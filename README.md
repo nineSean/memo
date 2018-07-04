@@ -1,6 +1,6 @@
 
 
-#### 2018/06/30
+### 2018/06/30
 
 - Kernel&Shell
 
@@ -35,7 +35,7 @@
   - [http://wiki.jikexueyuan.com/project/javascript-design-patterns/mvc.html](http://wiki.jikexueyuan.com/project/javascript-design-patterns/mvc.html)
   - [https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvc](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvc)
 
-#### 2018/07/01
+### 2018/07/01
 
 - Lisp系语言（函数式编程范式）
 
@@ -68,7 +68,7 @@
 
   - [https://github.com/hanzichi/underscore-analysis/issues/27](https://github.com/hanzichi/underscore-analysis/issues/27)
 
-#### 2018/07/02
+### 2018/07/02
 
 - Javascrit类型检查
 
@@ -101,24 +101,19 @@ isNaN(value)
 ```
 
 - vim替换
-
-  - [http://yyq123.blogspot.com/2011/10/vim-substitute.html](http://yyq123.blogspot.com/2011/10/vim-substitute.html)
-
+  - [http://tanqisen.github.io/blog/2013/01/13/vim-search-replace-regex/](http://tanqisen.github.io/blog/2013/01/13/vim-search-replace-regex/)
+  - [http://vimregex.com/](http://vimregex.com/)
 - SDK
-
 - DP(dynamic programming)
 
   - 把一个问题划分成若干子问题，相同的子问题只需解决一次进而减少了计算量。
-
 - git flow
 
   - [https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow)
-
 - git cherry-pick
 
   - [https://www.jianshu.com/p/08c3f1804b36](https://www.jianshu.com/p/08c3f1804b36)
   - [https://juejin.im/post/5925a2d9a22b9d0058b0fd9b](https://juejin.im/post/5925a2d9a22b9d0058b0fd9b)
-
 - jj
 
 ```
@@ -127,7 +122,7 @@ isNaN(value)
 
 ```
 
-#### 2018/07/03
+### 2018/07/03
 
 - why primitive type of string instanceof String is false but can inherit method from prototype chain
 
@@ -139,7 +134,7 @@ isNaN(value)
   - [https://javascript.ruanyifeng.com/htmlapi/requestanimationframe.html](https://javascript.ruanyifeng.com/htmlapi/requestanimationframe.html)
   - [https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)
 
-#### 2018/07/04
+### 2018/07/04
 
 - how browsers work
 
