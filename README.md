@@ -137,17 +137,37 @@ isNaN(value)
 ### 2018/07/04
 
 - how browsers work
-
+  - [https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
   - [https://coolshell.cn/articles/9666.html](https://coolshell.cn/articles/9666.html)
   - [https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda](https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda)
   - [https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
-
 - 数组去重
 
   - [https://github.com/mqyqingfeng/Blog/issues/27](https://github.com/mqyqingfeng/Blog/issues/27)
   - [https://github.com/huangchucai/My-Note-Blog/issues/13](https://github.com/huangchucai/My-Note-Blog/issues/13)
-
 - Persistence data
 
   - [https://www.datastax.com/dev/blog/what-persistence-and-why-does-it-matter](https://www.datastax.com/dev/blog/what-persistence-and-why-does-it-matter)
 
+
+
+
+### 2018/07/05
+
+- [语言学习指南](./img/guide for learning computer language.png)
+- [项目结构目录](https://www.dropbox.com/s/7c2v7es1dg3c730/Screenshot%202018-07-05%2001.25.05.png?dl=0)
+- bindRight实现
+  - https://code.h5jun.com/qig/edit?js,console
+- 倒计时动画
+  - https://code.h5jun.com/vix/edit?js,output
+  - https://code.w3ctech.com/detail/239
+- 月影code
+  - https://code.w3ctech.com/465?page=3
+  - https://code.w3ctech.com/465?page=2
+  - https://code.w3ctech.com/465?page=1
+- CSS水平、垂直居中
+  - https://sokrati.com/csswarriors/css-horizontal-vertical-centering/
+  - http://louiszhai.github.io/2016/03/12/css-center/
+- eventloop
+  - https://itnext.io/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
+  - https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
