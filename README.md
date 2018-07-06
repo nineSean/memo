@@ -171,3 +171,23 @@ isNaN(value)
 - eventloop
   - https://itnext.io/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
   - https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
+
+
+
+### 2018/07/06
+
+- CSS3 3D transforms
+  - https://3dtransforms.desandro.com/
+- Dymatic vs Static, Strong vs Weak
+  - Dymatic versus static is about when to check for types, strong versus weak is about how serious do you get while checking the types.
+  - JS is dymatic and weak language.
+  - Dymatic means checking the types and looking for type errors during runtime.On the contrary, statics does during compile time.
+  - Weak means allowing implicit conversion. Strongs is opposite.
+  - https://www.youtube.com/watch?v=C5fr0LZLMAs
+- 有趣的JS教程
+  - https://www.youtube.com/watch?v=muFql8Z4sCg&list=PL-xu4i_QDSxcoDNeh8rx5-pHCCTOg0XsI
+  - https://en.hexlet.io/courses/intro_to_programming
+- 深入JS动态、弱类型特性
+  - https://dzone.com/articles/understanding-loose-typing-jav
+  - [https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e](https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e)
+  - https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing
