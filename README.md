@@ -191,3 +191,62 @@ isNaN(value)
   - https://dzone.com/articles/understanding-loose-typing-jav
   - [https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e](https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e)
   - https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing
+
+
+
+### 2018/07/07
+
+- package-lock.josn
+  - https://medium.com/@Quigley_Ja/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8
+- 柯里化
+  - 把多参函数转化为单参函数
+
+```
+function curryIt(fn) {
+    let args = []
+    let countDown = fn.length
+    return function(){
+        args.push(arguments[0])
+        if(--countDown <= 0) return fn.apply(undefined, args)
+        return arguments.callee
+    }
+}
+
+//测试用例
+var fn = function (a, b, c) {return a + b + c}; 
+curryIt(fn)(1)(2)(3); //6
+```
+
+- 获取数字 num 二进制形式第 bit 位的值
+
+```
+// 注意：
+// 1、bit 从 1 开始
+// 2、返回 0 或 1
+// 3、举例：2 的二进制为 10，第 1 位为 0，第 2 位为 1
+
+function valueAtBit(num, bit) {
+    return +num.toString(2).split('').reverse().slice(bit - 1, bit)
+}
+
+//测试用例
+valueAtBit(128, 8) //1
+```
+
+- 求 a 和 b 相乘的值，a 和 b 可能是小数，需要注意结果的精度问题
+
+```
+function multiply(a, b) {
+    return a * getMultiple(a) * b * getMultiple(b)/ getMultiple(a) / getMultiple(b)
+}
+
+function getMultiple(num){
+    return Math.pow(10, ((num + '').length - 1 - ((num + '').indexOf('.'))))
+}
+
+//测试用例
+multiply(3, 0.0001) // 0.0003
+```
+
+
+
