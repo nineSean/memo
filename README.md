@@ -155,19 +155,56 @@ isNaN(value)
 ### 2018/07/05
 
 - [语言学习指南](./img/guide for learning computer language.png)
+
 - [项目结构目录](https://www.dropbox.com/s/7c2v7es1dg3c730/Screenshot%202018-07-05%2001.25.05.png?dl=0)
+
 - bindRight实现
   - https://code.h5jun.com/qig/edit?js,console
+
+  ```
+  Function.prototype.bindRight = function(thisObj, ...values){
+    let fn = this, len = fn.length - values.length;
+    return function(...args){
+      let rest = [], rargs = values.reverse();
+      
+      if(len > 0){
+        rest = args.slice(0, len);
+      }
+
+      return fn.apply(thisObj, rest.concat(rargs));
+    }
+  }
+
+  console.log(["2","3","4"].map(parseInt));
+
+  console.log(["2","3","4"].map(parseInt.bindRight(null, 10)));
+
+  function add(x, y, z){
+      return 100*x + 10 * y + z;
+  }
+
+  let add1 = add.bind(null, 1, 2);
+  let add2 = add.bindRight(null, 1, 2);
+
+  console.log(add1(3)); //123
+  console.log(add2(3)); //321
+  ```
+
+  ​
+
 - 倒计时动画
   - https://code.h5jun.com/vix/edit?js,output
   - https://code.w3ctech.com/detail/239
+
 - 月影code
   - https://code.w3ctech.com/465?page=3
   - https://code.w3ctech.com/465?page=2
   - https://code.w3ctech.com/465?page=1
+
 - CSS水平、垂直居中
   - https://sokrati.com/csswarriors/css-horizontal-vertical-centering/
   - http://louiszhai.github.io/2016/03/12/css-center/
+
 - eventloop
   - https://itnext.io/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
   - https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
@@ -212,9 +249,9 @@ function curryIt(fn) {
     }
 }
 
-//测试用例
+// 测试用例
 var fn = function (a, b, c) {return a + b + c}; 
-curryIt(fn)(1)(2)(3); //6
+curryIt(fn)(1)(2)(3); // 6
 ```
 
 - 获取数字 num 二进制形式第 bit 位的值
@@ -229,8 +266,8 @@ function valueAtBit(num, bit) {
     return +num.toString(2).split('').reverse().slice(bit - 1, bit)
 }
 
-//测试用例
-valueAtBit(128, 8) //1
+// 测试用例
+valueAtBit(128, 8) // 1
 ```
 
 - 求 a 和 b 相乘的值，a 和 b 可能是小数，需要注意结果的精度问题
@@ -244,9 +281,227 @@ function getMultiple(num){
     return Math.pow(10, ((num + '').length - 1 - ((num + '').indexOf('.'))))
 }
 
-//测试用例
+// 测试用例
 multiply(3, 0.0001) // 0.0003
 ```
 
 
 
+### 2018/07/08
+
+- 给定字符串 str，检查其是否包含 连续3个数字 
+
+```
+// 1、如果包含，返回最新出现的 3 个数字的字符串
+// 2、如果不包含，返回 false
+// 注意：必须是三个连续数
+
+function captureThreeNumbers(str) {
+    let temp = ''
+	let arr = str.split('')
+	for(let i = 0; i < arr.length; i++){
+		if(Math.abs(+arr[i] - +arr[i+1]) === 1){
+			if(temp[1]){
+				if(Math.abs(+temp[0] - +arr[i]) === 2) return temp += arr[i]
+				temp = ''
+			}else temp += arr[i]			
+        }else temp = ''
+	}
+	return false
+}
+
+// 测试用例
+captureThreeNumbers('9896543') // 654
+```
+
+- Regexp railroad diagram
+  - https://regexper.com/
+- 给定字符串 str，检查其是否符合美元书写格式
+
+```
+// 1、以 $ 开始
+// 2、整数部分，从个位起，满 3 个数字用 , 分隔
+// 3、如果为小数，则小数部分长度为 2
+// 4、正确的格式如：$1,023,032.03 或者 $2.03，错误的格式如：$3,432,12.12 或者 $34,344.3
+// 小数点后两位是一定要写的
+
+function isUSD(str) {
+    return /^\$\d{1,3}(,\d{3})*\.\d{2}$/g.test(str)
+}
+
+// 测试用例
+isUSD('$20,933,209.93') // true
+```
+
+- #### Detect Pangram
+
+  - http://www.codewars.com/kata/545cedaa9943f7fe7b000048/solutions/javascript/all/clever
+
+```
+// A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+// Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+function isPangram(string){
+  string = string.toLowerCase()
+  let hash = {}
+  let count = 0
+  for(let v of str){
+    if(/[a-z]/.test(v)){
+      count++
+      if(hash[v]) count--
+      hash[v] = true
+    }
+  }
+  return count === 26
+}
+
+//clever
+function isPangram(string){
+  return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
+}
+```
+
+- Contains Duplicate
+
+  - https://leetcode.com/submissions/detail/162597934/
+
+  ```
+  // Given an array of integers, find if the array contains any duplicates.
+  //	Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+
+  function containsDuplicate(nums){
+    const visited = new Set()
+    for(let num of nums){
+      if(vistied.has(num))
+        return true
+      visitied.add(num)
+    }
+    return false
+  }
+  ```
+
+- Contains Duplicate II
+
+  - https://leetcode.com/submissions/detail/162606600/
+
+  ```
+  // Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
+
+  // example
+  // Input: nums = [1,2,3,1], k = 3
+  // Output: true
+  // 
+  // Input: nums = [1,2,3,1,2,3], k = 2
+  // Output: false
+
+  /**
+   * @param {number[]} nums
+   * @param {number} k
+   * @return {boolean}
+   */
+  var containsNearbyDuplicate = function(nums, k) {
+      if (!nums.length) return false
+      if (nums.length == 1) return false
+      
+      var map = new Map()
+      
+      for (var i = 0; i < nums.length; i++) {
+          if (map.has(nums[i])) {
+              if (i - map.get(nums[i]) <= k) {
+                  return true
+              } else {
+                  map.set(nums[i], i)
+              }
+          }
+          else map.set(nums[i], i)
+      }
+      
+      return false
+  };
+  ```
+
+  ​
+
+- 封装类型检查函数
+
+  ```
+  function checkType(data){
+    return Object.prototype.toString.call(data).match(/\b([a-z]+)\]/i)[1]
+  }
+  ```
+
+- Find the odd int
+
+  - http://www.codewars.com/kata/54da5a58ea159efa38000836/solutions/javascript
+
+  ```
+  // Given an array, find the int that appears an odd number of times.
+  // There will always be only one integer that appears an odd number of times.
+
+  // clever
+  const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+  ```
+
+- Sort the odd
+
+  - http://www.codewars.com/kata/578aa45ee9fd15ff4600090d/solutions/javascript
+
+  ```
+  // You have an array of numbers.
+  // Your task is to sort ascending odd numbers but even numbers must be on their places.
+  // Zero isn't an odd number and you don't need to move it. If you have an empty array, you need to return it.
+
+  Example
+  //sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
+
+  //clever
+  function sortArray(array) {
+    const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+    return array.map((x) => x % 2 ? odd.shift() : x);
+  }
+  ```
+
+
+
+- shortest word
+
+  - https://www.codewars.com/kata/shortest-word/solutions/javascript
+
+  ```
+  // Simple, given a string of words, return the length of the shortest word(s).
+
+  // String will never be empty and you do not need to account for different data types.
+
+  //clever
+  function findeShort(s){
+    return Math.min.apply(null, s.split(' ').map(v => v.length))
+  }
+  ```
+
+- a chain adding function
+
+  - https://www.codewars.com/kata/539a0e4d85e3425cb0000a88/solutions/javascript/all/clever
+
+  ![](https://www.dropbox.com/s/hvguh7keer7t5u1/Screenshot%202018-07-08%2017.49.06.png?dl=0)
+
+  ```
+  //有点凌乱，逻辑上要向clever靠
+  function add(n){
+    let sum = n
+    function mid(m){
+      sum += m
+      return mid
+    }
+    mid.toString =  () => sum
+    return mid
+  }
+
+  //clever
+  function add(n) {
+    var next = add.bind(n += this | 0);
+    next.valueOf = function() { return n; };
+    return next;
+  }
+  ```
+
+  ​
