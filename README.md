@@ -758,5 +758,201 @@ function duplicateCount(text){
 
 
 
+### 2018/07/10
 
+##### who likes it?
+
+- https://www.codewars.com/kata/5266876b8f4bf2da9b000362/solutions/javascript
+
+```
+// You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+// Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
+// 
+// likes [] // must be "no one likes this"
+// likes ["Peter"] // must be "Peter likes this"
+// likes ["Jacob", "Alex"] // must be "Jacob and Alex like this"
+// likes ["Max", "John", "Mark"] // must be "Max, John and Mark like this"
+// likes ["Alex", "Jacob", "Mark", "Max"] // must be "Alex, Jacob and 2 others like this"
+
+//MDN看了下template literals的tagged templates，想试下高级用法，发现更麻烦，switch只分4中情况，更简单
+function likes(names){
+  switch (names.length){
+    case 0:
+    return `no one likes this`
+    case 1:
+    return `${names[0]} likes this`
+    case 2:
+    return `${names[0]} and ${names[1]} like this`
+    case 3:
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+    default:
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+  }
+}
+
+
+//function likes(names) {
+//  function templ(str, names, len){
+//    let like, comma, and, more
+//    len > 1 ? like = 'like', and = 'and' : like = 'likes', and = ''
+//    len > 2 ? comma = ',' : comma = ''
+//    len > 3 ? more = '2 others'
+//    return `${len >= 2
+//    
+//  }
+//  return templ`${names}${names.length} this`
+//}
+```
+
+
+
+##### Array.prototype.insert
+
+- Chrome console支持，但是目前ES6不支持
+- insert(val, index) => return 改变后的array
+
+```
+//自己写个polyfill
+Array.prototype.insert = function(v, i){
+  return Array.prototype.splice.call(this, i, 0, v)
+}
+```
+
+
+
+
+
+##### Create Phone Number
+
+- https://www.codewars.com/kata/525f50e3b73515a6db000b83/solutions/javascript/all/clever
+
+```
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+// Example:
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge. 
+// Don't forget the space after the closing parentheses!
+
+//spread真好用，不过感觉正则太强大了，查询替换的基本都能实现
+function createPhoneNumber(numbers){
+  return [...['('].concat(numbers.splice(0, 3).concat(') ')), ...numbers.splice(0, 3).concat('-'), ...numbers].join('')      
+}
+
+//clever with regexp
+function createPhoneNumber(numbers){
+  return numbers.join('').replace(/(...)(...)(.*)/, '($1) $2-$3');
+}
+```
+
+
+
+##### TDD
+
+- Test-Driven Development - 测试驱动开发
+- https://coolshell.cn/articles/3649.html
+
+
+
+##### Once
+
+- https://www.codewars.com/kata/once/solutions?show-solutions=1
+
+```
+// You'll implement once, a function that takes another function as an argument, and returns a new version of that function that can only be called once.
+
+// Subsequent calls to the resulting function should have no effect (and should return undefined).
+// 
+// For example:
+// 
+// logOnce = once(console.log)
+// logOnce("foo") // -> "foo"
+// logOnce("bar") // -> no effect
+
+function once(fn){
+  let called = false
+  return function(){
+    if(called) return
+    called = true
+    fn.apply(this, arguments)
+  }
+}
+
+// clever
+function once(fn) {
+  return function() {
+    try {
+      return fn && fn.apply(this, arguments);
+    } finally {
+      fn = undefined;
+    }
+  };
+}
+```
+
+
+
+##### Regex Password Validation
+
+- https://www.codewars.com/kata/regex-password-validation/solutions/javascript
+
+```
+// You need to write regex that will validate a password to make sure it meets the following criteria:
+
+// At least six characters long
+// contains a lowercase letter
+// contains an uppercase letter
+// contains a number
+// Valid passwords will only be alphanumeric characters.
+
+function validate(password) {
+  return  /^[A-Za-z0-9]{6,}$/.test(password) &&
+          /[A-Z]+/           .test(password) &&
+          /[a-z]+/           .test(password) &&
+          /[0-9]+/           .test(password) ;
+}
+
+// clever
+function validate(password) {
+  return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/.test(password);
+}
+```
+
+
+
+##### persistent bugger
+
+- https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/solutions/javascript
+
+```
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+// For example:
+// 
+//  persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4
+//                        // and 4 has only one digit
+// 
+//  persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,
+//                         // 1*2*6 = 12, and finally 1*2 = 2
+// 
+//  persistence(4) === 0 // because 4 is already a one-digit number
+
+//clever巧妙运用递归，再简单的题目总是有很灵巧的思维
+function persistence(num) {
+  let time = 0
+  while(String(num).length > 1){
+    num = String(num).split('').reduce( (a, c) => a * +c, 1)
+    time++
+  }
+  return time
+}
+
+//clever
+const persistence = num => {
+  return `${num}`.length > 1 
+    ? 1 + persistence(`${num}`.split('').reduce((a, b) => a * +b)) 
+    : 0;
+}
+```
 
