@@ -956,3 +956,269 @@ const persistence = num => {
 }
 ```
 
+
+
+##### scrolling text
+
+- https://www.codewars.com/kata/5a995c2aba1bb57f660001fd/solutions/javascript/all/clever
+
+```
+// Let's create some scrolling text!
+
+// Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
+// 
+// Example
+// scrollingText("codewars") should return:
+// 
+// [ "CODEWARS",
+//   "ODEWARSC",
+//   "DEWARSCO",
+//   "EWARSCOD",
+//   "WARSCODE",
+//   "ARSCODEW"
+//   "RSCODEWA",
+//   "SCODEWAR" ]
+
+function scrollingText(text){
+  let arr = []
+  let n = 0
+  text = text.toUpperCase()
+  arr.push(text)
+  while(n < text.length - 1){
+    n++
+    arr.push(text = text.replace(/^(.)(.*)$/, '$2$1'))
+  }
+  return arr
+}
+
+//clever
+const scrollingText = s => [].map.call( s, (_,i) => ( s.slice(i) + s.slice(0,i) ).toUpperCase() )
+```
+
+
+
+##### Human Readable Time
+
+- http://www.codewars.com/kata/52685f7382004e774f0001f7/solutions/javascript/all/clever
+
+```
+// Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
+
+// HH = hours, padded to 2 digits, range: 00 - 99
+// MM = minutes, padded to 2 digits, range: 00 - 59
+// SS = seconds, padded to 2 digits, range: 00 - 59
+// The maximum time never exceeds 359999 (99:59:59)
+
+function humanReadable(seconds) {
+  function leftPad(n){
+	return `0${n | 0}`.slice(-2)
+  }
+  let hours = parseInt(seconds / 3600)
+  let minutes = parseInt( seconds / 60 % 60) 
+  seconds = seconds % 60
+  return `${leftPad(hours)}:${leftPad(minutes)}:${leftPad(seconds)}`
+}
+
+//clever
+p=n=>`0${n}`.slice(-2),humanReadable=(s)=>(m=s/60|0,p(m/60|0)+':'+p(m%60)+':'+p(s%60))
+```
+
+
+
+##### Get the Middle Character
+
+- https://www.codewars.com/kata/56747fd5cb988479af000028/solutions/javascript
+
+```
+// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+// #Examples:
+// 
+// Kata.getMiddle("test") should return "es"
+// 
+// Kata.getMiddle("testing") should return "t"
+// 
+// Kata.getMiddle("middle") should return "dd"
+// 
+// Kata.getMiddle("A") should return "A"
+// #Input
+// 
+// A word (string) of length 0 < str < 1000 (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test for this. This is only here to tell you that you do not need to worry about your solution timing out.
+// 
+// #Output
+
+// The middle character(s) of the word represented as a string.
+
+function getMiddle(s)
+{
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
+```
+
+
+
+##### Unique In Order
+
+- https://www.codewars.com/kata/54e6533c92449cc251001667/solutions/javascript
+
+```
+// Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+// For example:
+// 
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+
+// with regexp
+// 有个不严谨的地方，或者说特殊情况，array里包含相邻且不严格相等的字符串和数字(而且array有类似'1'与2同时出现时区别处理也很麻烦)。不过考虑到真实情况在收集的同一个array里数据，各项值的类型应该是一样的。
+var uniqueInOrder=function(iterable){
+  let str = Array.from(iterable).join('')
+  let arr = str.replace(/(\S)\1+/g, '$1').split('')
+  return arr.map(v => isNaN(+v) ? v : +v)
+}
+
+//clever
+var uniqueInOrder = function (iterable)
+{
+  return [].filter.call(iterable, (function (a, i) { return iterable[i - 1] !== a }));
+}
+```
+
+
+
+##### array.diff
+
+- https://www.codewars.com/kata/523f5d21c841566fde000009/solutions/javascript
+
+```
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b.
+// 
+// array_diff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+array_diff([1,2,2,2,3],[2]) == [1,3]
+
+// 刚开始会错意，以为a、b先diff，然后再concat，测试报错发现b只是用来diff的。
+function array_diff(a, b) {
+  let aStr = a.join(' ')
+  b.map(v => aStr = aStr.replace(new RegExp(v , 'g'), ''))
+  return aStr.split(' ').filter(v => v === '' ? false : true)
+}
+
+// with Set
+function array_diff(a, b) {
+  b = new Set(b)
+  return a.filter(v => !b.has(v))
+}
+
+// clever
+function array_diff(a, b) {
+  return a.filter(function(x) { return b.indexOf(x) == -1; });
+}
+```
+
+
+
+##### is it a number?
+
+- https://www.codewars.com/kata/57126304cdbf63c6770012bd/solutions/javascript/all/clever
+
+```
+// Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
+
+// Valid examples, should return true:
+// 
+// isDigit("3")
+// isDigit("  3  ")
+// isDigit("-3.23")
+// should return false:
+// 
+// isDigit("3-4")
+// isDigit("  3   5")
+// isDigit("3 5")
+// isDigit("zero")
+
+function isDigit(s) {
+  return !isNaN(+s) && typeof +s === 'number' && !s.match(/^\s*$/g)                
+}
+
+// clever
+function isDigit(s) {
+ return s==parseFloat(s);
+}
+
+const isDigit = str => !!str.trim() && !isNaN(str)
+
+function isDigit(s) {
+console.log(s);
+ return /(^(\-|\s)[0-9]{1,}$)|(^[0-9]{1,}\.[0-9]{1,}$)|(^\-[0-9]{1,}\.[0-9]{1,}$)/g.test(s)&&s!==-0;
+}
+
+// 先存后看
+class Tokenizer {
+  constructor(string) {
+    this.str = string.trim();
+  }
+
+  isNumber() {
+    const iterator = this[Symbol.iterator]();
+    let dotFlag = false;
+    let beginFlag = false;
+    let tmp;
+    if(Tokenizer.isPrefix(iterator.next().value)) {
+      beginFlag = true;
+      iterator.next('next');
+    }
+    while(!(tmp = iterator.next()).done) {
+      const value = tmp.value;
+      if(Tokenizer.isDot(value) && !dotFlag && beginFlag) {
+        iterator.next('next');
+        dotFlag = true;
+      }
+      else if(Tokenizer.isDigit(value)) {
+        iterator.next('next');
+        beginFlag = true;
+      }
+      else return false;
+    }
+    return this.str.length > 0;
+  }
+
+  * [Symbol.iterator]() {
+    const string = this.str;
+    let ptr = 0;
+
+    while(ptr < string.length) {
+      const readingType = yield string[ptr];
+      if(readingType === 'next')
+        ptr += 1;
+    }
+  }
+
+  static isDot(char) {
+    const checker = /\./;
+    return checker.test(char);
+  }
+
+  static isPrefix(char) {
+    const checker = /[-|\+]/;
+    return checker.test(char);
+  }
+
+  static isDigit(char) {
+    const checker = /\d/; // useless ^, $
+    return checker.test(char);
+  }
+}
+
+function isDigit(s) {
+  const checker = new Tokenizer(s);
+  return checker.isNumber();
+}
+```
+
+ 
