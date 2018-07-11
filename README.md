@@ -6,19 +6,19 @@
 ##### Kernel&Shell
 
 - Kernel（核），操作系统的中心，分配时间和内存；处理文件存储和通讯以响应系统的调用。
-  - Shell（壳），一种用户与kernel之间的接口。
+- Shell（壳），一种用户与kernel之间的接口。
 
 ##### POSIX
 
 - Portable Operating System Interface 
-  - 一种标准，定义了标准API用于兼容各种系统 
+- 一种标准，定义了标准API用于兼容各种系统 
 
 ##### REST
 
 - Representational State Transfer
-  - 一种万维网软件架构风格
-  - 目的是便于软件/程序在网络中传递数据
-  - 基于HTTP之上而确定的一组约定和属性
+- 一种万维网软件架构风格
+- 目的是便于软件/程序在网络中传递数据
+- 基于HTTP之上而确定的一组约定和属性
 
 ##### Snapchat
 
@@ -29,12 +29,12 @@
 ##### shell scripting
 
 - [https://github.com/qinjx/30min_guides/blob/master/shell.md](https://github.com/qinjx/30min_guides/blob/master/shell.md)
-  - [https://www.shellscript.sh/](https://www.shellscript.sh/)
+- [https://www.shellscript.sh/](https://www.shellscript.sh/)
 
 ##### JavaScript design pattern
 
 - [http://wiki.jikexueyuan.com/project/javascript-design-patterns/mvc.html](http://wiki.jikexueyuan.com/project/javascript-design-patterns/mvc.html)
-  - [https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvc](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvc)
+- [https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvc](https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailmvc)
 
 ### 2018/07/01
 
@@ -49,9 +49,9 @@
 ##### SICP课程/PPT/习题集
 
 - [http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/](http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/)
-  - [http://www.math.pku.edu.cn/teachers/qiuzy/progtech/MIT_slides/](http://www.math.pku.edu.cn/teachers/qiuzy/progtech/MIT_slides/)
-  - [http://sicp.readthedocs.io/en/latest/](http://sicp.readthedocs.io/en/latest/)
-  - [http://numbbbbb.com/2016/03/28/20160328_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%A4%E5%91%A8%E6%97%B6%E9%97%B4%E5%88%B7%E5%AE%8C%20SICP/](http://numbbbbb.com/2016/03/28/20160328_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%A4%E5%91%A8%E6%97%B6%E9%97%B4%E5%88%B7%E5%AE%8C%20SICP/)
+- [http://www.math.pku.edu.cn/teachers/qiuzy/progtech/MIT_slides/](http://www.math.pku.edu.cn/teachers/qiuzy/progtech/MIT_slides/)
+- [http://sicp.readthedocs.io/en/latest/](http://sicp.readthedocs.io/en/latest/)
+- [http://numbbbbb.com/2016/03/28/20160328_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%A4%E5%91%A8%E6%97%B6%E9%97%B4%E5%88%B7%E5%AE%8C%20SICP/](http://numbbbbb.com/2016/03/28/20160328_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%A4%E5%91%A8%E6%97%B6%E9%97%B4%E5%88%B7%E5%AE%8C%20SICP/)
 
 ##### Linked List
 
@@ -103,7 +103,7 @@ isNaN(value)
 
 ##### vim替换
 - [http://tanqisen.github.io/blog/2013/01/13/vim-search-replace-regex/](http://tanqisen.github.io/blog/2013/01/13/vim-search-replace-regex/)
-  - [http://vimregex.com/](http://vimregex.com/)
+- [http://vimregex.com/](http://vimregex.com/)
 ##### SDK
 ##### DP(dynamic programming)
 
@@ -114,7 +114,7 @@ isNaN(value)
 ##### git cherry-pick
 
 - [https://www.jianshu.com/p/08c3f1804b36](https://www.jianshu.com/p/08c3f1804b36)
-  - [https://juejin.im/post/5925a2d9a22b9d0058b0fd9b](https://juejin.im/post/5925a2d9a22b9d0058b0fd9b)
+- [https://juejin.im/post/5925a2d9a22b9d0058b0fd9b](https://juejin.im/post/5925a2d9a22b9d0058b0fd9b)
 ##### jj
 
 ```
@@ -128,26 +128,26 @@ isNaN(value)
 ##### why primitive type of string instanceof String is false but can inherit method from prototype chain
 
 - [https://javascriptrefined.io/the-wrapper-object-400311b29151](https://javascriptrefined.io/the-wrapper-object-400311b29151)
-  - [https://hacks.mozilla.org/2012/12/performance-with-javascript-string-objects/](https://hacks.mozilla.org/2012/12/performance-with-javascript-string-objects/)
+- [https://hacks.mozilla.org/2012/12/performance-with-javascript-string-objects/](https://hacks.mozilla.org/2012/12/performance-with-javascript-string-objects/)
 
 ##### requestAnimationFrame
 
 - [https://javascript.ruanyifeng.com/htmlapi/requestanimationframe.html](https://javascript.ruanyifeng.com/htmlapi/requestanimationframe.html)
-  - [https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)
+- [https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)
 
 ### 2018/07/04
 
 ##### how browsers work
 - [https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
-  - [https://coolshell.cn/articles/9666.html](https://coolshell.cn/articles/9666.html)
-  - [https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda](https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda)
-  - [https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
+- [https://coolshell.cn/articles/9666.html](https://coolshell.cn/articles/9666.html)
+- [https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda](https://blog.sessionstack.com/how-javascript-works-the-rendering-engine-and-tips-to-optimize-its-performance-7b95553baeda)
+- [https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
 
 
 ##### 数组去重
 
 -   [https://github.com/mqyqingfeng/Blog/issues/27](https://github.com/mqyqingfeng/Blog/issues/27)
-  - [https://github.com/huangchucai/My-Note-Blog/issues/13](https://github.com/huangchucai/My-Note-Blog/issues/13)
+- [https://github.com/huangchucai/My-Note-Blog/issues/13](https://github.com/huangchucai/My-Note-Blog/issues/13)
 
   ****
 ##### Persistence data
@@ -199,20 +199,20 @@ isNaN(value)
 
 ##### 倒计时动画
 - https://code.h5jun.com/vix/edit?js,output
-  - https://code.w3ctech.com/detail/239
+- https://code.w3ctech.com/detail/239
 
 ##### 月影code
 - https://code.w3ctech.com/465?page=3
-  - https://code.w3ctech.com/465?page=2
-  - https://code.w3ctech.com/465?page=1
+- https://code.w3ctech.com/465?page=2
+- https://code.w3ctech.com/465?page=1
 
 ##### CSS水平、垂直居中
 - https://sokrati.com/csswarriors/css-horizontal-vertical-centering/
-  - http://louiszhai.github.io/2016/03/12/css-center/
+- http://louiszhai.github.io/2016/03/12/css-center/
 
 ##### eventloop
 - https://itnext.io/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
-  - https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
+- https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
 
 
 
@@ -226,21 +226,21 @@ isNaN(value)
 ##### Dymatic vs Static, Strong vs Weak
 
 - Dymatic versus static is about when to check for types, strong versus weak is about how serious do you get while checking the types.
-  - JS is dymatic and weak language.
-  - Dymatic means checking the types and looking for type errors during runtime.On the contrary, statics does during compile time.
-  - Weak means allowing implicit conversion. Strongs is opposite.
-  - https://www.youtube.com/watch?v=C5fr0LZLMAs
+- JS is dymatic and weak language.
+- Dymatic means checking the types and looking for type errors during runtime.On the contrary, statics does during compile time.
+- Weak means allowing implicit conversion. Strongs is opposite.
+- https://www.youtube.com/watch?v=C5fr0LZLMAs
 
 ##### 有趣的JS教程
 
 - https://www.youtube.com/watch?v=muFql8Z4sCg&list=PL-xu4i_QDSxcoDNeh8rx5-pHCCTOg0XsI
-  - https://en.hexlet.io/courses/intro_to_programming
+- https://en.hexlet.io/courses/intro_to_programming
 
 ##### 深入JS动态、弱类型特性
 
 - https://dzone.com/articles/understanding-loose-typing-jav
-  - [https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e](https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e)
-  - https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing
+- [https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e](https://medium.com/@gaperton/typescript-static-or-dynamic-64bceb50b93e)
+- https://softwareengineering.stackexchange.com/questions/122205/what-is-the-supposed-productivity-gain-of-dynamic-typing
 
 
 
@@ -499,7 +499,7 @@ function isPangram(string){
 
 -   https://www.codewars.com/kata/539a0e4d85e3425cb0000a88/solutions/javascript/all/clever
 
-  - <a href='https://www.dropbox.com/s/hvguh7keer7t5u1/Screenshot%202018-07-08%2017.49.06.png?dl=0'>描述</a>
+- <a href='https://www.dropbox.com/s/hvguh7keer7t5u1/Screenshot%202018-07-08%2017.49.06.png?dl=0'>描述</a>
 
   ```
   //不够简洁，逻辑上要向clever靠
@@ -818,8 +818,6 @@ Array.prototype.insert = function(v, i){
   return Array.prototype.splice.call(this, i, 0, v)
 }
 ```
-
-
 
 
 
@@ -1222,3 +1220,171 @@ function isDigit(s) {
 ```
 
  
+
+### 2018/07/11
+
+##### Visualizing  js runtime
+
+- http://latentflip.com/loupe
+
+##### Asynchrony: Under the Hood
+
+- https://www.youtube.com/watch?v=SrNQS8J67zc
+
+  - <img src='./img/async-mechanism.png' alt='async-mechanism' />
+
+  - **current task** come off **event queue** and it’s location is stored in **memory** while relevant variables populate the **heap**
+
+  - the **task queue** is populated by **task sources**, any one of which would be a particular chunk of code in an executing program
+
+  - callback
+
+    - 适合简单处理单个异步请求
+    - 函数套函数的写法不直观，代码可读性太差
+    - 多层嵌套而引发的回调地狱
+    - 控制反转引发信任问题
+
+  - promises
+
+    - 异步处理的一种新的机制
+
+    - 链式处理异步，线性、直观
+
+    - 错误处理不够优雅，无法通过try catch捕捉错误，同步异步错误传播要分开捕获（与下面async比较）
+
+      ```
+      const asyncFunction = () => {
+        try{
+          doSynchronousThings()
+          return getSomeData()
+          	.then(data => data.map(item => item.doSomething()))
+          	.catch(e => console.error(e))
+        }catch(err){
+          console.error(err)
+        }
+      }
+      ```
+
+      ​
+
+  - generators
+
+    - `*`语法
+    - 生成器返回可迭代对象
+    - 可迭代对象通过`.next`获取`yield`出来的值
+    - ​
+
+  - async/await
+
+    - 更简洁的异步处理方式
+
+    - await calls operate sequentially（异步操作有序化）
+
+    - 更优雅的错误处理try catch（与上promises比较）
+
+      ```
+      const asyncFunction = async () => {
+        try{
+          doSynchronousThings()
+          const data = await getSomeData()
+          return data.map(item => item.doSomeThing())
+        }catch(err){
+          console.error(err)
+        }
+      }
+      ```
+
+      ​
+
+
+##### directions reduction
+
+- https://www.codewars.com/kata/directions-reduction/solutions/javascript
+
+```
+// Once upon a time, on a way through the old wild west,…
+… a man was given directions to go from one point to another. The directions were "NORTH", "SOUTH", "WEST", "EAST". Clearly "NORTH" and "SOUTH" are opposite, "WEST" and "EAST" too. Going to one direction and coming back the opposite direction is a needless effort. Since this is the wild west, with dreadfull weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!
+
+// How I crossed the desert the smart way.
+// The directions given to the man are, for example, the following:
+// 
+// ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"].
+// or
+// 
+// { "NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST" };
+// or (haskell)
+// 
+// [North, South, South, East, West, North, West]
+// You can immediatly see that going "NORTH" and then "SOUTH" is not reasonable, better stay to the same place! So the task is to give to the man a simplified version of the plan. A better plan in this case is simply:
+// 
+// ["WEST"]
+// or
+// 
+// { "WEST" }
+// or (haskell)
+// 
+// [West]
+// or (rust)
+
+// [WEST];
+// Other examples:
+// In ["NORTH", "SOUTH", "EAST", "WEST"], the direction "NORTH" + "SOUTH" is going north and coming back right away. What a waste of time! Better to do nothing.
+// 
+// The path becomes ["EAST", "WEST"], now "EAST" and "WEST" annihilate each other, therefore, the final result is [] (nil in Clojure).
+// 
+// In ["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"], "NORTH" and "SOUTH" are not directly opposite but they become directly opposite after the reduction of "EAST" and "WEST" so the whole path is reducible to ["WEST", "WEST"].
+// 
+// Task
+// Write a function dirReduc which will take an array of strings and returns an array of strings with the needless directions removed (W<->E or S<->N side by side).
+// 
+// The Haskell version takes a list of directions with data Direction = North | East | West | South. The Clojure version returns nil when the path is reduced to nothing. The Rust version takes a slice of enum Direction {NORTH, SOUTH, EAST, WEST}.
+// 
+// Examples
+// dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]) => ["WEST"]
+// dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"]) => []
+// See more examples in "Example Tests"
+// Note
+// Not all paths can be made simpler. The path ["NORTH", "WEST", "SOUTH", "EAST"] is not reducible. "NORTH" and "WEST", "WEST" and "SOUTH", "SOUTH" and "EAST" are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
+
+//用了递归，性能不佳
+function dirReduc(arr){
+  let len = arr.length
+  let rule = {
+    'NORTH': 'SOUTH',
+    'SOUTH': 'NORTH',
+    'WEST': 'EAST',
+    'EAST': 'WEST'
+  }
+  for(let i = 0; i < arr.length; i++){
+    rule[arr[i]] === arr[i+1] ? (arr.splice(i, 2), i--) : arr
+  }
+  return len !== arr.length ? dirReduc(arr) : arr
+}
+
+//clever with regexp
+function dirReduc(arr) {
+  var str = arr.join(''), pattern = /NORTHSOUTH|EASTWEST|SOUTHNORTH|WESTEAST/;
+  while (pattern.test(str)) str = str.replace(pattern,'');
+  return str.match(/(NORTH|SOUTH|EAST|WEST)/g)||[];
+}
+
+//clever reduce新建一个dirs数组，始终用dirs的最后一项按照规则比较plan每一项然后确定添加方向或者删除方向。
+function dirReduc(plan) {
+  var opposite = {
+    'NORTH': 'SOUTH', 'EAST': 'WEST', 'SOUTH': 'NORTH', 'WEST': 'EAST'};
+  return plan.reduce(function(dirs, dir){
+      if (dirs[dirs.length - 1] === opposite[dir])
+        dirs.pop();
+      else
+        dirs.push(dir);
+      return dirs;
+    }, []);
+}
+
+```
+
+
+
+
+
+
