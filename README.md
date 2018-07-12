@@ -1385,6 +1385,99 @@ function dirReduc(plan) {
 
 
 
+### 2018/07/12
+
+##### 闭包
+
+- Ecam-262标准中没有closure（闭包）的定义，因为闭包是计算机语言的一种特性吧，见维基百科
+
+
+- MDN：A *closure* is the combination of a function and the lexical environment within which that function was declared
+- WIKIPEDIA：In [programming languages](https://en.wikipedia.org/wiki/Programming_language), a **closure** (also **lexical closure** or **function closure**) is a technique for implementing [lexically scoped](https://en.wikipedia.org/wiki/Lexically_scoped) [name binding](https://en.wikipedia.org/wiki/Name_binding) in a language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function). [Operationally](https://en.wikipedia.org/wiki/Operational_semantics), a closure is a [record](https://en.wikipedia.org/wiki/Record_(computer_science)) storing a [function](https://en.wikipedia.org/wiki/Function_(computer_science))[[a\]](https://en.wikipedia.org/wiki/Closure_(computer_programming)#cite_note-1) together with an environment.[[1\]](https://en.wikipedia.org/wiki/Closure_(computer_programming)#cite_note-2) The environment is a mapping associating each [free variable](https://en.wikipedia.org/wiki/Free_variable) of the function (variables that are used locally, but defined in an enclosing scope) with the [value](https://en.wikipedia.org/wiki/Value_(computer_science)) or [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) to which the name was bound when the closure was created.[[b\]](https://en.wikipedia.org/wiki/Closure_(computer_programming)#cite_note-3) A closure—unlike a plain function—allows the function to access those *captured variables* through the closure's copies of their values or references, even when the function is invoked outside their scope.
+- EcmaScript 2015 - lexical environment
+
+
+- 广义的闭包：函数与它的词法作用域
+  - 所以任何函数都是一个闭包
+  - 发想：只要在栈中/队列中的函数，它的词法环境就得保存，那么整条词法作用域链就得保存（GC如果清除链上任何一环的上下文变量，由于JS编译执行的特性只有当队列中的函数入栈时才会分析该函数上下文中变量有哪些引用，所以得保存整条作用域链的完整）
+- 狭义的闭包（实际使用）
+  - 函数在它声明的作用域外调用，且函数内部有外部变量的访问且是调用环境无法访问的变量
+  - 原理：词法作用域
+  - 目的：隐藏变量
+  - 用途：模块化
+- https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+- [closure wikipedia](https://en.wikipedia.org/wiki/Closure_(computer_programming))
+
+
+
+
+##### 动态作用域
+
+- 在函数调用时确定上下文，区别于在函数声明时确定上下文（词法作用域）
+- this就是动态作用域的应用(非箭头函数中的this)
+
+##### Maximum subarray sum
+
+- https://www.codewars.com/kata/maximum-subarray-sum/solutions/javascript/all/clever
+- https://en.wikipedia.org/wiki/Maximum_subarray_problem
+
+```Javascript
+// The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
+
+// maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+// // should be 6: [4, -1, 2, 1]
+// Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.
+// 
+// Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
+
+// 看到题目觉得不可能对比所有和取最大吧？完全没有实现思路，心想：真好，能学到更多了。转换心态，不再纠结自己有多菜而自怨自艾，而在乎在旅途中获取更多
+
+// clever
+var maxSequence = function(arr){
+  var min = 0, ans = 0, i, sum = 0;
+  for (i = 0; i < arr.length; ++i) {
+    sum += arr[i];
+    min = Math.min(sum, min);
+    ans = Math.max(ans, sum - min);
+  }
+  return ans;
+}
+// explanation
+// Let's image a broken line chart presenting the sum.
+// 
+// http://i.imgur.com/HnEEx0Q.png
+// 
+// You could try climbing from most bottom valley to the most top peak.
+// 
+// The difference between them is the answer we want.
+// 
+// At the first glance, you may want to pick the most top and most bottom point to get the answer.
+// 
+// But you will notice the answer is wrong when the most bottom point come after the most top point.
+// 
+// As a result. 
+// I'll try to keep the most bottom point so far,
+// //min = Math.min(sum, min);
+// and update the answer if the new difference is bigger than origin answer.
+// //ans = Math.max(ans, sum - min);
+
+var maxSequence = function(arr){
+    var maxNow = 0, maxSoFar = 0;
+    for(i = 0; i < arr.length; i++){
+        //If adding the new number to our list
+        //causes us to go negative, start over with 0
+        maxSoFar = Math.max(0, maxSoFar + arr[i]);
+        //Compare our new max, to our old and
+        //assign highest value to our max holder
+        maxNow = Math.max(maxSoFar, maxNow);
+    }
+    return maxNow;
+}
+
+const maxSequence = (a,sum=0) => a.reduce((max,v) => Math.max(sum = Math.max(sum + v, 0), max), 0);
+
+```
 
 
 
