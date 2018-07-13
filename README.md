@@ -75,13 +75,13 @@
 
 - [https://webbjocke.com/javascript-check-data-types/](https://webbjocke.com/javascript-check-data-types/)
 
-```
+```javascript
 
 //check Array
 
 function isArray(value){
 
-​	return typeof value === ‘object’ && value instaceof Array //用constructor来判断容易伪造
+	return typeof value === ‘object’ && value instaceof Array //用constructor来判断容易伪造
 
 }
 
@@ -91,14 +91,13 @@ Array.isArray(value)
 
 function isNull(value){
 
-​	return value === null
+	return value === null
 
 }
 
 //check NaN
 
 isNaN(value)
-
 ```
 
 ##### vim替换
@@ -166,7 +165,7 @@ isNaN(value)
 ##### bindRight实现
 -   https://code.h5jun.com/qig/edit?js,console
 
-  ```
+  ```javascript
   Function.prototype.bindRight = function(thisObj, ...values){
     let fn = this, len = fn.length - values.length;
     return function(...args){
@@ -254,7 +253,7 @@ isNaN(value)
 
 - 把多参函数转化为单参函数
 
-```
+```javascript
 function curryIt(fn) {
     let args = []
     let countDown = fn.length
@@ -272,7 +271,7 @@ curryIt(fn)(1)(2)(3); // 6
 
 ##### 获取数字 num 二进制形式第 bit 位的值
 
-```
+```javascript
 // 注意：
 // 1、bit 从 1 开始
 // 2、返回 0 或 1
@@ -288,7 +287,7 @@ valueAtBit(128, 8) // 1
 
 ##### 求 a 和 b 相乘的值，a 和 b 可能是小数，需要注意结果的精度问题
 
-```
+```javascript
 function multiply(a, b) {
     return a * getMultiple(a) * b * getMultiple(b)/ getMultiple(a) / getMultiple(b)
 }
@@ -299,6 +298,7 @@ function getMultiple(num){
 
 // 测试用例
 multiply(3, 0.0001) // 0.0003
+
 ```
 
 
@@ -307,7 +307,7 @@ multiply(3, 0.0001) // 0.0003
 
 ##### 给定字符串 str，检查其是否包含 连续3个数字 
 
-```
+```javascript
 // 1、如果包含，返回最新出现的 3 个数字的字符串
 // 2、如果不包含，返回 false
 // 注意：必须是三个连续数
@@ -327,6 +327,7 @@ function captureThreeNumbers(str) {
 }
 
 // 测试用例
+
 captureThreeNumbers('9896543') // 654
 ```
 
@@ -336,7 +337,7 @@ captureThreeNumbers('9896543') // 654
 
 ##### 给定字符串 str，检查其是否符合美元书写格式
 
-```
+```javascript
 // 1、以 $ 开始
 // 2、整数部分，从个位起，满 3 个数字用 , 分隔
 // 3、如果为小数，则小数部分长度为 2
@@ -349,13 +350,14 @@ function isUSD(str) {
 
 // 测试用例
 isUSD('$20,933,209.93') // true
+
 ```
 
 ##### Detect Pangram
 
 - http://www.codewars.com/kata/545cedaa9943f7fe7b000048/solutions/javascript/all/clever
 
-```
+```javascript
 // A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 // Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
@@ -384,7 +386,7 @@ function isPangram(string){
 
 -   https://leetcode.com/submissions/detail/162597934/
 
-  ```
+  ```javascript
   // Given an array of integers, find if the array contains any duplicates.
   //	Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
 
@@ -403,7 +405,7 @@ function isPangram(string){
 
 -   https://leetcode.com/submissions/detail/162606600/
 
-  ```
+  ```javascript
   // Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
 
   // example
@@ -443,7 +445,7 @@ function isPangram(string){
 
 ##### 封装类型检查函数
 
-  ```
+  ```javascript
   function checkType(data){
     return Object.prototype.toString.call(data).match(/\b([a-z]+)\]/i)[1]
   }
@@ -453,7 +455,7 @@ function isPangram(string){
 
 -   http://www.codewars.com/kata/54da5a58ea159efa38000836/solutions/javascript
 
-  ```
+  ```javascript
   // Given an array, find the int that appears an odd number of times.
   // There will always be only one integer that appears an odd number of times.
 
@@ -465,7 +467,7 @@ function isPangram(string){
 
 -   http://www.codewars.com/kata/578aa45ee9fd15ff4600090d/solutions/javascript
 
-  ```
+  ```javascript
   // You have an array of numbers.
   // Your task is to sort ascending odd numbers but even numbers must be on their places.
   // Zero isn't an odd number and you don't need to move it. If you have an empty array, you need to return it.
@@ -484,7 +486,7 @@ function isPangram(string){
 
 -   https://www.codewars.com/kata/shortest-word/solutions/javascript
 
-  ```
+  ```javascript
   // Simple, given a string of words, return the length of the shortest word(s).
 
   // String will never be empty and you do not need to account for different data types.
@@ -501,7 +503,7 @@ function isPangram(string){
 
 - <a href='https://www.dropbox.com/s/hvguh7keer7t5u1/Screenshot%202018-07-08%2017.49.06.png?dl=0'>描述</a>
 
-  ```
+  ```javascript
   //不够简洁，逻辑上要向clever靠
   function add(n){
     let sum = n
@@ -532,7 +534,7 @@ function isPangram(string){
 
 - https://leetcode.com/submissions/detail/162799953/
 
-```
+```javascript
 //Given an array of integers, find out whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.
 //example 1:
 //Input: nums = [1,5,9,2,5,9], k = 2, t = 3
@@ -583,7 +585,7 @@ var containsNearbyAlmostDuplicate = function(nums, k, t) {
 
 - https://www.codewars.com/kata/sum-of-pairs/solutions/javascript?show-solutions=1
 
-```
+```javascript
 // Given a list of integers and a single sum value, return the first two values (parse from the left please) in order of appearance that add up to form the sum.
 // 
 // sum_pairs([11, 3, 7, 5],         10)
@@ -651,7 +653,7 @@ var sum_pairs=function(ints, s){
 
 - https://www.codewars.com/kata/55c45be3b2079eccff00010f/solutions/javascript
 
-```
+```javascript
 // Your task is to sort a given string. Each word in the String will contain a single number. This number is the position the word should have in the result.
 // 
 // Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
@@ -688,7 +690,7 @@ function order(words){
 
 - https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/solutions/javascript
 
-```
+```javascript
 // The goal of this exercise is to convert a string to a new string where each character in the new string is '(' if that character appears only once in the original string, or ')' if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
 // 
 // Examples:
@@ -726,7 +728,7 @@ function duplicateEncode(word){
 
 - https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/solutions/javascript
 
-```
+```javascript
 // Count the number of Duplicates
 // Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
 // 
@@ -764,7 +766,7 @@ function duplicateCount(text){
 
 - https://www.codewars.com/kata/5266876b8f4bf2da9b000362/solutions/javascript
 
-```
+```javascript
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
 // Implement a function likes :: [String] -> String, which must take in input array, containing the names of people who like an item. It must return the display text as shown in the examples:
@@ -812,7 +814,7 @@ function likes(names){
 - Chrome console支持，但是目前ES6不支持
 - insert(val, index) => return 改变后的array
 
-```
+```javascript
 //自己写个polyfill
 Array.prototype.insert = function(v, i){
   return Array.prototype.splice.call(this, i, 0, v)
@@ -825,7 +827,7 @@ Array.prototype.insert = function(v, i){
 
 - https://www.codewars.com/kata/525f50e3b73515a6db000b83/solutions/javascript/all/clever
 
-```
+```javascript
 // Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 
 // Example:
@@ -857,7 +859,7 @@ function createPhoneNumber(numbers){
 
 - https://www.codewars.com/kata/once/solutions?show-solutions=1
 
-```
+```javascript
 // You'll implement once, a function that takes another function as an argument, and returns a new version of that function that can only be called once.
 
 // Subsequent calls to the resulting function should have no effect (and should return undefined).
@@ -895,7 +897,7 @@ function once(fn) {
 
 - https://www.codewars.com/kata/regex-password-validation/solutions/javascript
 
-```
+```javascript
 // You need to write regex that will validate a password to make sure it meets the following criteria:
 
 // At least six characters long
@@ -923,7 +925,7 @@ function validate(password) {
 
 - https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/solutions/javascript
 
-```
+```javascript
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 
 // For example:
@@ -960,7 +962,7 @@ const persistence = num => {
 
 - https://www.codewars.com/kata/5a995c2aba1bb57f660001fd/solutions/javascript/all/clever
 
-```
+```javascript
 // Let's create some scrolling text!
 
 // Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
@@ -999,7 +1001,7 @@ const scrollingText = s => [].map.call( s, (_,i) => ( s.slice(i) + s.slice(0,i) 
 
 - http://www.codewars.com/kata/52685f7382004e774f0001f7/solutions/javascript/all/clever
 
-```
+```javascript
 // Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)
 
 // HH = hours, padded to 2 digits, range: 00 - 99
@@ -1027,7 +1029,7 @@ p=n=>`0${n}`.slice(-2),humanReadable=(s)=>(m=s/60|0,p(m/60|0)+':'+p(m%60)+':'+p(
 
 - https://www.codewars.com/kata/56747fd5cb988479af000028/solutions/javascript
 
-```
+```javascript
 // You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
 // #Examples:
@@ -1059,7 +1061,7 @@ function getMiddle(s)
 
 - https://www.codewars.com/kata/54e6533c92449cc251001667/solutions/javascript
 
-```
+```javascript
 // Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
 
 // For example:
@@ -1090,7 +1092,7 @@ var uniqueInOrder = function (iterable)
 
 - https://www.codewars.com/kata/523f5d21c841566fde000009/solutions/javascript
 
-```
+```javascript
 // Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
 
 // It should remove all values from list a, which are present in list b.
@@ -1125,7 +1127,7 @@ function array_diff(a, b) {
 
 - https://www.codewars.com/kata/57126304cdbf63c6770012bd/solutions/javascript/all/clever
 
-```
+```javascript
 // Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
 
 // Valid examples, should return true:
@@ -1252,7 +1254,7 @@ function isDigit(s) {
 
     - 错误处理不够优雅，无法通过try catch捕捉错误，同步异步错误传播要分开捕获（与下面async比较）
 
-      ```
+      ```javascript
       const asyncFunction = () => {
         try{
           doSynchronousThings()
@@ -1282,7 +1284,7 @@ function isDigit(s) {
 
     - 更优雅的错误处理try catch（与上promises比较）
 
-      ```
+      ```javascript
       const asyncFunction = async () => {
         try{
           doSynchronousThings()
@@ -1301,7 +1303,7 @@ function isDigit(s) {
 
 - https://www.codewars.com/kata/directions-reduction/solutions/javascript
 
-```
+```javascript
 // Once upon a time, on a way through the old wild west,…
 … a man was given directions to go from one point to another. The directions were "NORTH", "SOUTH", "WEST", "EAST". Clearly "NORTH" and "SOUTH" are opposite, "WEST" and "EAST" too. Going to one direction and coming back the opposite direction is a needless effort. Since this is the wild west, with dreadfull weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!
 
@@ -1380,7 +1382,6 @@ function dirReduc(plan) {
       return dirs;
     }, []);
 }
-
 ```
 
 
@@ -1478,6 +1479,112 @@ var maxSequence = function(arr){
 const maxSequence = (a,sum=0) => a.reduce((max,v) => Math.max(sum = Math.max(sum + v, 0), max), 0);
 
 ```
+
+
+
+### 2018/07/13
+
+##### bind polyfill
+
+```Javascript
+if (!Function.prototype.bind) {
+	Function.prototype.bind = function(oThis) {
+		if (typeof this !== "function") {
+			// closest thing possible to the ECMAScript 5
+			// internal IsCallable function
+			throw new TypeError( "Function.prototype.bind - what " +
+				"is trying to be bound is not callable"
+			);
+		}
+
+		var aArgs = Array.prototype.slice.call( arguments, 1 ),
+			fToBind = this,
+			fNOP = function(){},
+			fBound = function(){
+				return fToBind.apply(
+					(
+						this instanceof fNOP &&
+						oThis ? this : oThis
+					),
+					aArgs.concat( Array.prototype.slice.call( arguments ) )
+				);
+			}
+		;
+
+		fNOP.prototype = this.prototype;
+		fBound.prototype = new fNOP();
+
+		return fBound;
+	};
+}
+```
+
+
+
+##### 软绑定
+
+- https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md
+
+```Javascript
+if (!Function.prototype.softBind) {
+	Function.prototype.softBind = function(obj) {
+		var fn = this,
+			curried = [].slice.call( arguments, 1 ),
+			bound = function bound() {
+				return fn.apply(
+					(!this ||
+						(typeof window !== "undefined" &&
+							this === window) ||
+						(typeof global !== "undefined" &&
+							this === global)
+					) ? obj : this,
+					curried.concat.apply( curried, arguments )
+				);
+			};
+		bound.prototype = Object.create( fn.prototype );
+		return bound;
+	};
+}
+
+function foo() {
+   console.log("name: " + this.name);
+}
+
+var obj = { name: "obj" },
+    obj2 = { name: "obj2" },
+    obj3 = { name: "obj3" };
+
+var fooOBJ = foo.softBind( obj );
+
+fooOBJ(); // name: obj
+
+obj2.foo = foo.softBind(obj);
+obj2.foo(); // name: obj2   <---- look!!!
+
+fooOBJ.call( obj3 ); // name: obj3   <---- look!
+
+setTimeout( obj2.foo, 10 ); // name: obj   <---- falls back to soft-binding
+```
+
+
+
+##### RPC
+
+
+
+##### 红黑树
+
+
+
+##### Behavior Delegation
+
+
+
+##### OLOO(Objects Linked to Other Objects)
+
+
+
+
 
 
 
