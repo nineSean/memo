@@ -1584,6 +1584,31 @@ setTimeout( obj2.foo, 10 ); // name: obj   <---- falls back to soft-binding
 
 
 
+### 2018/07/14
+
+##### 一刷《你不知道的javascript（上卷）》
+
+- https://github.com/getify/You-Dont-Know-JS
+
+##### OOP VS OLOO
+
+
+
+##### class带来的隐患
+
+
+
+##### JSON.stringify(target, replacer)
+
+
+
+##### document.all
+
+- 作为假值对象 — falsy value
+- 老版本IE为真值对象，故用以区分
+
+
+
 
 
 
