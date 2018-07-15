@@ -1609,6 +1609,24 @@ setTimeout( obj2.foo, 10 ); // name: obj   <---- falls back to soft-binding
 
 
 
+### 2017/07/15
+
+##### ~x大致等于-(x+1)
+
+
+
+##### == vs ===
+
+- 前者允许隐式强制类型转换，后者不允许
+
+
+
+
+
+
+
+
+
 
 
 
