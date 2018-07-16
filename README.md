@@ -1621,6 +1621,101 @@ setTimeout( obj2.foo, 10 ); // name: obj   <---- falls back to soft-binding
 
 
 
+### 2017/07/16
+
+##### 并行
+
+
+
+##### 并发
+
+
+
+##### 回调
+
+- 解决不调用的信任问题
+
+```js
+function timeoutify(fn,delay) {
+	var intv = setTimeout( function(){
+			intv = null;
+			fn( new Error( "Timeout!" ) );
+		}, delay )
+	;
+
+	return function() {
+		// timeout hasn't happened yet?
+		if (intv) {
+			clearTimeout( intv );
+			fn.apply( this, [ null ].concat( [].slice.call( arguments ) ) );
+		}
+	};
+}
+
+// using "error-first style" callback design
+function foo(err,data) {
+	if (err) {
+		console.error( err );
+	}
+	else {
+		console.log( data );
+	}
+}
+
+ajax( "http://some.url.1", timeoutify( foo, 500 ) );
+```
+
+
+
+- 确保异步执行
+
+```js
+function asyncify(fn) {
+	var orig_fn = fn,
+		intv = setTimeout( function(){
+			intv = null;
+			if (fn) fn();
+		}, 0 )
+	;
+
+	fn = null;
+
+	return function() {
+		// firing too quickly, before `intv` timer has fired to
+		// indicate async turn has passed?
+		if (intv) {
+			fn = orig_fn.bind.apply(
+				orig_fn,
+				// add the wrapper's `this` to the `bind(..)`
+				// call parameters, as well as currying any
+				// passed in parameters
+				[this].concat( [].slice.call( arguments ) )
+			);
+		}
+		// already async
+		else {
+			// invoke original function
+			orig_fn.apply( this, arguments );
+		}
+	};
+}
+
+function result(data) {
+	console.log( a );
+}
+
+var a = 0;
+
+ajax( "..pre-cached-url..", asyncify( result ) );
+a++;
+```
+
+
+
+
+
+
+
 
 
 
