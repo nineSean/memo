@@ -1712,6 +1712,29 @@ a++;
 
 
 
+### 2018/07/17
+
+##### Promise.resolve(value)
+
+- 无论value是普通值、可信亦或是不可信的thenable，都会封装为可信任的thenable
+
+##### Promise第一个参数命名为resolve比fulfill准确
+
+- resovle(value)，当value为thenable或者Promise时，不管是fulfilled或者是rejected状态都可以处理并且展开，所以如果命名为fulfill就会有歧义了
+- 所以resolve具有duality(二元性)
+
+##### generator
+
+- next()与yield组成双向消息传递系统
+
+  - yield表达式可以发送消息响应next()调用，next()也可以向暂停的yield表达式传值
+
+  - next()执行发起询问‘生成器下一个给我的值是？’，yield表达式回答
+
+    ​
+
+
+
 
 
 
