@@ -1726,12 +1726,164 @@ a++;
 ##### generator
 
 - next()与yield组成双向消息传递系统
-
   - yield表达式可以发送消息响应next()调用，next()也可以向暂停的yield表达式传值
+  - 执行next()发起询问‘生成器下一个给我的值是？’，yield表达式回答
 
-  - next()执行发起询问‘生成器下一个给我的值是？’，yield表达式回答
 
-    ​
+
+### 2018/07/18
+
+##### Math.hypot(arr)
+
+- 数组每一项平方和的开方
+
+##### Vector class
+
+- https://www.codewars.com/kata/526dad7f8c0eb5c4640000a4/solutions/javascript
+
+```js
+// Create a Vector object that supports addition, subtraction, dot products, and norms. So, for example:
+
+// var a = new Vector([1, 2, 3]);
+// var b = new Vector([3, 4, 5]);
+// var c = new Vector([5, 6, 7, 8]);
+// 
+// a.add(b);      // should return a new Vector([4, 6, 8])
+// a.subtract(b); // should return a new Vector([-2, -2, -2])
+// a.dot(b);      // should return 1*3 + 2*4 + 3*5 = 26
+// a.norm();      // should return sqrt(1^2 + 2^2 + 3^2) = sqrt(14)
+// a.add(c);      // throws an error
+// If you try to add, subtract, or dot two vectors with different lengths, you must throw an error!
+// 
+// Also provide:
+// 
+// a toString method, so that using the vectors from above, a.toString() === '(1,2,3)' (in Python, this is a __str__ method, so that str(a) == '(1,2,3)')
+// an equals method, to check that two vectors that have the same components are equal
+// Note: the test cases will utilize the user-provided equals method.
+
+var Vector = function (components) {
+  this.arr = components
+};
+Vector.prototype.add = function(vector){
+  return this.arr.length === vector.arr.length ? new Vector(this.arr.map((v, i) => v + vector.arr[i])) : !function(){throw new Error('error')}()
+}
+Vector.prototype.subtract = function(vector){
+  return this.arr.length === vector.arr.length ? new Vector(this.arr.map((v, i) => v - vector.arr[i])) : !function(){ throw new Error('error')}()
+}
+Vector.prototype.dot = function(vector){
+  return this.arr.length === vector.arr.length ? this.arr.reduce((a, c, i) => a + c*vector.arr[i], 0) : !function(){throw new Error('error')}()
+}
+Vector.prototype.norm = function(){
+  return Math.hypot(...this.arr)
+}
+Vector.prototype.toString = function(){
+  return `(${this.arr.toString()})`
+}
+Vector.prototype.equals = function(vector){
+  return this.toString() === vector.toString()
+}
+
+//clever 虽然用了eval，但是思路可做了解
+var Vector = function (components) {
+  this.items = components;
+  this.length = components.length;
+};
+
+Vector.prototype = {
+  do: function (action, vector) {
+    if (vector.length !== this.length) { throw 'Different Length!'; }
+    return new Vector(this.items.map(function (v, k) { 
+      return eval(v + action + vector.items[k])
+    }));
+  },
+  add: function (v) { return this.do('+', v); },
+  subtract: function (v) { return this.do('-', v); },
+  sum: function (v) { return eval(v.items.join('+')); },
+  dot: function (v) { return this.sum(this.do('*', v)); },
+  norm: function () { return Math.sqrt(this.dot(this)); },
+  toString: function() { return '(' + this.items + ')'; },
+  equals: function (v) { return this.toString() == v.toString(); }  
+};
+```
+
+##### Simple Web Framework #1: Create a basic router
+
+- https://www.codewars.com/kata/588a00ad70720f2cd9000005/solutions/javascript/all/clever
+
+```js
+// In this Kata, you have to design a simple routing class for a web framework.
+
+// The router should accept bindings for a given url, http method and an action.
+// 
+// Then, when a request with a bound url and method comes in, it should return the result of the action.
+// 
+// Example usage:
+// 
+// var router = new Router;
+// router.bind('/hello', 'GET', function(){ return 'hello world'; });
+// 
+// router.runRequest('/hello', 'GET') // returns 'hello world';
+// When asked for a route that doesn't exist, router should return:
+// 
+// 'Error 404: Not Found'
+// The router should also handle modifying existing routes. See the example tests for more details.
+
+//笨办法
+var Router = function(){
+  this.data = []
+}
+Router.prototype = {
+  constructor: Router,
+  bind(path, method, action){
+  console.log(this.data)
+    for(let i = 0; i < this.data.length; i++){
+      if(this.data[i].path === path && this.data[i].method.toUpperCase() === method.toUpperCase()){
+        return this.data[i].action = action}
+    }
+    this.data.push({path, method, action})
+  },
+  runRequest(path, method){
+    for(let item of this.data){
+      if(item.path === path && item.method.toUpperCase() === method.toUpperCase()) return item.action()
+    }
+    return 'Error 404: Not Found'
+  } 
+}
+
+//clever Map的用法，优雅好多
+class Router {
+    
+    constructor() {
+        this.routes = new Map();
+    }  
+        
+    bind(url, method, action) {
+        this.routes.set(url + ":" + method, action);
+    }
+    
+    runRequest(url, method) {
+        if (!this.routes.has(url + ":" + method)) {
+            return "Error 404: Not Found";
+        }
+        return this.routes.get(url + ":" + method)();
+    }
+    
+}
+```
+
+##### git revert vs git reset vs git checkout
+
+- https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting
+- 都可以用来撤销对repo的变动
+  - git checkout
+    - 改变head指针的指向
+    - 用于快速查看项目之前的各个版本/做一些实验性的改动，如果要保留就新建分支
+    - commits和files级别操作
+  - git reset
+    - 改变head指针指向，使‘三棵树’的状态都指向该commit
+  - git revert
+    - 指向指定commit，只能commit级别，无法进行files级别操作
+    - 不重写历史，远程仓库使用最安全
 
 
 
