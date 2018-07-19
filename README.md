@@ -71,7 +71,7 @@
 
 ### 2018/07/02
 
-##### Javascrit类型检查
+##### Javascript类型检查
 
 - [https://webbjocke.com/javascript-check-data-types/](https://webbjocke.com/javascript-check-data-types/)
 
@@ -107,13 +107,7 @@ isNaN(value)
 ##### DP(dynamic programming)
 
 - 把一个问题划分成若干子问题，相同的子问题只需解决一次进而减少了计算量。
-##### git flow
 
-- [https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow)
-##### git cherry-pick
-
-- [https://www.jianshu.com/p/08c3f1804b36](https://www.jianshu.com/p/08c3f1804b36)
-- [https://juejin.im/post/5925a2d9a22b9d0058b0fd9b](https://juejin.im/post/5925a2d9a22b9d0058b0fd9b)
 ##### jj
 
 ```
@@ -1884,6 +1878,43 @@ class Router {
   - git revert
     - 指向指定commit，只能commit级别，无法进行files级别操作
     - 不重写历史，远程仓库使用最安全
+
+### 2018/07/19
+
+##### ruby
+
+- http://ruby-doc.com/docs/ProgrammingRuby/
+
+##### clean code
+
+- https://www.investigatii.md/uploads/resurse/Clean_Code.pdf
+- 经典必读，今年完成一刷
+
+##### git合并分支
+
+- git merge
+  - https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6
+- git rebase
+  - https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA
+  - 更线性的历史
+  - 原则：只对尚未推送或分享给别人的本地修改执行rebase操作清理历史，从不对已推送至别处的提交执行变基操作
+  - 用于合并分支
+  - 用于重写历史
+- git cherry-pick
+  - https://git-scm.com/book/zh/v2/%E5%88%86%E5%B8%83%E5%BC%8F-Git-%E7%BB%B4%E6%8A%A4%E9%A1%B9%E7%9B%AE
+  - https://juejin.im/post/5925a2d9a22b9d0058b0fd9b
+  - https://www.jianshu.com/p/08c3f1804b36
+
+##### git flow
+
+- http://www.ruanyifeng.com/blog/2015/12/git-workflow.html
+- https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow
+
+##### default parameters
+- https://medium.com/dailyjs/named-and-optional-arguments-in-javascript-using-es6-destructuring-292a683d5b4e
+
+
+
 
 
 
