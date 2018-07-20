@@ -1298,8 +1298,7 @@ function isDigit(s) {
 - https://www.codewars.com/kata/directions-reduction/solutions/javascript
 
 ```javascript
-// Once upon a time, on a way through the old wild west,…
-… a man was given directions to go from one point to another. The directions were "NORTH", "SOUTH", "WEST", "EAST". Clearly "NORTH" and "SOUTH" are opposite, "WEST" and "EAST" too. Going to one direction and coming back the opposite direction is a needless effort. Since this is the wild west, with dreadfull weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!
+// Once upon a time, on a way through the old wild west,…… a man was given directions to go from one point to another. The directions were "NORTH", "SOUTH", "WEST", "EAST". Clearly "NORTH" and "SOUTH" are opposite, "WEST" and "EAST" too. Going to one direction and coming back the opposite direction is a needless effort. Since this is the wild west, with dreadfull weather and not much water, it's important to save yourself some energy, otherwise you might die of thirst!
 
 // How I crossed the desert the smart way.
 // The directions given to the man are, for example, the following:
@@ -1885,7 +1884,7 @@ class Router {
 
 - http://ruby-doc.com/docs/ProgrammingRuby/
 
-##### clean code
+##### 《Clean Code》
 
 - https://www.investigatii.md/uploads/resurse/Clean_Code.pdf
 - 经典必读，今年完成一刷
@@ -1910,13 +1909,87 @@ class Router {
 - http://www.ruanyifeng.com/blog/2015/12/git-workflow.html
 - https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/git-flow
 
-##### default parameters
+##### named and positional parameters
 - https://medium.com/dailyjs/named-and-optional-arguments-in-javascript-using-es6-destructuring-292a683d5b4e
+- http://2ality.com/2011/11/keyword-parameters.html
+- C# named parameters simulation
 
+### 2017/07/20
 
+##### destructing and parameters handling
 
+- http://2ality.com/2015/01/es6-destructuring.html
 
+##### ES6 module
 
+- http://2ality.com/2014/09/es6-modules-final.html
+
+##### generator感悟
+
+- next()的作用
+  - 迭代器迭代一次
+  - 获取内部yield出来的值
+- yield的作用
+  - 暂停生成器——控制权转移
+  - 获取外部next(val)传进来的val
+- 通过next()与yield之间消息（值）的相互传递实现双向消息传递系统
+
+##### right associativity
+
+- ternary operator
+
+```js
+var foo = true ? false : true ? 2 : 3 // output is false not 3 because of right to left associativity
+
+// 左结合性就是同种运算符（优先级相同运算符更准确）之间是从左到右解析的，就像下面利用小括号
+var foo = (true ? false : true) ? 2 : 3 // 3
+
+// 右结合性就是同种运算符之间是从右到左解析，如开始的例子，相当于在后面加了小括号
+var foo = true ? false : (true ? 2 : 3) // false
+```
+
+##### operator precedence
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+- 运算符优先级是在太重要，故创造口诀以便记忆
+- 口诀
+  - 优先级由小到大
+     - 逗耶佛跳逻 位等英比...
+  - 优先级由大到小
+     - 括属牛call...
+  - 太多编不下去了ORZ
+
+##### 算法学习路径
+
+1. 高等数学
+   - [《普林斯顿微积分读本》](https://zhuanlan.zhihu.com/p/31199228)
+   - [《单变量微积分》David Jarison](https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/video-lectures/)
+   - [麻省理工公开课的《单变量微积分》](https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/index.htm)
+   - [如何学好高等数学](https://www.zhihu.com/question/20587989)
+
+2. 离散数学
+   - [《离散数学导学》](https://book.douban.com/subject/1231286/)
+   - [《离散数学及其应用》](https://book.douban.com/subject/26316200/)
+
+3. 初步了解
+   - 《算法图解》
+   - 《算法基础》
+
+4. [《算法》](https://book.douban.com/subject/19952400/)
+
+5. [《算法导论》](https://book.douban.com/subject/20432061/)
+
+6. 参考
+   - https://www.zhihu.com/question/21318658
+   - https://www.zhihu.com/question/19981544
+
+##### Java
+
+- 静态强类型
+- 基于类
+- 类：一类对象的抽象，包括状态和方法
+- 对象是类的实例
+- Java程序的基本结构：类与类之间的关系，具体类对象之间的交互
 
 
 
