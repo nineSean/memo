@@ -1991,6 +1991,35 @@ var foo = true ? false : (true ? 2 : 3) // false
 - 对象是类的实例
 - Java程序的基本结构：类与类之间的关系，具体类对象之间的交互
 
+### 2018/07/21
+
+##### VIM Marks
+
+- Marks
+   - **`.**跳到最后一次修改的位置
+   - **``**跳到回上一次的位置
+
+```js
+:marks - list of marks
+ma - set current position for mark A
+`a - jump to position of mark A
+y`a - yank text to position of mark A
+```
+
+##### 很全的VIM速查卡
+
+- https://coolshell.cn/articles/5479.html
+
+##### IDE + VIM 感想
+
+- 纵向
+   - VIM是一种思想、哲学，不易过时
+   - 一次学习，长久受用
+   - 越用挖掘越深，越能提升效率 
+- 横向
+   - VIM是一种编辑模式
+   - 与各种IDE配合，既能发挥VIM无鼠标操作的流畅感，又能享用IDE自身特性
+   - 学习各种语言时自带熟悉的操作感
 
 
 
