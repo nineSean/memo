@@ -141,8 +141,7 @@ isNaN(value)
 
 -   [https://github.com/mqyqingfeng/Blog/issues/27](https://github.com/mqyqingfeng/Blog/issues/27)
 - [https://github.com/huangchucai/My-Note-Blog/issues/13](https://github.com/huangchucai/My-Note-Blog/issues/13)
-
-  ****
+  
 ##### Persistence data
 
 - [https://www.datastax.com/dev/blog/what-persistence-and-why-does-it-matter](https://www.datastax.com/dev/blog/what-persistence-and-why-does-it-matter)
@@ -1996,8 +1995,8 @@ var foo = true ? false : (true ? 2 : 3) // false
 ##### VIM Marks
 
 - Marks
-   - **`.**跳到最后一次修改的位置
-   - **``**跳到回上一次的位置
+   - **`.** 跳到最后一次修改的位置
+   - **``** 跳回上一次的位置
 
 ```js
 :marks - list of marks
@@ -2021,11 +2020,45 @@ y`a - yank text to position of mark A
    - 与各种IDE配合，既能发挥VIM无鼠标操作的流畅感，又能享用IDE自身特性
    - 学习各种语言时自带熟悉的操作感
 
+### 2018/07/22
 
+##### VIM tricks and tips
 
+- http://vim.wikia.com/wiki/Best_Vim_Tips
 
+##### overview about 10 languages
 
+- https://www.youtube.com/watch?v=7bE2mI4ePeU
 
+##### how the internet works ( 47 minutes )
+
+- https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7
+
+##### how computers work ( 27 minutes )
+
+- https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-
+- core task
+   - input
+   - storage
+   - processing
+   - output
+- binary number system
+   - ones or zeros ( electrical signal, on or off )
+   - decimal number convert to binary number
+   - all information media can convert to number
+      - text
+         - like ASCII Unicode
+      - image and vedio
+         - image -> consist of pixels -> RGB -> number
+         - vedio -> 30 images per seconds
+      - sound
+         - sound is a seriers of vibrations in the air
+         - vibrations can be represented graphically as a waveform
+         - any point on the waveform can be represented by a number
+
+##### How Not to Get Hacked
+
+- https://code.org/curriculum/csp/docs/hownottogethacked
 
 
 
