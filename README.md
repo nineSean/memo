@@ -2060,7 +2060,107 @@ y`a - yank text to position of mark A
 
 - https://code.org/curriculum/csp/docs/hownottogethacked
 
+### 2018/07/23
 
+##### about cryptography
+
+- PKI(public key infrastructure)
+   - confidentiality 
+   - 公钥加密（public-key crytography）又称非对称加密（asymmetric cryptography）
+- 简单分析A向B发送消息过程
+   - A手握自己的私钥与B的公钥
+     - 私钥为了确认身份，B手上A的公钥只能解密经过A私钥加密的信息
+     - 公钥是为了保密性，经过B公钥加密的信息只有B的私钥才能解密
+   - B手握自己的私钥与A的公钥
+   - A用私钥加密再用公钥加密
+   - B拿到消息先用A的公钥解密来做验证消息来源
+   - B再用私钥解密消息内容
+   - 其中存在如何确保公钥真实性的问题，见下文
+- digital signature certificate
+   - integrity -> 完整性
+   - authenticity -> 真实性
+   - non-repudiation -> 不可否认性
+   - 数字签名证书由信任第三方CA发布
+   - 假设有三方CA，A，B
+      - CA用自己的私钥加密A的公钥及其它相关信息生成数字证书
+      - A发送消息给B时附上数字证书
+      - B通过CA的公钥（CA公钥内置在浏览器、操作系统）解码数字证书获取可信的A的公钥
+- 其它
+    
+    ```js
+    非对称加密作为破解难度更大的加密方式，一般也只用作某个对称加密算法的密钥传递信道，以获取加密效率和安全性的平衡
+    
+    未来可能使用量子通信做为更高级的信道派发公钥
+    ```
+   - 上文理解为：实际中先是采取非对称加密建立可靠连接来传送对称加密的公钥，最后使用对称加密来进行连接通信，这样在确保了安全性的基础上保证了效率
+- SSH
+   - Secure Shell
+   - 作用
+      - 远程登录服务器
+      - 使用命令行接口
+   - 使用非对称加密技术
+      - 加密算法有很多种，如RSA、DSA、ED25519等
+   - 所以起名很形象：安全的shell
+- https://www.youtube.com/watch?v=G7hs-3R86M0
+- https://www.youtube.com/watch?v=y2SWzw9D4RA
+- http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html
+- https://www.zhihu.com/question/47232448
+
+##### Jokes you've been 'awaiting' for ... promise
+
+- https://www.codewars.com/kata/jokes-youve-been-awaiting-for-dot-dot-dot-promise/solutions?show-solutions=1
+
+```js
+/*** Here are some classic Christmas cracker jokes.
+
+There is a made up API URL (http://great.jokes/christmas) that you can call to a get list of Christmas jokes in JSON format.
+
+Your challenge
+Write an async function which takes an apiUrl and jokeId which returns a promise.
+The data will need to be filtered to get the specified joke by id.
+When you got the joke it should be accessible through a simple API of saySetup and sayPunchLine methods.
+Handle error cases
+
+If a joke can't be found throw an error message in this format new Error('No jokes found id: {jokeId}').
+Getting jokes from a another API URL may return a different data shape, throw this error message new Error('No jokes at url: {url}') for an unexpected shape.
+Throw error in a promise style
+
+Info
+Get the data using the mocked fetch(url) function, which implements the basics of the fetch api. Learn about fetch. Learn about async/await.
+
+Joke data shape:
+
+{
+  jokes: [{ 
+    id: 101,
+    setup: "Who is Santa's favorite singer?",
+    punchLine: "Elf-is Presley!"
+  },
+...moreJokes]
+// Use for your tests ^^
+***/
+
+async function sayJoke(apiUrl, jokeId){
+   const jokesResponse = await fetch(apiUrl);
+   const jokes = await jokesResponse.json();
+   
+  if (!jokes.jokes) {
+    throw new Error(`No jokes at url: ${apiUrl}`)
+  }
+  
+  const joke = jokes.jokes.find(joke => joke.id === jokeId);
+  
+   if (!joke) {
+     throw new Error(`No jokes found id: ${jokeId}`);
+   }
+   
+   return {
+       saySetup: () => joke.setup,
+       sayPunchLine: () => joke.punchLine
+   };
+   
+}
+```
 
 
 
