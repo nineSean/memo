@@ -2092,7 +2092,7 @@ y`a - yank text to position of mark A
     
     未来可能使用量子通信做为更高级的信道派发公钥
     ```
-   - 上文理解为：实际中先是采取非对称加密建立可靠连接来传送对称加密的公钥，最后使用对称加密来进行连接通信，这样在确保了安全性的基础上保证了效率
+   - 上文理解为：现实中先是采取非对称加密建立可靠连接来传送对称加密的公钥，最后使用对称加密来进行连接通信，这样在确保了安全性的基础上保证了效率
 - SSH
    - Secure Shell
    - 作用
@@ -2162,8 +2162,23 @@ async function sayJoke(apiUrl, jokeId){
 }
 ```
 
+### 2018/07/24
 
+##### duplex
+- full duplex
+   - 双方在数据传输的过程中，同一时间允许双向传输（即收发）
+   - 如手机通话
+- half duplex
+   - 双方能够通讯，但不同时，即同一时间只允许收或者发讯息
+   - 如对讲机
 
+##### 数字证书原理
+
+- http://www.cnblogs.com/JeffreySun/archive/2010/06/24/1627247.html#!comments
+
+##### TCP那些事儿（上）- coolshell
+
+- https://coolshell.cn/articles/11564.html
 
 
 
