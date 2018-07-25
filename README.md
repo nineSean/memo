@@ -2180,5 +2180,13 @@ async function sayJoke(apiUrl, jokeId){
 
 - https://coolshell.cn/articles/11564.html
 
+##### 2018/07/25
+
+##### CIDR与IP地址
+
+- http://uule.iteye.com/blog/2102484
+- https://www.waitig.com/cidr%E7%9A%84ip%E5%9C%B0%E5%9D%80%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E5%88%92%E5%88%86%E6%96%B9%E6%B3%95.html
+
+
 
 
