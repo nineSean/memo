@@ -2180,13 +2180,39 @@ async function sayJoke(apiUrl, jokeId){
 
 - https://coolshell.cn/articles/11564.html
 
-##### 2018/07/25
+### 2018/07/25
 
 ##### CIDR与IP地址
 
 - http://uule.iteye.com/blog/2102484
 - https://www.waitig.com/cidr%E7%9A%84ip%E5%9C%B0%E5%9D%80%E7%9A%84%E8%A1%A8%E7%A4%BA%E4%B8%8E%E5%88%92%E5%88%86%E6%96%B9%E6%B3%95.html
 
+### 2018/07/26
 
+##### 网络连接
 
+- TCP UDP
+   - 浏览器邮件收发数据走TCP
+   - DNS查询等收发较短的数据走UDP
+- IP
+   - ICMP
+- ARP
+   - MAC
+- MTU
+   - Maximum Transmission Unit
+   - 一个网络包的最大长度，以太网的是1500字节
+   - MTU = header + MSS
+- MSS
+   - Maximum Segment Size
+   - 特指TCP数据长度
+   - TCP IP头部长度一般为40字节，所以MSS长度为1460字节
+
+##### cookie
+
+- 作用
+   - 浏览器识别用户
+   - 保存一些状态信息
+   - 不是用作客户端存储
+- 大小
+   - 4KB
 
