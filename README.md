@@ -2216,3 +2216,14 @@ async function sayJoke(apiUrl, jokeId){
 - 大小
    - 4KB
 
+### 2018/07/28
+
+##### 二进制数组
+
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Typed_arrays
+
+##### lodash深拷贝
+
+- http://07lyt.com/2016/12/14/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0clonedeep/
+- http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/
+
