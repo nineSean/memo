@@ -2227,3 +2227,36 @@ async function sayJoke(apiUrl, jokeId){
 - http://07lyt.com/2016/12/14/%E8%87%AA%E5%B7%B1%E5%AE%9E%E7%8E%B0clonedeep/
 - http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/
 
+### 2018/09/07
+
+##### Cookie vs Session
+
+- 目的
+    - 只是为了区分用户就用Cookie
+    - 记录用户的私密信息时，用Session
+- 实现原理
+    - 响应时设置`Set-Cookie`头，此为HTTP协议层面的技术，存储在浏览器端
+    - 而Session不是HTTP协议层面的技术，存储在服务器端，不同的后端框架实现机制不同，一般存在内存（不建议）、文件、数据库
+- 关系
+    - Session一般基于Cookie，但是不绝对
+    - Session可以放在localStorage，需要的时候用JS读取在带到request header里
+    - Session还可以作为查询参数放在url里
+
+##### flex layout
+
+- flex container properties
+    - flex-direction
+    - flex-wrap
+    - flex-flow
+    - justify-content
+    - align-items
+    - align-content
+- flex item properties
+    - flex-grow
+    - flex-shrink
+    - flex-basis
+    - flex
+    - order
+    - align-self
+
+
