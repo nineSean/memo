@@ -25,6 +25,7 @@
 ##### http cache strategy
 
 - [https://segmentfault.com/a/1190000008956069](https://segmentfault.com/a/1190000008956069)
+- https://zhuanlan.zhihu.com/p/23299600?refer=study-fe
 
 ##### shell scripting
 
@@ -2241,12 +2242,23 @@ async function sayJoke(apiUrl, jokeId){
     - Session一般基于Cookie，但是不绝对
     - Session可以放在localStorage，需要的时候用JS读取在带到request header里
     - Session还可以作为查询参数放在url里
+- 参考
+    - http://book.jirengu.com/fe/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/Javascript/%E5%AD%98%E5%82%A8.html
+
+#### 
 
 ##### flex layout
 
 - flex container properties
     - flex-direction
+        - row(default)
+        - row-reverse
+        - column
+        - column-reverse
     - flex-wrap
+        - nowrap(default)
+        - wrap
+        - wrap-reverse
     - flex-flow
     - justify-content
     - align-items
@@ -2259,4 +2271,59 @@ async function sayJoke(apiUrl, jokeId){
     - order
     - align-self
 
+### 2018/09/13
+
+#### 获取页面元素位置
+
+- 获取元素在页面中的绝对位置
+
+```js
+//method one
+function getAbsolutePositionY(element){
+    let y = element.offsetTop
+    while(element.offsetParent !== null){
+        element = element.offsetParent
+        y += element.offsetTop
+    }
+    return y
+}
+//menthod two
+element.getBoundingClientRect().top + document.documentElement.scrollTop
+```
+
+- DOM元素属性
+
+```js
+//高
+element.scrollHeight
+element.clientHeight
+element.offsetHeight
+
+//距离
+element.scrollTop
+element.offsetTop //element.offsetParent获取定位父容器（否则为body，但为body时，offsetTop包含至body的margin）
+
+//获取封装了元素左上角与右下角到viewport左上角距离等数据的对象
+element.getBoundingClientRect()
+
+
+```
+
+- BOM核心对象属性、方法
+
+```js
+//属性
+window.innerHeight
+window.scrollY
+
+//方法
+window.scrollTo(x, y)
+window.scrollBy(x, y)
+
+```
+
+- 参考
+    - http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html
+    - http://js.jirengu.com/qaxij/1/edit?html,css,js,output
+    - http://js.jirengu.com/puqab/2/edit?html,css,js,console,output
 
