@@ -2327,3 +2327,15 @@ window.scrollBy(x, y)
     - http://js.jirengu.com/qaxij/1/edit?html,css,js,output
     - http://js.jirengu.com/puqab/2/edit?html,css,js,console,output
 
+### 2018/09/14
+
+#### JS打开新标签页
+
+```js
+window.open('http://www.baidu.com')
+
+$('body').append('<a href="" id="goto" target="_blank"></a>');
+$('#goto').attr('href', _href);
+$('#goto').get(0).click();
+```
+
