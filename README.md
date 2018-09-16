@@ -2273,7 +2273,7 @@ async function sayJoke(apiUrl, jokeId){
 
 ### 2018/09/13
 
-#### 获取页面元素位置
+#### 获取页面元素位置
 
 - 获取元素在页面中的绝对位置
 
@@ -2338,4 +2338,11 @@ $('body').append('<a href="" id="goto" target="_blank"></a>');
 $('#goto').attr('href', _href);
 $('#goto').get(0).click();
 ```
+
+### 2018/09/16
+
+#### 相对line-height中 无单位值 vs 百分比值 的继承
+
+- 无单位值得继承是继承这个无单位值，后代元素再根据自身的`font-size`再计算出绝对值
+- 百分比值是计算出绝对值后给后代元素继承
 
