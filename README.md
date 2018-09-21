@@ -2346,3 +2346,83 @@ $('#goto').get(0).click();
 - 无单位值得继承是继承这个无单位值，后代元素再根据自身的`font-size`再计算出绝对值
 - 百分比值是计算出绝对值后给后代元素继承
 
+### 2018/09/17
+
+#### webpack骨架
+
+```js
+module.exports = {
+    entry: {}, //入口
+    output: {  //输出
+        path: path.resolve(__dirname, 'dist'),
+        filename: ''
+    },
+    module: {  //预处理
+        rules: [
+            {
+                test: /\.jsx?$/,
+                use: []
+            }
+        ]
+    },
+    plugins: {},  //贯彻整个生命周期的
+    resolve: {
+        alias: ''
+    }
+}
+```
+
+### 2018/09/19
+
+#### prettier - 格式化规则设置
+- https://prettier.io/docs/en/index.html
+
+#### display:flex一定放到max-width下面，否则max-width失效（tips：display:flex都发最下面以防意外）
+
+### 2018/09/21
+
+#### 几个`input`相关的伪类`:valid` `:invalid` `:required`
+
+```js
+//都要配合input元素required属性使用，否则会出现奇怪现象
+//权重 :required >:valid 与 :invalid
+//:valid 与 :invalid规则应该是互斥的
+
+//先上一个使用场景: 需要切换input中有无内容时的状态，只用:valid
+
+//1.只要有:invalid，不匹配规则即激活（e.g.该伪类下设置字体红色，只要输入字体为红色，比较奇怪，可能后续会扩展功能），还没有想到使用场景
+//2.:required，标记位required属性的input激活
+```
+- [demo](http://jsbin.com/nutemiz/edit?html,css,output)
+
+#### SCSS summary
+
+- history
+    - 源于Ruby编译成CSS的脚本语言，所以语法类似Ruby，包含了脚本语言的基本概念，如：变量声明、各种条件、循环控制语句等等
+
+- basic
+    - nested rules
+    - `&` represent parent class
+    - attribute nested
+    - `//` anotation doesn't compile in css
+- caculate
+    - `$` is variables prefix
+    - `#{}` interpolation liked ES6 `${}` placeholder
+    - `+-*/`
+    - `18px/20px` liked no used `/`
+- static directive
+    - `@` is SCSS directive signal 
+    - `@import`
+    - `@extend`
+- mixin directive
+    - `@mixin` defines name represents a group of key-values and using `@include` the name defined by `@mixin` reference
+- control directive
+    - `@if` `@else if`
+    - `@for $i from 1 to 10`
+    - `@for $i from 1 through 10`
+    - `@each $n in x1, x2, x3`
+    - `@while $foo < 10`
+- function directive
+    - `@function name(){@return }`
+    - function body allows to use control directives but function directive
+
