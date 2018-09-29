@@ -2426,3 +2426,27 @@ module.exports = {
     - `@function name(){@return }`
     - function body allows to use control directives but function directive
 
+### 2018/09/26
+
+#### `insertAdjacentHTML`性能更好
+
+### 2018/09/28
+
+#### Vue数据通讯
+- props down event up
+    - 父子组件通讯
+        - $parent
+        - ref 
+- global bus
+    - 非父子组件通讯
+- vuex
+    - 复杂的数据通讯
+- localStorage
+
+### 2018/09/29
+
+#### object-path
+
+- 使用path来获取很深的属性的库
+
+
