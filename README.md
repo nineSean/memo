@@ -2449,4 +2449,24 @@ module.exports = {
 
 - 使用path来获取很深的属性的库
 
+### 2018/09/30
+
+#### dom遍历的BFS与DFS
+
+- https://blog.csdn.net/shuidinaozhongyan/article/details/70325551
+- https://blog.csdn.net/WickedDogg/article/details/72150040
+
+#### dns-prefetch
+
+#### 双核浏览器优先使用webkit
+
+```html
+<meta name=renderer content=webkit>
+```
+
+#### npm script
+
+- https://michael-kuehnel.de/tooling/2018/03/22/helpers-and-tips-for-npm-run-scripts.html
+- http://www.infoq.com/cn/news/2016/02/gulp-grunt-npm-scripts-part2
+
 
