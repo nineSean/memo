@@ -2559,5 +2559,19 @@ dom.dispatchEvent(e)
 //请求1->请求2->响应1->响应2...
 ```
 
+### 2018/10/02
 
+#### MVC思考
+
+- 根据wikipedia，经典的MVC是
+    - Model作为中心，管理数据，逻辑，规则
+    - View负责输出  
+    - Controller负责输入
+- 前端业务的MVC是
+    - Model负责获取数据--ajax
+    - View负责准备模板（输出）--HTML展示
+    - Controller负责拼装数据（输入）--拿到Model的数据进行渲染，即要操作dom来更新数据
+- 很明显前端MVC与经典MVC差异为前者的中心为Model，后者为Controller。
+- 仔细思考，经典MVC应该是基于服务端，所以逻辑上与前端有所差异在所难免。另外前端MVC中事件监听放在Controller里刚好完成整个数据输入的完整逻辑。
+- 所以前端的C层是最复杂的，负责模板与数据外的所有逻辑。
 
