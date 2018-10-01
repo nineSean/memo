@@ -2245,8 +2245,6 @@ async function sayJoke(apiUrl, jokeId){
 - 参考
     - http://book.jirengu.com/fe/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/Javascript/%E5%AD%98%E5%82%A8.html
 
-#### 
-
 ##### flex layout
 
 - flex container properties
@@ -2468,5 +2466,98 @@ module.exports = {
 
 - https://michael-kuehnel.de/tooling/2018/03/22/helpers-and-tips-for-npm-run-scripts.html
 - http://www.infoq.com/cn/news/2016/02/gulp-grunt-npm-scripts-part2
+
+### 2018/10/01
+
+#### pre vs xmp vs code 
+
+- 浏览器可以解析pre标签里的空格数量，但不能包含HTML元素（即不能在里面写HTML标签）
+- 浏览器把xmp标签里的所有内容当普通文本解析（即写HTML标签页当做普通文本展示）
+- code标签意指里面的内容为计算机代码，浏览器会添加默认样式
+
+#### table layout
+- `display: table`的元素独占一行，但是宽度靠子元素撑开
+- `dispaly: table-cell`的元素高度一致，取height最大
+
+#### grid layout
+
+- https://css-tricks.com/snippets/css/complete-guide-grid/
+- http://cssgridgarden.com/
+    - level24 26有点反直觉，重点是要考虑预设了5行5列
+- `display: grid`元素不受浮动元素影响，并且比普通流、浮动元素与`position`非`fixed/relative/abosulte/sticky`元素的层级高（即覆盖效果）
+    - [demo](https://jsbin.com/hawovac/edit?html,css,output)
+
+#### 上下定高定位，中间自适应
+
+- https://jsbin.com/kutujiq/3/edit?html,output
+
+#### JS获取元素宽高
+
+- element.style.width
+- element.currentStyle.width
+- window.getComputedStyle(element).width
+- element.getBoundingClientRect().width
+
+#### 块级格式化上下文(BFC) 的特性
+- BFC 内的浮动不会影响到BFC外部的元素
+- BFC 的高度会包含其内的浮动元素
+- BFC 不会和浮动元素重叠
+- 同一个BFC内的垂直margin合并
+
+#### 创建BFC
+- 浮动框
+- `position`非`static`
+- 非块级的块容器(inline-block)
+- overflow 属性非 visible 的块框
+
+#### BFC使用场景
+- 清除浮动
+- 防止margin折叠
+
+#### 浮动（float）
+- 浮动元素从常规流中脱离，被漂浮在容器(包含块)左边或右边
+- 浮动盒会一直漂到其外边缘挨到容器边缘或另外的浮动盒
+- 浮动元素不会影响其后面的流内块级盒
+- 但是浮动元素后面的行级盒子会变短以避开浮动元素
+
+#### DOM事件捕获流程
+
+- `window->document->html->body->...->target`
+
+#### event对象常见应用
+
+- event.preventDefault
+- event.stopPropagation
+- event.stopImmediatePropagation
+- event.currentTarget
+- event.target
+
+#### 自定义事件
+
+```js
+let e = new Event('custome')
+dom.addEventListener('custome', function(){})
+dom.dispatchEvent(e)
+
+//CustomEvent vs Event，前者可以在new实例的时候传入一个对象作为第二个参数挂载在event对象上传递数据
+```
+
+#### HTTP协议get与post区别
+
+- <img src='./img/get-vs-post.png' alt='get vs post'>
+
+#### HTTP持久连接与管线化
+
+- 持久连接 
+    - HTTP 1.1 version才开始使用`Connection: Keep-Alive`字段建立持久连接，避免每个request/response之间都要重新建立连接，直到`Connection: Close`为止
+- 管线化
+    - <img src='./img/管线化.png' alt='管线化'>
+
+```
+//将请求1->响应1->请求2->响应2...
+//变为多个请求与响应分别打包发送，如下
+//请求1->请求2->响应1->响应2...
+```
+
 
 
