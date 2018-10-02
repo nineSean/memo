@@ -2575,3 +2575,74 @@ dom.dispatchEvent(e)
 - 仔细思考，经典MVC应该是基于服务端，所以逻辑上与前端有所差异在所难免。另外前端MVC中事件监听放在Controller里刚好完成整个数据输入的完整逻辑。
 - 所以前端的C层是最复杂的，负责模板与数据外的所有逻辑。
 
+#### 实现继承的方法演进
+
+### 2018/10/03
+
+#### 跨域
+- JSONP
+- CORS
+- WebSocket
+- postMessage
+- hash
+
+#### 安全
+- XSS
+- CSRF
+
+#### 常见算法类
+- 排序
+- 堆栈、队列、链表
+- 递归
+- 波兰式和逆波兰式
+
+#### 渲染机制
+- doctype
+    - 告诉浏览器文档类型
+    - 常用的类型有HTML5与HTML4.01（分strict与transitional；区别在于是否包含展示性与弃用元素）
+- 渲染流程
+    - reflow
+    - repaint 
+
+#### JS运行机制
+- 单线程
+- 堆栈
+- 任务队列
+- 事件循环
+
+#### 页面性能
+
+- 资源打包，减少HTTP请求
+- 非核心代码异步加载
+    - 动态脚本加载
+    - defer
+        - 加载完后，等待HTML解析完毕后，同样具有defer属性的JS按照书写顺序异步执行
+    - async
+        - 其它与defer一样，除了执行顺序不一定外
+- 浏览器缓存
+    - 强缓存不发送请求，协商缓存发送请求（名字取得好，强制与协商）
+    - 强缓存
+        - Expires
+        - Cache-Control（权重比Expires大）
+    - 协商缓存
+        - Last-Modified If-Modified-Since
+        - Etag If-None-Match
+- DNS预解析
+- 使用CDN
+        
+#### 错误监控
+- 即时运行错误：代码报错
+    - `try...catch`
+    - `window.onerror`
+- 资源加载错误 
+    - Object.onerror（注意：资源加载错误不会冒泡）
+    - performance.getEntries()捕获所有加载资源返回数组
+    - Error事件捕获
+- 跨域的JS运行错误监控
+    - `script`标签添加`crossorigin`属性
+    - JS资源响应头设置`Access-Control-Allow-Origi: 对应域/*`
+- 上报错误的原理
+    - 不推荐：AJAX 
+    - 利用Image对象上报，代码`(new Image()).src="xxxx?xxxx"`
+
+
