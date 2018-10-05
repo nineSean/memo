@@ -2661,3 +2661,54 @@ dom.dispatchEvent(e)
 - 链式调用实现是thenable对象的then方法会return一个新的Promise实例，这是因为一个实例对象的状态非resolved即rejected。
 - 解开了一个疑惑：event loop里Promise属于microtask，`new Promise(fn).then(resolve)`里Promise的回调是同步的，then的回调是异步，under the hood终于看清了。
 
+#### simple-promise
+- https://github.com/slashhuang/simple-promise
+
+### 2018/10/05
+
+#### Virtual DOM
+- what&why
+    - DOM操作是昂贵的，JS运行是高效的
+    - JS模拟DOM结构
+    - DOM变化的对比，放在JS层来做（HTML CSS JS中只有JS是图灵完备语言）
+    - 提高重绘性能
+    - 数据结构
+
+    ```js
+    //一个层次的标签用包含tag attrs children 3个属性的JS对象表示，如下：
+    {
+        tag: 'div',
+        attrs: {
+            className: 'list'
+        },
+        children: [
+            'xxx', //纯文本
+            {
+            //另外一个层级的标签，形式一样，随着层级增加而递归
+            }
+        ]
+    }
+    ```
+    
+- how
+    - [snabbdom](https://github.com/snabbdom/snabbdom)
+        - h
+            - 生成DOM数据结构
+        - patch
+            - 分首次渲染与更新，下文介绍
+
+- diff algorithm
+    - what
+        - diff算法是linux基础命令
+    - why
+        - 在virtual DOM中应用diff算法找出需要更新的节点
+    - snabbdom的diff算法实现
+        - patch(container, vnode)
+            - 渲染到空DOM元素中
+            - createElement实现
+        - patch(vnode, newVnode)
+            - 更新节点
+            - updateChildren实现
+
+
+
