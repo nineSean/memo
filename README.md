@@ -2710,5 +2710,47 @@ dom.dispatchEvent(e)
             - 更新节点
             - updateChildren实现
 
+#### mixed content
+- 没办法，只能把http协议改成https，如果资源url不支持https则没辙
+
+### 2018/10/06
+
+#### MVVM与Vue
+- jQuery库和框架区别
+    - 数据与视图分离，解耦（开放封闭原则，对扩展开放，对修改封闭）
+    - 以数据驱动视图，只关心数据变化，DOM操作被封装（开发者不关心如何渲染，由框架实现）
+- 理解MVVM
+    - Model - 数据、模型
+    - View - 视图、模板
+    - ViewModel - 连接Model与View
+- Vue三要素
+    - 响应式
+        - 
+    - 模板解析
+        - 模板
+            - 本质是字符串
+            - 蕴含逻辑，各种指令如：v-if v-on等
+            - 基于HTML，做了扩展（能嵌入JS变量）
+            - 生命周期：字符串 -> JS -> HTML
+    - render函数
+        - render(模板数据) -> 处理逻辑，渲染为DOM节点
+        - `with`
+            - with体内的变量优先在with提供的对象上找
+
+        ```js
+       // usage
+       obj = {a: 1, b: 2}
+       a = 0
+       with(obj){
+         console.log(a)
+         console.log(b)
+       }
+        ```
+        
+        - `vm._c` - createElement
+        - `vm._v` - createTextVNode
+        - `vm._s` - toString
+        - `vm._l` - renderList
+        - re-render时，没有get监听的属性是不被用到的，set监听无需处理，避免重复渲染
 
 
