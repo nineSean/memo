@@ -258,7 +258,6 @@ isNaN(value)
 
 ##### Array.prototype.insert
 
-- Chrome console支持，但是目前ES6不支持
 - insert(val, index) => return 改变后的array
 
 ```javascript
