@@ -2298,7 +2298,7 @@ element.clientHeight
 element.offsetHeight
 
 //距离
-element.scrollTop
+element.scrollTop //需要元素内容产生进度条，否则为0
 element.offsetTop //element.offsetParent获取定位父容器（否则为body，但为body时，offsetTop包含至body的margin）
 
 //获取封装了元素左上角与右下角到viewport左上角距离等数据的对象
@@ -2752,5 +2752,111 @@ dom.dispatchEvent(e)
         - `vm._s` - toString
         - `vm._l` - renderList
         - re-render时，没有get监听的属性是不被用到的，set监听无需处理，避免重复渲染
+
+### 2018/10/09
+
+#### 好看的渐变生成
+- https://uigradients.com/#PiggyPink
+- https://webgradients.com/
+
+#### 8的倍数
+- 技巧：字体与间距设置为8的倍数
+
+#### HTML渲染
+- 顺序执行，并发加载
+    - 同一个域名的并发加载资源有上限，所以会有3到4个cdn分配资源
+    - 词法分析
+    - 并发加载
+    - 并发上限
+- 是否阻塞
+    - CSS阻塞
+    - JS阻塞
+- 依赖关系
+- 引入方式
+
+### 2018/10/10
+
+#### vue data中undefined/null的属性非响应
+
+- This is intended behavior in order to make another use case possible: class-based model objects with getter/setters defined on the prototype. Note that we explicitly recommend against using class/prototype based objects as data. The general rule of thumb is Vue's reactivity system leaves everything on the prototype chain alone because we assume the user wants the original behavior on the prototype chain.My suggestion is instead of trying to expand the missing properties post-observe (inside a watcher), do it pre-observe (before you feed the object into Vue instances) - i.e. setting all of these properties onto the object as own properties before letting Vue making it reactive.
+
+#### slot-scope
+- 插槽内外数据通讯的方式，用于通过slot标签的特性，把当前作用域的数据传递给扩充插槽的元素(通过slot-scope特性拿到)
+
+#### 计算属性无法监听对象的变化，可以用watch监听
+
+### 2018/10/12
+
+#### XSS
+
+- https://segmentfault.com/a/1190000013315450
+- https://www.imooc.com/learn/812
+- https://acelibin.github.io/2017/11/23/WEB%E5%AE%89%E5%85%A8%E2%80%94%E2%80%94%E4%BA%86%E8%A7%A3XSS%E5%92%8CCSRF%E6%94%BB%E5%87%BB/             
+
+#### CSRF
+
+- https://www.jianshu.com/p/855395f9603b
+      
+### 2018/10/13
+
+#### 移动端开发 
+
+- 调试工具 charles
+- https://github.com/jtyjty99999/mobileTech/blob/master/README.md
+
+#### 浏览器存储
+- cookie
+    - limited size 4kb
+- localStorage
+    - limited size 5mb or 10mb
+- sessionStorage
+    - same as localStorage
+
+### 2018/10/14
+
+#### 同源策略
+
+- 限制范围
+    - cookie、localStorage、 indexDB 无法读取
+    - DOM 无法获取
+    - AJAX 请求不能发送
+   
+#### JS生成的img请求发送时机
+
+- 原来JS生成img，不是在插入页面后再向src发送请求，而是在设置完img.src即发送请求，见demo
+- [demo](https://jsbin.com/topeniq/edit?html,js,output)
+
+#### window.onload vs document.onload vs $(callback)
+
+- window.onload
+    - 在页面与标签上的外部资源都加载完毕才触发回调
+    - 但是有的浏览器实现与document.onload一致
+- document.onload 与 $(callback)
+    - DOM树生成即可触发回调
+
+#### 构造任意长度的数组
+
+```js
+// 造个长度5的数组
+
+// 只要用fill的填充empty即可
+let arr1 = Array(5).fill(0)
+// 利用Array.from函数第二个回调更精确的控制每个值
+let arr2 = Array.from(Array(5), (item, i) => i + 1)
+```
+
+- [更多](https://stackoverflow.com/questions/1295584/most-efficient-way-to-create-a-zero-filled-javascript-array)
+
+#### ES6 模板字符能否替代模板引擎
+- https://www.keithcirkel.co.uk/es6-template-literals/
+
+#### 函数默认参数中的可选参数
+
+- https://medium.com/dailyjs/named-and-optional-arguments-in-javascript-using-es6-destructuring-292a683d5b4e
+
+#### JS 浏览器的线程
+
+- http://imweb.io/topic/58e3bfa845e5c13468f567d5
+- https://blog.csdn.net/It_rod/article/details/79880745
 
 
