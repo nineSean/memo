@@ -258,7 +258,6 @@ isNaN(value)
 
 ##### Array.prototype.insert
 
-- Chrome console支持，但是目前ES6不支持
 - insert(val, index) => return 改变后的array
 
 ```javascript
@@ -993,7 +992,7 @@ y`a - yank text to position of mark A
 
 ### 2018/09/13
 
-#### 获取页面元素位置
+#### 获取页面元素位置
 
 - 获取元素在页面中的绝对位置
 
