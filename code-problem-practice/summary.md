@@ -1283,6 +1283,35 @@ async function sayJoke(apiUrl, jokeId){
 }
 ```
 
+### 2018/10/14
+
+#### 移除数组中的元素
+
+##### 描述
+
+```
+移除数组 arr 中的所有值与 item 相等的元素，直接在给定的 arr 数组上进行操作，并将结果返回
+removeWithoutCopy([23,1,2,3,4,23,55,23], 23) // output: [1,2,3,4,55]
+```
+
+##### 巧妙思路
+- 用队列的思路
+- 从首部开始，符合要求的值放置尾部，这个首部的值清掉；数组一个循环下来，原数组的项全部清掉，符合要求的都留下。
+
+##### 代码
+
+```
+const removeWithoutCopy = (arr, item) => {
+    let l = arr.length
+    for(let i = 0; i < l; i++){
+        if(arr[0] !== item) arr.push(arr[0])
+        arr.shift()
+    }
+    return arr
+}
+```
+
+
 
 
 
