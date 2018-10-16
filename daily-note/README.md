@@ -1345,7 +1345,7 @@ dom.dispatchEvent(e)
     - defer
         - 加载完后，等待HTML解析完毕后，同样具有defer属性的JS按照书写顺序异步执行
     - async
-        - 其它与defer一样，除了执行顺序不一定外
+        - 加载不阻塞，加载完立即执行阻塞
 - 浏览器缓存
     - 强缓存不发送请求，协商缓存发送请求（名字取得好，强制与协商）
     - 强缓存
@@ -1596,14 +1596,76 @@ let arr2 = Array.from(Array(5), (item, i) => i + 1)
 
 ### 2018/10/15
 
-- 微信小程序
-    - 特点
-        - 无需安装 — 包<1mb，所以用户感觉不到下载安装
-        - 用完即走 — 适用低频使用的应用，用户不用管理
-        - 无处不在，随时可用 — 任何服务都可以通过小程序获取
-        - 适于业务逻辑简单、使用低频、性能要求低的应用
-    - 格局
-        - 微信作为一个通讯App，内部搭建了一个平台提供给开发者，而小程序的开发成本和周期都低于Native、Hybird、webapp，这方面来说给创业者与开发者提供了便利；另一方面搭建起了一个大家共同维护的生态无疑健壮了微信这个产品的生命。可以说是相互成就，格局远大。
+#### 微信小程序
+- 特点
+  - 无需安装 — 包<1mb，所以用户感觉不到下载安装
+  - 用完即走 — 适用低频使用的应用，用户不用管理
+  - 无处不在，随时可用 — 任何服务都可以通过小程序获取
+  - 适于业务逻辑简单、使用低频、性能要求低的应用
+- 格局
+  - 微信作为一个通讯App，内部搭建了一个平台提供给开发者，而小程序的开发成本和周期都低于Native、Hybird、webapp，这方面来说给创业者与开发者提供了便利；另一方面搭建起了一个大家共同维护的生态无疑健壮了微信这个产品的生命。可以说是相互成就，格局远大。
+
+### 2018/10/16
+
+#### 开放封闭原则
+- 代码模块化便于维护
+- 降低测试回归的工作量
+
+#### JS运行机制总结
+- 堆
+- 栈
+- 执行上下文
+- 词法作用域
+- 单线程
+- event loop
+
+#### vuex
+
+- store
+    - 构建
+
+      ```js
+      const store = new Vuex.Store({
+        state: {},
+        getters: {}
+        mutations: {},
+        actions: {},
+      })
+      ```
+    
+    - state
+    - getter
+        - 类似computed
+    - mutation
+        - 必须通过mutation的方法更改state中的数据
+    - action
+        - 类似mutation，不过是通过提交mutation而不是直接改变state状态
+        - 可以包含任何异步
+    - module
+        - 当存储的对象过于庞大而臃肿时，将store分切为多个module
+        
+        ```js
+        const moduleA = {
+            state: {},
+            getters: {},
+            mutations: {},
+            actions: {}
+        }
+        const moduleB = {
+            state: {},
+            getters: {},
+            mutations: {},
+            actions: {}
+        }
+        const store = new Vuex.Store({
+            modules: {
+                a: moduleA,
+                b: moduleB
+            }
+        })
+        store.state.a
+        store.state.b
+        ```
 
 
 
