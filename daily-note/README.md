@@ -152,7 +152,7 @@ isNaN(value)
 
 ### 2018/07/05
 
-##### <a href='./img/guide for learning computer language.png'>语言学习指南</a>
+##### <a href='../img/guide for learning computer language.png'>语言学习指南</a>
 
 ##### [项目结构目录](https://www.dropbox.com/s/7c2v7es1dg3c730/Screenshot%202018-07-05%2001.25.05.png?dl=0)
 
@@ -284,7 +284,7 @@ Array.prototype.insert = function(v, i){
 
 - https://www.youtube.com/watch?v=SrNQS8J67zc
 
-  - <img src='./img/async-mechanism.png' alt='async-mechanism' />
+  - <img src='../img/async-mechanism.png' alt='async-mechanism' />
 
   - **current task** come off **event queue** and it’s location is stored in **memory** while relevant variables populate the **heap**
 
@@ -1270,14 +1270,14 @@ dom.dispatchEvent(e)
 
 #### HTTP协议get与post区别
 
-- <img src='./img/get-vs-post.png' alt='get vs post'>
+- <img src='../img/get-vs-post.png' alt='get vs post'>
 
 #### HTTP持久连接与管线化
 
 - 持久连接 
     - HTTP 1.1 version才开始使用`Connection: Keep-Alive`字段建立持久连接，避免每个request/response之间都要重新建立连接，直到`Connection: Close`为止
 - 管线化
-    - <img src='./img/管线化.png' alt='管线化'>
+    - <img src='../img/管线化.png' alt='管线化'>
 
 ```
 //将请求1->响应1->请求2->响应2...
@@ -1667,5 +1667,39 @@ let arr2 = Array.from(Array(5), (item, i) => i + 1)
         store.state.b
         ```
 
+### 2018/10/17
+
+#### 渲染机制
+- 渲染流程
+   - dom tree
+       - 增量构建
+   - cssom tree
+       - 全量构建
+   - render tree
+   - layout
+   - paint
+- 资源对渲染的影响
+   - css
+       - 阻塞渲染
+           - 通过link标签添加媒体查询避免非主样式加载的阻塞
+           - 通过DOM API创建link标签避免阻塞
+           - preload
+       - 阻塞JS执行 
+   - js
+       - 阻塞HTML parser
+       - 并行加载，顺序执行
+       - 阻塞css执行，不阻塞加载
+       - async defer相比较于放在body底部而言，优先加载了资源
+           - async加载不阻塞HTML parser，但是下载完成立即执行，阻塞渲染
+   - font
+       - 阻塞渲染
+   - img
+       - 不阻塞
+
+#### 性能优化目标
+- 降低以下指标
+    - 关键资源数量
+    - 关键资源体积
+    - 关键资源网络请求
 
 
