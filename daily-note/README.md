@@ -1703,3 +1703,23 @@ let arr2 = Array.from(Array(5), (item, i) => i + 1)
     - 关键资源网络请求
 
 
+### 2018/10/18
+
+#### chunk asset通俗理解
+- chunk中间状态的资源
+- asset是最终要获取的资源
+
+#### path.join vs path.resolve
+- path.join拼接多个路径，路径之间是相对的
+- path.resolve是从右往左拼接直到出现绝对路径位置为止
+- https://stackoverflow.com/questions/39110801/path-join-vs-path-resolve-with-dirname/39111164
+
+#### output.path vs output.publicPath
+- path是经过webpack打包后的输出路径
+- publicPath以服务器启动目录为根目录设置路径
+- https://stackoverflow.com/questions/28846814/what-does-publicpath-in-webpack-do
+
+#### NODE_ENV
+- https://juejin.im/post/5a4ed5306fb9a01cbc6e2ee2
+
+
