@@ -1723,3 +1723,50 @@ let arr2 = Array.from(Array(5), (item, i) => i + 1)
 - https://juejin.im/post/5a4ed5306fb9a01cbc6e2ee2
 
 
+### 2018/10/19
+
+#### react vs angular vs vue
+- https://academind.com/learn/angular/angular-vs-react-vs-vue-my-thoughts/
+
+#### proxychain-ng
+- https://www.hi-linux.com/posts/48321.html
+
+#### vue过滤器
+- 定义
+
+```js
+// 实例化时定义
+new Vue({
+    filters: {
+        name(){}
+    }
+})
+
+// 全局定义
+Vue.filter(name, function(){})
+```
+
+- 使用
+    - 双花括号或者v-bind的表达式后面用管道符号链接使用
+    - 流式处理表达式的返回值，可多个串联（前者的输出作为后者输入）
+
+    ```js
+    {{ expression | filterName}}
+    
+    v-bind:id="rawId | formatId"
+    ```
+    
+#### vue-router
+- router
+    - history.pushState({}, '', path)
+    - location.hash
+- 作用
+    - 跳转路径，展示不同组件，不发送请求
+
+#### autocomplete属性
+- 用于input标签是否提示之前输入过的能容并且点选入input，on为可以，off不能
+
+#### autofocus属性
+- input添加该属性，属性页面会自动聚焦至首个拥有该属性的input
+
+
