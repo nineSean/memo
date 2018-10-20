@@ -1507,8 +1507,9 @@ dom.dispatchEvent(e)
 
 ### 2018/10/10
 
-#### vue data中undefined/null的属性非响应
+#### vue data属性中undefined/null的属性非响应
 
+- https://github.com/vuejs/vue/issues/7087
 - This is intended behavior in order to make another use case possible: class-based model objects with getter/setters defined on the prototype. Note that we explicitly recommend against using class/prototype based objects as data. The general rule of thumb is Vue's reactivity system leaves everything on the prototype chain alone because we assume the user wants the original behavior on the prototype chain.My suggestion is instead of trying to expand the missing properties post-observe (inside a watcher), do it pre-observe (before you feed the object into Vue instances) - i.e. setting all of these properties onto the object as own properties before letting Vue making it reactive.
 
 #### slot-scope
@@ -1757,6 +1758,8 @@ Vue.filter(name, function(){})
     ```
     
 #### vue-router
+- 本质
+    - 把url映射到组件树结构的过程
 - router
     - history.pushState({}, '', path)
     - location.hash
@@ -1768,5 +1771,16 @@ Vue.filter(name, function(){})
 
 #### autofocus属性
 - input添加该属性，属性页面会自动聚焦至首个拥有该属性的input
+
+### 2018/10/20
+
+#### 通读尤大todoMVC
+- https://jsfiddle.net/yyx990803/4dr2fLb7/?utm_source=website&utm_medium=embed&utm_campaign=4dr2fLb7
+
+
+
+
+
+
 
 
