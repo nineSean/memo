@@ -1772,19 +1772,11 @@ Vue.filter(name, function(){})
 #### autofocus属性
 - input添加该属性，属性页面会自动聚焦至首个拥有该属性的input
 
+
 ### 2018/10/20
 
 #### 通读尤大todoMVC
 - https://jsfiddle.net/yyx990803/4dr2fLb7/?utm_source=website&utm_medium=embed&utm_campaign=4dr2fLb7
-
-
-
-
-
-
-
-
-### 2018/10/20
 
 #### 前端发展不是太快，而是被压抑
 - 2008年github面世前，缺乏平台交流共享技术
@@ -1812,10 +1804,20 @@ Vue.filter(name, function(){})
 
 #### 良言
 - 价值观决定人生方向
-- 思维模式决定成长空间
+- 思维方式决定成长空间
 
+#### 数据驱动组件开发
+- 把问题抽象成数据
+- 数据正交化
+- 视图是数据的映射
+- 组件必须是失血模型，即只包含数据处理，不包含业务逻辑
+- 设计可以数据驱动的组件
+- https://ppt.baomitu.com/d/4136e50e#/ 
 
+### 2018/10/23
 
+#### 数组方法
+- http://louiszhai.github.io/2017/04/28/array/
 
-
-
+#### 字符串方法
+- http://louiszhai.github.io/2016/01/12/js.String/
