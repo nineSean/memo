@@ -1821,3 +1821,48 @@ Vue.filter(name, function(){})
 
 #### 字符串方法
 - http://louiszhai.github.io/2016/01/12/js.String/
+
+#### vue cli 3 webpack配置
+- https://segmentfault.com/a/1190000016101954
+
+### 2018/10/25
+
+#### 移动端UI库
+- [mint-ui](https://github.com/ElemeFE/mint-ui)
+- [vue-ydui](https://github.com/ydcss/vue-ydui)
+- [vux](https://github.com/airyland/vux)
+- [weui](https://github.com/Tencent/weui)
+- [更多](https://github.com/vuejs/awesome-vue#mobile)
+
+### 2018/10/26
+
+#### 保留2位小数
+
+```js
+function format(n){
+	return String(parseInt(Number(n)*100)).replace(/(\d{2})$/, '.$1')
+}
+```
+
+#### qs
+- 把查询参数转换成对象的包
+
+#### [页面设计层级规范](https://weui.io/#layers)
+- 由上到下：popout > mask > navigation > content
+
+### 2018/10/27
+
+#### benchmark笔记
+- 获取时间api
+    - node端
+        > process.hrtime() // return [s, ns]
+        
+    - browser端
+        > performance.now()
+
+- benchmark库的改进点
+    - 每个测试用例的时间都要跑1s，这是由于benchmark库诞生的年代（2010左右）的计算机时钟精度不高造成（1ms），采取大量采样取平均值的方式。现在的提供了高性能的计时器，可用`Math.min()`代替取平均(这又大大降低了取样数量)加快跑分时间
+    - 手动取样设置的时间片精度可以降低，又节省了一部分时间
+    - 监控获取稳定数据的循环次数，当趋于稳定时停止采样
+- [参考](http://cloud.live.360vcloud.net/theater/play?roomid=2242)
+
