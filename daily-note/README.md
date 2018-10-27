@@ -1866,3 +1866,8 @@ function format(n){
     - 监控获取稳定数据的循环次数，当趋于稳定时停止采样
 - [参考](http://cloud.live.360vcloud.net/theater/play?roomid=2242)
 
+#### 某些特定场景下，vue挂载的html中的注释里有js代码的语法错误会解析并报错(用模板字符串的$中的变量，作用域会有差别，结论是不要在vue模板里用模板字符串)
+- <img src='../img/181027-1.png'>
+- <img src='../img/181027-2.png'>
+
+
