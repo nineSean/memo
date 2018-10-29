@@ -1878,4 +1878,13 @@ function format(n){
 
 #### URLSearchParams
 
+### 2018/10/29
+
+#### content-length
+- TCP协议是没有边界的，通过HTTP协议的头部字段`content-length`定义边界
+
+#### 网络协议
+- WebSocket
+ 
+- WebRTC
 
