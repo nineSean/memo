@@ -1888,3 +1888,29 @@ function format(n){
  
 - WebRTC
 
+### 2018/11/03
+
+#### [软件开发模式演进史](https://www.tapd.cn/forum/view/36971)
+- 瀑布流式开发
+- 敏捷开发
+- scrum开发
+- kanban开发
+- lean开发
+
+#### [通用研发模式演进](https://mp.weixin.qq.com/s/aEanKIwA92zTh3BP5sTwiA)
+- 经典模式
+    - SLB — server load balance
+    - ECS — entity component system
+- faas模式(function as a service)
+    - event driven 事件驱动
+    - stateless 无状态
+    - ephemeral 瞬时性
+- baas模式(backend as a service)
+- serverless模式
+
+#### WebAssembly
+- http://feday.fequan.com/2017/WebAssembly%E5%9C%A8%E7%99%BD%E9%B9%AD%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%9E%E8%B7%B5.pdf
+- https://ppt.baomitu.com/d/404dff0f
+
+
+
