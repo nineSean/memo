@@ -1912,5 +1912,19 @@ function format(n){
 - http://feday.fequan.com/2017/WebAssembly%E5%9C%A8%E7%99%BD%E9%B9%AD%E5%BC%95%E6%93%8E%E7%9A%84%E5%AE%9E%E8%B7%B5.pdf
 - https://ppt.baomitu.com/d/404dff0f
 
+### 2018/11/23
 
+#### HTTP前世今生
+- https://juejin.im/post/5be935f2e51d4570813b8cf0
+
+
+### 2019/01/08
+
+#### HTML5标签分类
+- https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories
+
+#### JSON-LD
+- 指定格式的JSON数据
+- 结构化的数据便于数据交换
+- 用于搜索引擎优化，搜索引擎直接根据JSON-LD里的数据展示在搜索结果中
 
