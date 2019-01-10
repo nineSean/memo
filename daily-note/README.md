@@ -1928,3 +1928,48 @@ function format(n){
 - 结构化的数据便于数据交换
 - 用于搜索引擎优化，搜索引擎直接根据JSON-LD里的数据展示在搜索结果中
 
+
+### 2019/01/10
+
+#### 移动端使用开发者工具
+- 开启手机usb debugging功能，不同手机方式不一样
+- 电脑chrome打开chrome://inspect
+- 手机数据线连上电脑，并且用chrome打开网页
+- 电脑上刚才打开的网页即可进行调试
+- 整个过程中注意手机提示
+
+#### 关键渲染路径
+- https://developers.google.com/web/fundamentals/performance/critical-rendering-path/
+
+#### CSS选择器为何从右往左匹配
+- 更快的效率
+- https://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left
+
+#### 网络协议与网络模型
+- [参考](- http://www.cellbiol.com/bioinformatics_web_development/chapter-1-internet-networks-and-tcp-ip/the-tcpip-family-of-internet-protocols/)
+- DNS协议与ARP协议
+    - DNS
+        - 域名 -> IP地址
+    - ARP
+        - IP地址 -> MAC地址
+
+#### URI与URL
+- URL是URI的子集
+- URI
+    - 统一资源标识符(uniform resource identifier)
+    - 统一，即遵循统一的协议方案
+    - 资源，即信息的载体，可以被标识的东西
+    - 标识符，用来标识资源的字符
+ 
+#### 页面渲染与性能优化
+- https://segmentfault.com/a/1190000010298038
+
+#### TCP三次握手与四次挥手
+- 三次握手
+    - 意义：信道不可靠，为了确保数据传输的可靠性而建立的机制
+- https://www.jianshu.com/p/489bef7fb4a3?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+- https://github.com/jawil/blog/issues/14
+
+#### OSI各层功能简介
+- <img src='../img/osi-functions.png' alt='OSI功能' />
+
