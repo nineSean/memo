@@ -1063,7 +1063,7 @@ $('#goto').get(0).click();
 
 #### 相对line-height中 无单位值 vs 百分比值 的继承
 
-- 无单位值得继承是继承这个无单位值，后代元素再根据自身的`font-size`再计算出绝对值
+- 无单位值的继承是继承这个无单位值，后代元素再根据自身的`font-size`再计算出绝对值
 - 百分比值是计算出绝对值后给后代元素继承
 
 ### 2018/09/17
@@ -1946,7 +1946,7 @@ function format(n){
 - https://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left
 
 #### 网络协议与网络模型
-- [参考](- http://www.cellbiol.com/bioinformatics_web_development/chapter-1-internet-networks-and-tcp-ip/the-tcpip-family-of-internet-protocols/)
+- [参考](http://www.cellbiol.com/bioinformatics_web_development/chapter-1-internet-networks-and-tcp-ip/the-tcpip-family-of-internet-protocols/)
 - DNS协议与ARP协议
     - DNS
         - 域名 -> IP地址
@@ -1967,9 +1967,50 @@ function format(n){
 #### TCP三次握手与四次挥手
 - 三次握手
     - 意义：信道不可靠，为了确保数据传输的可靠性而建立的机制
+- 四次分手
+    - FIN_WAIT_1（主动方）
+    - CLOSE_WAIT（被动方）
+    - FIN_WAIT_2（主动方）
+    - LAST_ACK（被动方）
+    - TIME_WAIT（主动方，等待一段时间后CLOSED）
+    - CLOSED（被动方）
+- https://github.com/jawil/blog/issues/14 
 - https://www.jianshu.com/p/489bef7fb4a3?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
-- https://github.com/jawil/blog/issues/14
 
 #### OSI各层功能简介
 - <img src='../img/osi-functions.png' alt='OSI功能' />
+
+### 2019/01/12
+
+#### 状态码401与403
+- 401(unauthorized)是未认证的用户，服务器未识别的用户
+- 403(forbidden, not authenticated)是指没有权限，服务器已识别的用户
+- https://stackoverflow.com/questions/3297048/403-forbidden-vs-401-unauthorized-http-responses
+
+#### 状态码302、303与307
+- 都是临时重定向
+- 302
+    - HTTP1.0定义
+    - 规范定义使用原来的方法（如使用POST请求，服务器返回302，浏览器跟用户确认是否POST请求重定向的URI，得到确定后POST请求信的URI；这是用于POST不是幂等的，第二次请求的环境可能发生变化，需要用户确认），但实际浏览器实现是把POST请求改为GET请求由浏览器自动重定向，其实这是不符合规范，此时应该使用303（这就是303诞生的原因）
+- 303
+    - HTTP1.1定义
+    - 重定向，但是把POST方法改为GET
+- 307
+    - HTTP1.1定义
+    - 重定向，不改变请求方法
+- 总结
+    - 其实在HTTP1.1中303与307是对302的细化，理论上应该不再使用302；但是为了兼容，302在业界中任被大量使用
+- [参考](https://www.cnblogs.com/cswuyg/p/3871976.html)
+
+#### CSS求值过程
+- [求值过程](https://s1.ssl.qhres.com/static/4297ff3190130d32.svg)
+- [参考](https://ppt.baomitu.com/d/b0a3450a#/28)
+
+#### 避免页面布局抖动
+- fastdom
+
+#### chrome devtools技巧
+- https://juejin.im/post/5c09a80151882521c81168a2
+- https://github.com/anjia/blog/issues/47#issuecomment-452980705
+
 
