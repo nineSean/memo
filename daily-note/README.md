@@ -2014,3 +2014,43 @@ function format(n){
 - https://github.com/anjia/blog/issues/47#issuecomment-452980705
 
 
+### 2019/01/16
+
+#### 并行HTTP VS 合并HTTP请求
+- https://segmentfault.com/a/1190000015665465
+
+#### HTTP首部字段
+- 通用首部字段
+    - Cache-control
+    - Connection
+    - Date
+    - Via
+- 请求首部字段
+    - Host
+    - Referer
+    - Accept
+    - User-Agent
+    - Accept-Charset
+    - Accept-Encoding
+    - Accept-Language
+    - Range
+    - If-None-Match
+    - If-Match
+    - If-Modified-Since
+    - If-Unmodified-Since
+- 响应首部字段
+    - Location
+    - Etag
+    - Accept-Ranges
+
+- 实体首部字段
+    - Allow
+    - Content-Type
+    - Content-MD5
+    - Content-Encoding
+    - Content-Language
+    - Content-Ranges
+    - Content-Length
+    - Expires
+    - Last-Modified
+
