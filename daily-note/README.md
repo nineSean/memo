@@ -2054,3 +2054,18 @@ function format(n){
     - Expires
     - Last-Modified
 
+### 2019/01/17
+
+#### nextTick
+- 用途：用于数据修改（修改数据后立刻操作DOM，DOM未更新），视图更新后执行回调。（官方：将回调延迟到下次 DOM 更新循环之后执行。）
+- [源码](http://hcysun.me/vue-design/art/8vue-reactive-dep-watch.html#nexttick-%E7%9A%84%E5%AE%9E%E7%8E%B0)
+
+#### CSS3圆周运动
+- https://jsbin.com/kohiyov/1/edit?html,css,output
+
+#### canvas动画
+- https://www.jianshu.com/p/e70c9cfbdb38
+- https://github.com/supperjet/H5-Animation
+
+
+
