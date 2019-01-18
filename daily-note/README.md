@@ -2067,5 +2067,26 @@ function format(n){
 - https://www.jianshu.com/p/e70c9cfbdb38
 - https://github.com/supperjet/H5-Animation
 
+### 2019/01/18
+
+#### REM
+- 浏览器默认样式
+    - `font-size: 16px`
+- REM diff EM
+    - REM：根元素的font-size
+    - EM：当前元素的font-size
+- 移动端布局
+    - 百分比布局
+        - 缺点是高度无法与宽度做配合
+    - 等比缩放
+        - vw
+            - 兼容性不好
+        - REM
+            - `font-size = 页面宽度/100`
+                - 理论上实现了用REM模拟vw，但受到浏览器最小字体限制，根据需求调整比例
+            - `font-size`与`border-width`建议用配合`px`/`em`使用
+
+        - SCSS `PX2REM`
+
 
 
