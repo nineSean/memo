@@ -2088,5 +2088,19 @@ function format(n){
 
         - SCSS `PX2REM`
 
+### 2019/01/19
 
+#### review webpack & vue
+- `.vue` vs `.jsx`
+    - 前者结构更清晰，后者更开放、强大
+
+
+#### 虚数
+- [参考](http://www.ruanyifeng.com/blog/2012/09/imaginary_number.html)
+
+### 2019/01/23
+
+#### git rebase bug
+- 当只有2个commit的时候，其实根本不用git rebase来2合1，直接用`git reset --soft head^`把指针回退到stage再`git commit --amend`及其
+- [参考](https://gist.github.com/digitaljhelms/3099010)
 
