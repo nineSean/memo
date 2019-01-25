@@ -2104,3 +2104,15 @@ function format(n){
 - 当只有2个commit的时候，其实根本不用git rebase来2合1，直接用`git reset --soft head^`把指针回退到stage再`git commit --amend`及其
 - [参考](https://gist.github.com/digitaljhelms/3099010)
 
+### 2019/01/24
+
+#### npm 离线安装
+- http://www.ruanyifeng.com/blog/2016/01/npm-install.html
+- https://blog.miniasp.com/post/2018/06/16/Offline-installation-of-npm-packages-for-Enterprise.aspx
+- https://addyosmani.com/blog/using-npm-offline/
+
+### 2019/01/25
+
+#### 登录注册业务逻辑
+- http://mobile.51cto.com/hot-579080.htm?mobile
+
