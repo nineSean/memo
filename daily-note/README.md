@@ -2116,3 +2116,8 @@ function format(n){
 #### 登录注册业务逻辑
 - http://mobile.51cto.com/hot-579080.htm?mobile
 
+### 2019/01/27
+
+#### iterm闪退
+- 执行文件未找到，根据路径报错，打开finder，command+shift+g呼出路径输入框，把/bin/zsh执行文件复制到/usr/local/bin目录下
+
