@@ -2139,5 +2139,16 @@ function format(n){
 - [B站资源](https://www.bilibili.com/video/av16549975/)
 
 
+### 2019/02/11
+
+#### vue `.passive` modifier
+- 原生为`addEventListener`第三个参数`{passive: true}`
+- 主要为了解决滚动的流畅性
+- 机制
+    - 当滚动发生时，浏览器会检查handler里是否调用了`preventDefault`，如果没有则更新滚动位置，但大多数情况下是不会调用，这就造成了滚动的不流畅；`{passive: true}`显示告诉浏览器不会调用`preventDefualt`。
+- [参考](https://medium.com/@devlucky/about-passive-event-listeners-224ff620e68c)
+
+#### 开源项目实战
+- https://zhuanlan.zhihu.com/p/26534748
 
 
