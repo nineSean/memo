@@ -216,11 +216,11 @@ isNaN(value)
 - https://3dtransforms.desandro.com/
 
 
-##### Dymatic vs Static, Strong vs Weak
+##### Dynamic vs Static, Strong vs Weak
 
-- Dymatic versus static is about when to check for types, strong versus weak is about how serious do you get while checking the types.
-- JS is dymatic and weak language.
-- Dymatic means checking the types and looking for type errors during runtime.On the contrary, statics does during compile time.
+- Dynamic versus static is about when to check for types, strong versus weak is about how serious do you get while checking the types.
+- JS is dynamic and weak language.
+- Dynamic means checking the types and looking for type errors during runtime.On the contrary, statics does during compile time.
 - Weak means allowing implicit conversion. Strongs is opposite.
 - https://www.youtube.com/watch?v=C5fr0LZLMAs
 
@@ -2150,5 +2150,28 @@ function format(n){
 
 #### 开源项目实战
 - https://zhuanlan.zhihu.com/p/26534748
+
+
+### 2019/02/12
+
+#### `%s` and `%d` in printf of c
+
+```
+% is a placeholder
+%s - Take the next argument and print it as a string
+%d - Take the next argument and print it as an int
+```
+
+- [reference](https://stackoverflow.com/questions/9026980/what-does-s-and-d-mean-in-printf-in-the-c-language)
+
+#### strncmp vs strcmp
+
+```
+Use strncmp if you only need to compare a fixed number of characters, use strcmp if you need to compare a whole string.
+```
+
+#### finish c tutorial basics
+- [reference](https://www.learn-c.org/)
+
 
 
