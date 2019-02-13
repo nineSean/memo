@@ -2174,4 +2174,11 @@ Use strncmp if you only need to compare a fixed number of characters, use strcmp
 - [reference](https://www.learn-c.org/)
 
 
+### 2019/02/13
+
+#### 软件版本alpha beta gamma RC trial
+- [reference](https://blog.csdn.net/linxinzheng/article/details/2201043)
+
+
+
 
