@@ -2179,6 +2179,11 @@ Use strncmp if you only need to compare a fixed number of characters, use strcmp
 #### 软件版本alpha beta gamma RC trial
 - [reference](https://blog.csdn.net/linxinzheng/article/details/2201043)
 
+### 2019/02/14
+
+#### [裁员潮分析](https://www.zhihu.com/question/311955322/answer/595957835?utm_source=wechat_session&utm_medium=social&utm_oi=34531876798464)
+
+#### [程序员的找房程序](https://house-map.cn/#/)
 
 
 
