@@ -2186,4 +2186,10 @@ Use strncmp if you only need to compare a fixed number of characters, use strcmp
 #### [程序员的找房程序](https://house-map.cn/#/)
 
 
+### 2019/02/17
+
+#### for...in用于数组
+- 无法保证顺序
+- 忽略稀疏数组的`undefined`项
+
 
