@@ -2193,3 +2193,20 @@ Use strncmp if you only need to compare a fixed number of characters, use strcmp
 - 忽略稀疏数组的`undefined`项
 
 
+### 2019/02/18
+
+#### 《黑客与画家》语录
+- 与笨蛋辩论，你也会变成笨蛋。这时你要明白，自由思考比畅所欲言更重要。
+
+#### 变量命名
+- [javascript变量命名基本原则](http://www.informit.com/articles/article.aspx?p=131025&seqNum=3)
+
+- [变量命名指南-必看](https://a-nickels-worth.blogspot.com/2016/04/a-guide-to-naming-variables.html)
+- http://crockford.com/javascript/code.html
+- [IT词汇缩写列表](https://en.wikipedia.org/wiki/List_of_computing_and_IT_abbreviations)
+
+#### [代码优化技巧](https://github.com/nineSean/memo/blob/master/img/代码优化技巧.pdf)
+
+#### [mark,sign,signal,symbol的区别](https://xue.youdao.com/bbs/wenda/answer_detail?id=5118853)
+
+
