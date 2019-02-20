@@ -2210,3 +2210,37 @@ Use strncmp if you only need to compare a fixed number of characters, use strcmp
 #### [mark,sign,signal,symbol的区别](https://xue.youdao.com/bbs/wenda/answer_detail?id=5118853)
 
 
+### 2019/02/19
+
+#### [webpack4 tutorial](https://www.valentinog.com/blog/webpack-tutorial/)
+- 免配入口与出口
+    - 自动识别`./src/index.js`为入口
+    - `./dist/main.js`为默认出口
+- 免配模式
+    - 直接在`package.json`的`scripts`字段配置
+    
+    ```js
+    "scripts": {
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production"
+    }
+    ```
+
+#### [new features in webpack5](https://blog.logrocket.com/new-features-in-webpack-5-2559755adf5e)
+
+
+### 2019/02/20
+
+#### [客户流失](https://zhuanlan.zhihu.com/p/28708664)
+
+#### 《黑客与画家》感想
+- 写于2001年，预测互联网应用（即运行于浏览器上的页面）将成为主流
+- 如今，预测成为现实
+- 埋头编码，抬头看世界
+
+#### [ajax](https://en.wikipedia.org/wiki/Ajax_(programming)#cite_note-ALEXHOPMANN-5)
+- [xmlhttp](https://web.archive.org/web/20070623125327/http://www.alexhopmann.com/xmlhttp.htm)
+
+#### [web2.0](https://en.wikipedia.org/wiki/Web_2.0)
+
+
