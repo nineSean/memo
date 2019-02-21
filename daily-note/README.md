@@ -691,7 +691,7 @@ a++;
 - http://2ality.com/2011/11/keyword-parameters.html
 - C# named parameters simulation
 
-### 2017/07/20
+### 2018/07/20
 
 ##### destructing and parameters handling
 
@@ -2243,4 +2243,17 @@ Use strncmp if you only need to compare a fixed number of characters, use strcmp
 
 #### [web2.0](https://en.wikipedia.org/wiki/Web_2.0)
 
+
+### 2019/02/21
+
+#### [compile vs transpile vs interpret](https://stackoverflow.com/questions/39246498/compiler-vs-interpreter-vs-transpiler)
+- compile
+    - 高级语言 => 低级语言
+- transpile
+    - 高级版本 => 低级版本
+- interpret
+    - 解释代码，无关高低级语言、高低级版本等等
+
+#### 《黑客与画家》语录
+- 我们这个世界，你向下沉沦或者向上奋进都取决于你自己，不能把原因推给外界。
 
