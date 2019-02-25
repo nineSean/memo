@@ -2257,3 +2257,42 @@ Use strncmp if you only need to compare a fixed number of characters, use strcmp
 #### 《黑客与画家》语录
 - 我们这个世界，你向下沉沦或者向上奋进都取决于你自己，不能把原因推给外界。
 
+### 2019/02/22
+
+#### [npm and ES6 Modules](https://wesbos.com/javascript-modules/)
+
+#### 程序员文化系列
+- [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)
+- [如何有效地报告 Bug](https://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html)
+- [如何向开源社区提问题](https://github.com/seajs/seajs/issues/545)
+- [如何向开源项目提交无法解答的问题](https://zhuanlan.zhihu.com/p/25795393)
+
+#### [删除git repository中某个文件夹](https://stackoverflow.com/questions/6313126/how-to-remove-a-directory-from-git-repository)
+
+```
+//本地与repository一起删除
+git rm <file name>
+
+//只删除repository不删除本地
+git rm -r --cached <folder name>
+```
+
+- [使用git filter-branch](https://stackoverflow.com/questions/10067848/remove-folder-and-its-contents-from-git-githubs-history)
+
+#### [2019年javascript学啥框架和主题](https://medium.com/javascript-scene/top-javascript-frameworks-and-topics-to-learn-in-2019-b4142f38df20)
+
+
+### 2019/02/25
+
+#### [confuse about specify the mode](https://webpack.js.org/guides/production/#specify-the-mode)
+- https://github.com/webpack/webpack/issues/2537
+
+#### [webpack 4: import() and commonjs](https://medium.com/webpack/webpack-4-import-and-commonjs-d619d626b655)
+
+#### prefetch vs preload
+- 加载时机不同
+- 浏览器支持不同
+- [reference](https://webpack.js.org/guides/code-splitting/#prefetchingpreloading-modules)
+
+#### [lazy loading](https://dzone.com/articles/lazy-loading-es2015-modules-in-the-browser)
+
