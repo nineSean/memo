@@ -2296,3 +2296,12 @@ git rm -r --cached <folder name>
 
 #### [lazy loading](https://dzone.com/articles/lazy-loading-es2015-modules-in-the-browser)
 
+
+### 2019/02/26
+
+#### 解释器 VS 编译器
+- 编译器：先将整个程序全部翻译成机器语言，再运行。
+- 解释器：实时将代码解释成相应的机器语言，然后一行行运行。
+
+
+
