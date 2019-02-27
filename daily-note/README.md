@@ -2303,5 +2303,10 @@ git rm -r --cached <folder name>
 - 编译器：先将整个程序全部翻译成机器语言，再运行。
 - 解释器：实时将代码解释成相应的机器语言，然后一行行运行。
 
+### 2019/02/27
+
+####  函数式编程入门
+- [composing software: an introduction](https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea)
+- [functional light js](https://github.com/getify/Functional-Light-JS)
 
 
