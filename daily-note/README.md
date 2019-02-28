@@ -2309,4 +2309,10 @@ git rm -r --cached <folder name>
 - [composing software: an introduction](https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea)
 - [functional light js](https://github.com/getify/Functional-Light-JS)
 
+### 2019/02/28
+
+#### 《黑客与画家》
+- 今天读完这本书，发现利用零散的时间读完一本书也不用花太长时间，培养良好的阅读习惯迈下了第一步。
+- 从作者的视角分析了美国教育的弊端，作为程序员要如何思考，如何创造财富，对理想中的语言的定义等等太多Paul Graham凝聚的智慧，值得一翻再翻、一读再读汲取其中的营养。
+
 
