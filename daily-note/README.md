@@ -2315,4 +2315,26 @@ git rm -r --cached <folder name>
 - 今天读完这本书，发现利用零散的时间读完一本书也不用花太长时间，培养良好的阅读习惯迈下了第一步。
 - 从作者的视角分析了美国教育的弊端，作为程序员要如何思考，如何创造财富，对理想中的语言的定义等等太多Paul Graham凝聚的智慧，值得一翻再翻、一读再读汲取其中的营养。
 
+### 2019/03/01
+
+#### import third-part style file and using local in .vue
+- https://blog.csdn.net/weixin_39941429/article/details/80254724
+- https://www.jianshu.com/p/a821bce5c921
+- https://forum.vuejs.org/t/help-imported-css-styles-conflict-between-components/5687
+
+### 2019/03/02
+
+#### video about webpack by Sean Larkin
+- [understanding webpack from the inside out](https://www.youtube.com/watch?v=gEBUU6QfVzk)
+- [webpack 4: the state of the art](https://www.youtube.com/watch?v=jUTE7lmrS70)
+
+#### tapable
+- the backbone library of webpack plugin
+
+#### webpack 4 fundamentals
+- [reference](https://medium.com/@j_lim_j/summary-of-webpack-4-fundamentals-by-sean-larkin-part-1-of-4-why-webpack-e9112d81a588)
+
+#### webpack 5
+- [spec](https://github.com/webpack/webpack/issues/6527)
+
 
