@@ -2338,3 +2338,34 @@ git rm -r --cached <folder name>
 - [spec](https://github.com/webpack/webpack/issues/6527)
 
 
+### 2019/03/04
+
+#### Node.js写的第一个小工具
+
+```js
+const fs = require('fs')
+
+fs.readFile('1. Why Webpack/6. Configuring Webpack.srt', 'utf8', (err, data) => {
+  if(err) throw err
+  let array = data.match(/\[\d{2}:\d{2}:\d{2}\]/g)
+  const array2 = [...array]
+  array2.shift()
+  array2.push('[03:00:00]')
+
+  array = array.map((item, idx) => {
+    return `${item} --> ${array2[idx]}\n`
+  })
+
+  let newContent = data.replace(/(.*\n*)\[\d{2}:\d{2}:\d{2}\](\n*.*)/g, (match, p1, p2) => {
+    return `${p1}${array.shift()}${p2}`
+  })
+  newContent = newContent.replace(/\[/g, '')
+  newContent = newContent.replace(/\]/g, '')
+  fs.writeFile('1. Why Webpack/6. Configuring Webpack.srt', newContent, err => {
+    if(err) throw err
+    console.log('write successfully')
+  })
+})
+```
+
+
