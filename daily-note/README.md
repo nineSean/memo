@@ -2369,3 +2369,36 @@ fs.readFile('1. Why Webpack/6. Configuring Webpack.srt', 'utf8', (err, data) => 
 ```
 
 
+### 2019/03/05
+
+#### CGI - common gateway interface
+- [CGI wiki](https://en.wikipedia.org/wiki/Common_Gateway_Interface)
+
+#### [Sean Larkin with Mutual of Omaha](http://www.gistia.com/episode-20-sean-larkin/)
+
+#### [程序员必知字符编码](http://kunststube.net/encoding/)
+
+#### `ctrl+d` diff `ctrl+c` in cli
+- `ctrl+d` means `end of file`
+- `ctrl+c` means `interrupt`
+- [reference](https://superuser.com/questions/169051/whats-the-difference-between-c-and-d-for-unix-mac-os-x-terminal)
+
+#### pipe usage
+
+```
+// 有多少个txt文件
+ls -1 *.txt | wc -l
+```
+
+#### some weird in macos cli `sed`
+
+```
+//below in unix/linux
+echo i am sean | sed 's/\s+/\n/g'
+
+brew install gnu-sed
+//below in macos
+echo i   am  sean | gsed 's/  */\n/g'
+```
+
+
