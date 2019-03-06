@@ -2402,3 +2402,26 @@ echo i   am  sean | gsed 's/  */\n/g'
 ```
 
 
+### 2019/03/06
+
+#### strftime
+
+#### watch
+
+```
+//cool thing with watch
+
+//in one pane
+tail -f log.txt
+
+//in another pane
+watch -n5 'echo `date +%T` >> log.txt'
+```
+
+#### placeholder in bash
+- `$(())`
+- backtick
+- `$()`
+
+#### [awk command](https://likegeeks.com/awk-command/)
+
