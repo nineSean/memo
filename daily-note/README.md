@@ -2425,3 +2425,17 @@ watch -n5 'echo `date +%T` >> log.txt'
 
 #### [awk command](https://likegeeks.com/awk-command/)
 
+
+### 2019/03/07
+
+#### ln command
+- [symbolic link](https://www.linode.com/docs/tools-reference/tools/create-file-system-links-with-ln/)
+  - `ln -s <from> <to>`
+  - 对原文件/原文件夹/原链接的的引用
+  - keypoint: 保存引用路径
+- [symbolic link diff hard link](https://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link)
+
+#### ternary in shell
+
+- `test <condition> && echo true || echo false`
+
