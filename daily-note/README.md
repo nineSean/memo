@@ -2439,3 +2439,29 @@ watch -n5 'echo `date +%T` >> log.txt'
 
 - `test <condition> && echo true || echo false`
 
+
+### 2019/03/08
+
+#### [ligature](https://medium.com/larsenwork-andreas-larsen/ligatures-coding-fonts-5375ab47ef8e)
+
+#### operator mono ligature
+- it's so cool font display, but i'm failed to use it by following below guide
+- [reference](https://github.com/kiliman/operator-mono-lig)
+
+#### [four semesters of computer science](http://btholt.github.io/four-semesters-of-cs/)
+
+#### [introduction to node](https://github.com/FrontendMasters/intro-node-js#resources)
+
+
+### 2019/03/09
+
+#### [computer science](https://github.com/ossu/computer-science#introduction-to-computer-science)
+
+#### [learning how to learn](https://www.coursera.org/learn/learning-how-to-learn/home/welcome)
+
+#### algorithm
+- algorithm contains three parts
+  - steps
+  - control of flow
+  - when to stop
+
