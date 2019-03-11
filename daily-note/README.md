@@ -1710,11 +1710,6 @@ let arr2 = Array.from(Array(5), (item, i) => i + 1)
 - chunk中间状态的资源
 - asset是最终要获取的资源
 
-#### path.join vs path.resolve
-- path.join拼接多个路径，路径之间是相对的
-- path.resolve是从右往左拼接直到出现绝对路径位置为止
-- https://stackoverflow.com/questions/39110801/path-join-vs-path-resolve-with-dirname/39111164
-
 #### output.path vs output.publicPath
 - path是经过webpack打包后的输出路径
 - publicPath以服务器启动目录为根目录设置路径
@@ -2464,4 +2459,42 @@ watch -n5 'echo `date +%T` >> log.txt'
   - steps
   - control of flow
   - when to stop
+
+### 2019/03/10
+
+#### [turning side projects into profitable startups](https://www.youtube.com/watch?v=6reLWfFNer0)
+
+#### niche market
+
+#### two great tool to manage your work
+- [trello](https://trello.com/)
+- [workflowy](https://workflowy.com/)
+
+#### product hunt
+
+#### dojo
+
+
+### 2019/03/11
+
+#### vscode extensions recommended
+- rest client
+- css triggers
+- code runner
+
+#### module diff file system
+- whether executable or not
+
+#### [left-pad chaos](https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/)
+
+
+#### path.join vs path.resolve
+- path.join拼接多个路径，路径之间是相对的
+- path.resolve是从右往左拼接直到出现绝对路径位置为止
+- [reference](https://stackoverflow.com/questions/39110801/path-join-vs-path-resolve-with-dirname/39111164)
+
+#### [hot module replacement mechanism](https://stackoverflow.com/questions/24581873/what-exactly-is-hot-module-replacement-in-webpack)
+
+#### lambda
+
 
