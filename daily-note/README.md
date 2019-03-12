@@ -2498,3 +2498,19 @@ watch -n5 'echo `date +%T` >> log.txt'
 #### lambda
 
 
+### 2019/03/12
+
+#### [headless chrome](https://developers.google.com/web/updates/2017/06/headless-karma-mocha-chai)
+
+#### confuse: should vue install as devDependencies or dependencies?
+
+#### [what does hard code mean](https://stackoverflow.com/questions/1895789/what-does-hard-coded-mean)
+
+#### tips
+- [static site generator diff static site server](https://frontendmasters.com/courses/node-js/deploying-your-servers/)
+- do not serve static asset using nodejs
+
+#### [ES6 module loading: More complicated than you think](https://humanwhocodes.com/blog/2016/04/es6-module-loading-more-complicated-than-you-think/)
+
+
+
