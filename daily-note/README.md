@@ -2524,4 +2524,28 @@ watch -n5 'echo `date +%T` >> log.txt'
 #### [code splitting by Tobias Koppers](https://github.com/medikoo/modules-webmake/issues/7)
 
 
+### 2019/03/15
+
+#### render function in vue
+- `h` -> `createElement`
+  - h is abbreviate of hyperscript which creates hypertext of hyper text markup language.
+
+
+### 2019/03/16
+
+#### logic
+- category
+    - deductive reasoning
+        - the only one guarantees its conclusions in all cases.
+    - inductive reasoning
+    - abductive reasoning
+    - reasoning by analogy
+
+#### [intro multithreading](https://www.internalpointers.com/post/gentle-introduction-multithreading)
+
+
+### 2019/03/17
+
+#### [ipv4 classification](https://networkchefbd.com/ip-address-classification/)
+
 
