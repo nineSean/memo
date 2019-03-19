@@ -2549,3 +2549,23 @@ watch -n5 'echo `date +%T` >> log.txt'
 #### [ipv4 classification](https://networkchefbd.com/ip-address-classification/)
 
 
+### 2019/03/18
+
+#### [how to disagree](http://www.paulgraham.com/disagree.html)
+
+### 2019/03/19
+
+#### attrs vs props in vue
+
+#### functional programming
+- why functional programming
+    - make yourself and other to trust the code.
+- imperative vs declarative
+- abstraction
+    - abstraction is about creating semantic boundaries between things.
+- es6 is about creating declarative boundaries instead of hyper focusing on imperativeness.
+- all functions are procedures, but not all procedures are functions.
+- side effect
+    - writting code with less side effects while can not avoiding side effects.
+    - make debugger more easily.
+
