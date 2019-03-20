@@ -2562,10 +2562,40 @@ watch -n5 'echo `date +%T` >> log.txt'
     - make yourself and other to trust the code.
 - imperative vs declarative
 - abstraction
-    - abstraction is about creating semantic boundaries between things.
+    - abstraction is about creating semantic boundaries between the what and the how.
 - es6 is about creating declarative boundaries instead of hyper focusing on imperativeness.
 - all functions are procedures, but not all procedures are functions.
 - side effect
     - writting code with less side effects while can not avoiding side effects.
     - make debugger more easily.
+
+
+### 2019/03/20
+
+#### functional programming
+- what is pure function
+    - function which doesn't have any access to variables outside of itself that's observable.
+- impure
+    - side cause
+        - indirect input
+    - side effect
+        - indirect ouput
+- pure
+    -  all things are explicit.
+    -  same input, same ouput.
+- function definition
+    - arguments as direct input, return statement as direct output.
+- purity is confidence level.
+    - pure is high degree of confidence.
+
+#### functional programming
+- [point-free style](https://en.wikipedia.org/wiki/Tacit_programming)
+    - point
+        - pass through outside parameter to inside argument.
+    - purpose
+        - point style is unnecessary verbosity that confuses you visually, so most of your code should not have points.
+    - [pointfree javascript](https://lucasmreis.github.io/blog/pointfree-javascript/)
+- composition
+    - operating order is right to left, opposite to pip.
+    - unary function is easy to compose, currying makes multiple parameters function to unary function.
 
