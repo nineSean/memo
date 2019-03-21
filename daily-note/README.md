@@ -2599,3 +2599,14 @@ watch -n5 'echo `date +%T` >> log.txt'
     - operating order is right to left, opposite to pip.
     - unary function is easy to compose, currying makes multiple parameters function to unary function.
 
+
+### 2019/03/21
+
+#### functional programming
+- immutability
+    - const keyword is about assignment immutability. But mutation of value is a big deal.
+    - fp immutability is about value immutability.
+    - Object.freeze
+       - but it is shallow.
+    - immutable js
+
