@@ -2610,3 +2610,15 @@ watch -n5 'echo `date +%T` >> log.txt'
        - but it is shallow.
     - immutable js
 
+
+### 2019/03/22
+
+#### [solid principle](https://en.wikipedia.org/wiki/SOLID)
+- single responsibility principle
+- open-closed principle
+- liskov substitution principle
+    - [design by contract](https://en.wikipedia.org/wiki/Design_by_contract)
+- interface segregation principle
+- dependency inversion principle
+
+
