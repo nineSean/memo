@@ -2591,9 +2591,10 @@ watch -n5 'echo `date +%T` >> log.txt'
 #### functional programming
 - [point-free style](https://en.wikipedia.org/wiki/Tacit_programming)
     - point
-        - pass through outside parameter to inside argument.
+        - the input parameter
     - purpose
-        - point style is unnecessary verbosity that confuses you visually, so most of your code should not have points.
+        - pass through outside parameter to inside argument.
+        - point is unnecessary verbosity that confuses you visually, so most of your code should not have points.
     - [pointfree javascript](https://lucasmreis.github.io/blog/pointfree-javascript/)
 - composition
     - operating order is right to left, opposite to pip.
@@ -2620,5 +2621,29 @@ watch -n5 'echo `date +%T` >> log.txt'
     - [design by contract](https://en.wikipedia.org/wiki/Design_by_contract)
 - interface segregation principle
 - dependency inversion principle
+
+
+### 2019/03/26
+
+#### use space to disambiguate paren
+- no space between a function name and (.
+- one space between all other names and (.
+
+#### [the elements of style](http://www.crockford.com/wrrrld/style.html)
+
+#### [with](http://2ality.com/2011/06/with-statement.html)
+
+
+### 2019/03/28
+
+#### [how px convert to cm](https://www.pixelto.net/cm-to-px-converter)
+
+
+### 2019/03/29
+
+##### 知识体系与优质资源思考
+- 我们现在这个时代是信息洪流时代，首先要想清楚自己爱好什么，自己擅长什么，而不是觉得这个好像有用，那个好像不错最后被洪流冲着走（其内在原因是任何被分享的内容都是在某一个点切中读者的要害的）。所以归根结底要从洪流中跳出来认清自己，明白自己真正的追求从而化被动为主动，踏着浪潮前进而不是被沉底或者冲走。
+- 在明确自己的方向后，由某个点切入，先了解这个行业，持续一段时间后心里有谱时可以着手构建行业知识脉络图，当然这个图随着自己的深入会不断完善，把各个点（就是问题中的各个琐碎、零散的信息）归位，慢慢的整个脉络图会越来越清晰和完善（类比玩游戏大地图随探索，解锁隐藏的部分）。工具：绘制脉络图，让检索的时候方便跳转等各种便捷功能
+- 资源的获取，最强大的方式就是通过准确的关键字进行google，当然这个技巧只能自己不断积累（随着对行业的了解，知道想找的东西是对应什么英文单词，所以首先要『知道』，这就是一个从不知道自己不知道->知道自己不知道拓宽知识边界的过程）。资源都是人分享出来的，找到靠谱的人，关注这个人分享的咨询，然后从这些咨询中了解到他们关注的东西和人，这样不断递归下去可以拓展发现很多优质资源，再把这些资源归类到脉络图中。
 
 
