@@ -2647,3 +2647,65 @@ watch -n5 'echo `date +%T` >> log.txt'
 - 资源的获取，最强大的方式就是通过准确的关键字进行google，当然这个技巧只能自己不断积累（随着对行业的了解，知道想找的东西是对应什么英文单词，所以首先要『知道』，这就是一个从不知道自己不知道->知道自己不知道拓宽知识边界的过程）。资源都是人分享出来的，找到靠谱的人，关注这个人分享的咨询，然后从这些咨询中了解到他们关注的东西和人，这样不断递归下去可以拓展发现很多优质资源，再把这些资源归类到脉络图中。
 
 
+### 2019/04/04
+
+#### [What to do if your Mac sound is not working](https://www.macworld.co.uk/how-to/mac/mac-sound-not-working-3504175/)
+
+#### [topology](https://en.wikipedia.org/wiki/Topology)
+
+#### nodejs learning
+- [intro to nodejs](https://slides.com/scotups/deck#/)
+- [api design in node with express](https://slides.com/scotups/api-design-in-node-with-express-v3/#/)
+
+
+### 2019/04/09
+
+#### computer
+##### category
+- fixed program computer
+- stored program computer
+
+##### basic machine architecture
+- input
+- output
+- memory
+- ALU - arithmetic logic unit
+    - do primitive ops
+- CU - control unit
+    - program counter
+    
+##### basic primitive
+- six primitives
+    - move left
+    - move right
+    - scan
+    - read
+    - write
+    - do nothing
+    
+#### aspects of languages
+- primitive constructs
+    - numbers
+    - strings
+    - simple operators
+        - addition
+        - subtraction
+        - comparison
+        - etc
+    
+
+### 2019/04/12
+
+#### 真值函项
+
+#### 合取命题与析取命题
+
+
+### 2019/04/16
+
+#### [debounce vs throttle vs requestAnimationFrame](https://css-tricks.com/debouncing-throttling-explained-examples/)
+- debounce diff throttle
+    - debounce触发的时机是在最后一次事件触发时间点，再设定的时间后。回调执行的频率是不固定的，取决于事件的触发何时停止。
+    - throttle触发的时机是预设的时间间隔后事件触发。回调依据间隔时间执行，在连续触发的事件下按照固定频率执行回调。
+
+
