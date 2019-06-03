@@ -2709,3 +2709,55 @@ watch -n5 'echo `date +%T` >> log.txt'
     - throttle触发的时机是预设的时间间隔后事件触发。回调依据间隔时间执行，在连续触发的事件下按照固定频率执行回调。
 
 
+### 2019/04/18
+
+#### [svg diff canvas](https://stackoverflow.com/questions/4996374/what-is-the-difference-between-svg-and-html5-canvas)
+
+
+### 2019/05/09
+
+#### [navigate to earliest commits page in github](https://stackoverflow.com/questions/28533602/how-do-i-navigate-to-the-earliest-commit-in-a-github-repository)
+- commits minus 36
+
+#### [高效学习](https://www.imooc.com/read/27/article/258)
+
+
+### 2019/05/18
+
+#### 微服务
+- 服务端演进：单体应用 -> 服务化 -> 微服务
+
+#### 模式
+
+
+### 2019/05/19
+
+#### 微服务架构模式下关注的控制领域
+- 通讯
+- 负载
+- 限流
+- 隔离
+- 熔断
+- 异步
+- 并行
+- 重试
+- 降级
+
+#### 工业级别代码分类
+- 功能
+    - 功能代码，是实现需求的业务逻辑代码，反映真实业务场景，包含⼤量领域知识。
+- 控制
+    - 控制代码，是控制业务功能逻辑代码执⾏的代码，即业务逻辑的执⾏策略。
+- 运维
+    - 运维代码，就是⽅便程序检测、诊断和运⾏时处理的代码。
+- 总结
+    - 功能代
+码满⾜了服务的功能需求，⽽控制代码则保障了服务的稳定可靠，运维代码记录异常状态，定位异常。
+    - 三类代码的设计和实现，越是优雅的程序，这三类代码在程序实现中就越是能看出明显的边界。⾜够的边界与距离才能避免耦合与混乱。
+    - 在程序这个理性世界中，优雅有时就是边界与距离。
+
+
+### 2019/06/03
+
+#### [关于移动端适配，你必须要知道的](https://segmentfault.com/a/1190000019207842)
+
