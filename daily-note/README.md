@@ -2761,3 +2761,29 @@ watch -n5 'echo `date +%T` >> log.txt'
 
 #### [关于移动端适配，你必须要知道的](https://segmentfault.com/a/1190000019207842)
 
+#### [分辨率科普漫画](https://ac.qq.com/ComicView/index/id/536332/cid/254)
+
+
+### 2019/06/04
+
+#### 滚动穿透
+- [滚动穿透的6种解决方案](https://cloud.tencent.com/developer/article/1405979)
+- [移动端滚动穿透问题](https://github.com/pod4g/tool/wiki/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%BB%9A%E5%8A%A8%E7%A9%BF%E9%80%8F%E9%97%AE%E9%A2%98)
+
+
+### 2019/06/14
+
+#### [elegant error handler js](https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/)
+
+
+### 2019/06/18
+
+#### css naming convention bem
+- [bem docs](https://en.bem.info/methodology/)
+- [Battling BEM CSS: 10 Common Problems And How To Avoid Them](https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/)
+- [ABEM. A more useful adaptation of BEM.](https://css-tricks.com/abem-useful-adaptation-bem/)
+
+#### [solid in typescript](https://khalilstemmler.com/articles/solid-principles/solid-typescript/)
+
+#### [fundamental design principles for non-designers](https://www.freecodecamp.org/news/fundamental-design-principles-for-non-designers-ad34c30caa7/)
+
