@@ -2787,3 +2787,14 @@ watch -n5 'echo `date +%T` >> log.txt'
 
 #### [fundamental design principles for non-designers](https://www.freecodecamp.org/news/fundamental-design-principles-for-non-designers-ad34c30caa7/)
 
+
+### 2019/07/16
+
+#### vue router
+- 编程式导航，焦点获取问题
+- 路由跳转时，不要使用query传递为对象的数据，使用localStorage或者sessionStorage
+- 路由表配置
+    - path尽量不要缩写，若组件名过长取适当关键词
+    - name 驼峰命名法与component一致
+
+
