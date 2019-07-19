@@ -2835,8 +2835,13 @@ watch -n5 'echo `date +%T` >> log.txt'
 
             > 网络连接技术，从4G到5G，为数据的高速传输提供了重要基础。
             
-    - 未来智能化的商业形式预测
+    - 智能化的商业形式
         - AI需要完成从*感知*到*行动*的闭环才能最终解放生产力。
         - 发展机器之间的协作
+
+        
+### 2019/07/19
+
+#### [local image converts into base64](https://jsbin.com/waxubuh/edit?html,js,output)
 
 
