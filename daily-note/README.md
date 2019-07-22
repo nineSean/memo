@@ -2845,3 +2845,23 @@ watch -n5 'echo `date +%T` >> log.txt'
 #### [local image converts into base64](https://jsbin.com/waxubuh/edit?html,js,output)
 
 
+### 2019/07/22
+
+#### server开发与前端开发区别
+- 服务稳定性
+    - server端可能遭到各种恶意攻击与误操作
+    - 单个客户端允许意外挂掉，但服务端不能
+    - 使用PM2做进程守候
+- 要求内存与CPU的优化与扩展
+    - 客户端只发送用户的少量请求，内存与CPU都不是问题
+    - server端要承载很多请求，CPU与内存都是稀缺资源
+    - stream写日志优化，redis存session扩展
+- 日志记录
+    - 前端参与日志的发起，不关心后续
+    - server端需要记录日志、存储日志、分析日志
+- 安全
+    - server端随时准备接受各种恶意攻击，如越权操作，数据库攻击等
+- 集群和服务拆分
+    - 产品发展速度快，流量可能会迅速增加
+    - 拓展机器与服务拆分来承载大流量
+
