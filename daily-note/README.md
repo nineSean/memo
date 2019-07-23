@@ -2865,3 +2865,16 @@ watch -n5 'echo `date +%T` >> log.txt'
     - 产品发展速度快，流量可能会迅速增加
     - 拓展机器与服务拆分来承载大流量
 
+
+### 2019/07/23
+
+#### [5 methods to traverse object in js](https://hackernoon.com/5-techniques-to-iterate-over-javascript-object-entries-and-their-performance-6602dcb708a8)
+##### performance in descending order
+- for...in
+    - including inherited properties from prototype chain
+- Object.keys
+- Object.hasOwnProperyNames
+    - including inherited properties from prototype chain
+- Object.values
+- Object.entries
+

@@ -1312,7 +1312,48 @@ const removeWithoutCopy = (arr, item) => {
 ```
 
 
+### 2019/07/23
 
+#### 第 111 题：编程题，写个程序把 entry 转换成如下对象
 
+```
+var entry = {
+  a: {
+    b: {
+      c: {
+        dd: 'abcdd'
+      }
+    },
+    d: {
+      xx: 'adxx'
+    },
+    e: 'ae'
+  }
+}
+
+// 要求转换成如下对象
+  var output = {
+  'a.b.c.dd': 'abcdd',
+  'a.d.xx': 'adxx',
+'a.e': 'ae'
+}
+```
+
+##### 解答
+
+```
+function flatObj(obj, keyName = '', rst = {}){
+	for (let key in obj){
+		if (obj.hasOwnProperty(key)){
+			if (Object.prototype.toString.call(obj) === '[object Object]'){
+				flatObj(obj[key], keyName?`${keyName}.${key}`:key, rst)
+            }else{
+				rst[keyName] = obj
+            }
+        }
+    }
+	return rst
+}
+```
 
 
