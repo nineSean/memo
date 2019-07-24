@@ -1369,7 +1369,7 @@ function flatObj(obj, keyName = '', rst = {}){
 
 ```javascript
 
-function divide(str){
+function transformStr(str){
   let arr = [], temp = str[0]
   str.split(', ').forEach((val, i, array) => {
     const pre = array[i-1]
@@ -1390,8 +1390,8 @@ function divide(str){
   
 }
 
-console.log(divide('1, 2, 3, 5, 7, 8, 10'))
-console.log(divide('1, 2, 4, 5, 6, 7, 8, 10, 12, 15, 17, 18, 19'))
+console.log(transformStr('1, 2, 3, 5, 7, 8, 10'))
+console.log(transformStr('1, 2, 4, 5, 6, 7, 8, 10, 12, 15, 17, 18, 19'))
 ```
 
 
