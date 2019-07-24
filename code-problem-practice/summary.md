@@ -1316,7 +1316,7 @@ const removeWithoutCopy = (arr, item) => {
 
 #### 第 111 题：编程题，写个程序把 entry 转换成如下对象
 
-```
+```javascript
 var entry = {
   a: {
     b: {
@@ -1341,7 +1341,7 @@ var entry = {
 
 ##### 解答
 
-```
+```javascript
 function flatObj(obj, keyName = '', rst = {}){
 	for (let key in obj){
 		if (obj.hasOwnProperty(key)){
@@ -1354,6 +1354,44 @@ function flatObj(obj, keyName = '', rst = {}){
     }
 	return rst
 }
+```
+
+
+### 2019/07/24
+
+#### 第 110 题：编程题，请写一个函数，完成以下功能
+
+```
+输入 '1, 2, 3, 5, 7, 8, 10' 输出 '1~3, 5, 7~8, 10'
+```
+
+##### 解答
+
+```javascript
+
+function divide(str){
+  let arr = [], temp = str[0]
+  str.split(', ').forEach((val, i, array) => {
+    const pre = array[i-1]
+    if (i == 0) return
+    if (val - pre == 1) {
+       temp = temp[temp.length-1] == '~' ? temp : temp + '~'
+    }else{
+      temp = temp[temp.length-1] == '~' ? temp + array[i-1] : temp
+      arr.push(temp)
+      temp = val
+    }
+    if (i == array.length-1) {
+      temp = temp[temp.length-1] == '~' ? temp + val : temp
+      arr.push(temp)
+    }
+  })
+  return arr
+  
+}
+
+console.log(divide('1, 2, 3, 5, 7, 8, 10'))
+console.log(divide('1, 2, 4, 5, 6, 7, 8, 10, 12, 15, 17, 18, 19'))
 ```
 
 

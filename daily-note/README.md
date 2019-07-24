@@ -2873,7 +2873,7 @@ watch -n5 'echo `date +%T` >> log.txt'
 - for...in
     - including inherited properties from prototype chain
 - Object.keys
-- Object.hasOwnProperyNames
+- Object.getOwnProperyNames
     - including inherited properties from prototype chain
 - Object.values
 - Object.entries
