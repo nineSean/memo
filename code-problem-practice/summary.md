@@ -1386,7 +1386,7 @@ function transformStr(str){
       arr.push(temp)
     }
   })
-  return arr
+  return arr.join(', ')
   
 }
 
@@ -1394,4 +1394,52 @@ console.log(transformStr('1, 2, 3, 5, 7, 8, 10'))
 console.log(transformStr('1, 2, 4, 5, 6, 7, 8, 10, 12, 15, 17, 18, 19'))
 ```
 
+
+### 2019/07/25
+
+#### 第 107 题：考虑到性能问题，如何快速从一个巨大的数组中随机获取部分元素
+
+##### 解答
+
+```javascript
+/* 
+洗牌算法
+从数组中随机获取一项
+该项与最后一项互换位置
+继续从数组（不包括最后一项）随机获取一项
+该项与倒数第二项互换位置
+继续从数组（不包括倒数两项）随机获取一项
+依次类推继续取项
+*/
+
+// function shuffle(arr, size){
+//   let arrCopy = [...arr], len = arrCopy.length
+//   return Array.from(Array(size)).reduce((acc, cur) => {
+//     const random = Math.floor(Math.random()*len)
+//     acc.push(arrCopy[random])
+//     ;[arrCopy[random], arrCopy[len-1]] = [arrCopy[len-1], arrCopy[random]]
+//     len -= 1
+//     return acc
+//   }, [])
+// }
+
+function shuffle(arr, size){
+  let arrCopy = arr, len = arrCopy.length, rst = []
+  for (let i = 0; i < size; i++) {
+    const random = Math.floor(Math.random()*len)
+    let item = arrCopy[random]
+    rst.push(item)
+    arrCopy[random] = arrCopy[len-1]
+    arrCopy[len-1] = item
+    len -= 1
+  }
+  return rst
+}
+
+console.log(shuffle(Array.from(Array(10), (v, i)=> i+1), 5))
+var arr = Array.from(Array(10e5), (v, i)=> i+1)
+console.time('shuffle')
+shuffle(arr, 10e4)
+console.timeEnd('shuffle')
+```
 
