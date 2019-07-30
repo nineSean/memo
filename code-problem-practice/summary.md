@@ -1443,3 +1443,49 @@ shuffle(arr, 10e4)
 console.timeEnd('shuffle')
 ```
 
+
+### 2019/07/30
+
+#### 第 112 题：编程题，写个程序把 entry 转换成如下对象（跟第111题相反） 
+
+```javascript
+var entry = {
+  'a.b.c.dd': 'abcdd',
+  'a.d.xx': 'adxx',
+  'a.e': 'ae'
+}
+
+// 要求转换成如下对象
+var output = {
+  a: {
+   b: {
+     c: {
+       dd: 'abcdd'
+     }
+   },
+   d: {
+     xx: 'adxx'
+   },
+   e: 'ae'
+  }
+}
+```
+
+##### 解答
+
+```javascript
+function expandObj(obj){
+  const rst = {}
+  for (let key in obj){
+    let temp = rst
+    key.split('.').forEach((item, i) => {
+      if (!temp[item]) temp[item] = {}
+      i === key.split('.').length - 1 ? temp[item] = obj[key] : temp = temp[item]
+    })
+  }
+  return rst
+}
+
+console.log(expandObj(entry))
+```
+
