@@ -1446,7 +1446,7 @@ console.timeEnd('shuffle')
 
 ### 2019/07/30
 
-#### 第 112 题：编程题，写个程序把 entry 转换成如下对象（跟第111题相反） 
+#### [第 112 题：编程题，写个程序把 entry 转换成如下对象（跟第111题相反）](https://jsbin.com/mejumaj/1/edit?js,console) 
 
 ```javascript
 var entry = {

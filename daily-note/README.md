@@ -2884,3 +2884,41 @@ watch -n5 'echo `date +%T` >> log.txt'
 #### [webview调试](https://75team.com/post/webview-debug.html)
 
 
+### 2019/08/08
+
+#### interface
+- 描述对象有哪些属性
+- 在typescript中interface与abstract class的区别是：前者只作用于编译时，后者可作用于运行时
+
+#### generic
+- `<T>` T--type，占位符
+- 不确定类型，但确定变量都是统一的某种类型
+
+#### overloads
+- 重新声明函数并定义不同类型的参数
+- 重载与泛型的区别，重载的类型是确定的，而泛型的类型太广泛
+
+#### sound soundness
+- sound--完备的，健全的
+- soundness--可靠性
+
+#### [typescript design goals](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Design-Goals)
+
+
+### 2019/08/08
+
+#### the different between element and react component
+- element是纯JS对象，代表一个节点或者组件，是不可变的
+- 而react component是函数或者类，具有状态，根据props输出不同的DOM树；组件在它的生命周期过程中可能会有副作用；创建的开销更大
+
+#### [css dynamic shadow](https://jsbin.com/zezoyamuyi/edit?html,css,output)
+
+#### [5 Programming Patterns I Like](https://www.johnstewart.dev/five-programming-patterns-i-like/)
+- nested ternary
+    - 当条件分支语句嵌套过多时，使用嵌套的三元运算将更直观
+    - 注意三目运算符的右结合性与自左向右de运算顺序
+
+#### [容器101](https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-container-technology-for-beginners-d7b60d8511c1/)
+
+
+
