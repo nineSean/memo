@@ -3007,3 +3007,76 @@ const enum Month {
 let month = [Month.Jan, Month.Feb, Month.Mar]
 ```
 
+
+### 2019/11/15
+
+#### fe knowledge review
+- variable types
+    - primitive types
+        - `String`
+        - `Number`
+        - `Boolean`
+        - `Symbol`
+        - `Null`
+        - `undefined`
+    - reference types
+        - `Object`
+        - `Function`
+        - `Array`
+    - method to judge type
+        - `typeof`
+        - `instanceof`
+        - `Object.prototype.toString.call(variable)`
+    - primitive type diff reference type
+        - the former is value but the latter is address which points the value stored in heap.
+
+
+### 2019/11/19
+
+#### 持续交付
+
+- 是什么
+    - 为了提升交付速率的工程方法与最佳实践
+    - 包括持续集成构建、测试自动化与部署流水线
+
+
+### 2019/11/20
+
+#### [Next-generation web styling](Next-generation web styling)
+- scroll-snap-type
+
+
+### 2019/11/23
+
+#### [7 Tips to Handle undefined in JavaScript](https://dmitripavlutin.com/7-tips-to-handle-undefined-in-javascript/#24-function-return-value)
+
+#### [top-level await](https://v8.dev/features/top-level-await)
+
+#### [JavaScript Naming Conventions](https://www.robinwieruch.de/javascript-naming-conventions)
+
+
+### 2019/11/24
+
+#### CSS module
+
+- [Scalable Component Styles ](https://www.youtube.com/watch?v=jwG3zPGxgOA)
+- [scoped vs module in vue](https://stackoverflow.com/questions/50464111/what-is-the-difference-between-module-and-scoped-styles-in-vue#:~:targetText=CSS%20Modules%20is%20different%20in,automatically%20creating%20unique%20BEM%20classes.&targetText=Scoped%20Vue%20CSS%20will%20be,every%20element%20in%20that%20component.)
+
+#### [What’s the deal with functional components in Vue.js?](https://itnext.io/whats-the-deal-with-functional-components-in-vue-js-513a31eb72b0)
+
+#### [Functional components in Vue.js (2.x)](https://dev.to/vhoyer/functional-components-in-vue-js-20fl)
+
+#### [edge cases with scoped styles](https://codesandbox.io/s/scoped-styles-inconsistencies-kr9cj)
+- functional与stateful组件CSS scoped原理都是给标签带上data-v-randomHash，但是作用的范围确是差异很大
+- [Scoped styles inconsistent between functional and stateful components](https://github.com/vuejs/vue-loader/issues/1136)
+
+#### [exciting new features in vue 3](https://vueschool.io/articles/vuejs-tutorials/exciting-new-features-in-vue-3/)
+- composition api
+- fragments
+- suspense
+- multiply v-models
+- portals
+
+
+#### [The Most Important Feature in Vue](https://michaelnthiessen.com/most-important-feature-vue)
+
