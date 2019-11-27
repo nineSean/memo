@@ -3080,3 +3080,19 @@ let month = [Month.Jan, Month.Feb, Month.Mar]
 
 #### [The Most Important Feature in Vue](https://michaelnthiessen.com/most-important-feature-vue)
 
+
+### 2019/11/26
+
+#### [exploring the caching in the browser](https://wanago.io/2019/11/25/exploring-the-caching-in-the-browser-clarifying-the-cache-control-header/)
+
+
+### 2019/11/27
+
+#### type annotation vs type inference
+- type inference only works when doing variable definition and initialization on the same line. Always using type inference possibly.
+- using type annotation in three situations.
+    - function returns 'any' type.
+    - declare a variable on one line, and initialize it later.
+    - variable whose type can not be inferred correctly.
+
+
