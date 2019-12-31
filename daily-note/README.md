@@ -354,7 +354,6 @@ Array.prototype.insert = function(v, i){
 
 - Ecam-262标准中没有closure（闭包）的定义，因为闭包是计算机语言的一种特性吧，见维基百科
 
-
 - MDN：A *closure* is the combination of a function and the lexical environment within which that function was declared
 - WIKIPEDIA：In [programming languages](https://en.wikipedia.org/wiki/Programming_language), a **closure** (also **lexical closure** or **function closure**) is a technique for implementing [lexically scoped](https://en.wikipedia.org/wiki/Lexically_scoped) [name binding](https://en.wikipedia.org/wiki/Name_binding) in a language with [first-class functions](https://en.wikipedia.org/wiki/First-class_function). [Operationally](https://en.wikipedia.org/wiki/Operational_semantics), a closure is a [record](https://en.wikipedia.org/wiki/Record_(computer_science)) storing a [function](https://en.wikipedia.org/wiki/Function_(computer_science))[[a\]](https://en.wikipedia.org/wiki/Closure_(computer_programming)#cite_note-1) together with an environment.[[1\]](https://en.wikipedia.org/wiki/Closure_(computer_programming)#cite_note-2) The environment is a mapping associating each [free variable](https://en.wikipedia.org/wiki/Free_variable) of the function (variables that are used locally, but defined in an enclosing scope) with the [value](https://en.wikipedia.org/wiki/Value_(computer_science)) or [reference](https://en.wikipedia.org/wiki/Reference_(computer_science)) to which the name was bound when the closure was created.[[b\]](https://en.wikipedia.org/wiki/Closure_(computer_programming)#cite_note-3) A closure—unlike a plain function—allows the function to access those *captured variables* through the closure's copies of their values or references, even when the function is invoked outside their scope.
 - EcmaScript 2015 - lexical environment
@@ -2566,7 +2565,7 @@ watch -n5 'echo `date +%T` >> log.txt'
 - es6 is about creating declarative boundaries instead of hyper focusing on imperativeness.
 - all functions are procedures, but not all procedures are functions.
 - side effect
-    - writting code with less side effects while can not avoiding side effects.
+    - writing code with less side effects while can not avoiding side effects.
     - make debugger more easily.
 
 
@@ -2579,10 +2578,10 @@ watch -n5 'echo `date +%T` >> log.txt'
     - side cause
         - indirect input
     - side effect
-        - indirect ouput
+        - indirect output
 - pure
     -  all things are explicit.
-    -  same input, same ouput.
+    -  same input, same output.
 - function definition
     - arguments as direct input, return statement as direct output.
 - purity is confidence level.
@@ -2597,7 +2596,7 @@ watch -n5 'echo `date +%T` >> log.txt'
         - point is unnecessary verbosity that confuses you visually, so most of your code should not have points.
     - [pointfree javascript](https://lucasmreis.github.io/blog/pointfree-javascript/)
 - composition
-    - operating order is right to left, opposite to pip.
+    - operating order is right to left, opposite to pipe.
     - unary function is easy to compose, currying makes multiple parameters function to unary function.
 
 
@@ -3095,4 +3094,43 @@ let month = [Month.Jan, Month.Feb, Month.Mar]
     - declare a variable on one line, and initialize it later.
     - variable whose type can not be inferred correctly.
 
+
+### 2019/12/09
+
+#### [How to avoid SOLID principles violations in Vue. JS application](https://itnext.io/https-medium-com-manuustenko-how-to-avoid-solid-principles-violations-in-vue-js-application-1121a0df6197?)
+
+
+### 2019/12/16
+
+#### [point free](https://www.freecodecamp.org/news/how-point-free-composition-will-make-you-a-better-functional-programmer-33dcb910303a/)
+- 去除函数参数从而减少视觉上的冗余
+- 把一个任务分解成多个工具函数进而通过一个point free的协调函数串联/组合这些工具函数
+ 
+#### referential transparency
+
+
+### 2019/12/18
+
+#### [The Object-Oriented Programming vs Functional Programming debate, in a beginner-friendly nutshell](https://medium.com/@sho.miyata.1/the-object-oriented-programming-vs-functional-programming-debate-in-a-beginner-friendly-nutshell-24fb6f8625cc)
+
+#### [the good, the bad and SOLID](https://www.slideshare.net/FrikkievanBiljon)
+
+
+### 2019/12/26
+
+#### [data abstraction vs procedural abstraction](http://dos.iitm.ac.in/OOSD_Material/Basic%20Concepts/Basic%20Concepts%20Of%20OO/s1-M1-P1.htm)
+
+
+### 2019/12/27
+
+#### [type signatures in lamda wiki](https://github.com/ramda/ramda/wiki/Type-Signatures)
+
+#### [function type signatures in js](https://hackernoon.com/function-type-signatures-in-javascript-5c698c1e9801)
+
+
+### 2019/12/31
+
+#### [Functional programming design patterns by Scott Wlaschin](https://www.youtube.com/watch?v=E8I19uA-wGY)
+
+#### [碎片化时代构建知识体系](https://www.jianshu.com/p/fc2ef81315ee?from=jiantop.com)
 
