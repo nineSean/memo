@@ -1985,7 +1985,7 @@ function format(n){
 - 都是临时重定向
 - 302
     - HTTP1.0定义
-    - 规范定义使用原来的方法（如使用POST请求，服务器返回302，浏览器跟用户确认是否POST请求重定向的URI，得到确定后POST请求信的URI；这是用于POST不是幂等的，第二次请求的环境可能发生变化，需要用户确认），但实际浏览器实现是把POST请求改为GET请求由浏览器自动重定向，其实这是不符合规范，此时应该使用303（这就是303诞生的原因）
+    - 规范定义使用原来的方法（如使用POST请求，服务器返回302，浏览器跟用户确认是否POST请求重定向的URI，得到确定后POST请求新的URI；这是由于POST不是幂等的，第二次请求的环境可能发生变化，需要用户确认），但实际浏览器实现是把POST请求改为GET请求由浏览器自动重定向，其实这是不符合规范，此时应该使用303（这就是303诞生的原因）
 - 303
     - HTTP1.1定义
     - 重定向，但是把POST方法改为GET
@@ -3133,4 +3133,55 @@ let month = [Month.Jan, Month.Feb, Month.Mar]
 #### [Functional programming design patterns by Scott Wlaschin](https://www.youtube.com/watch?v=E8I19uA-wGY)
 
 #### [碎片化时代构建知识体系](https://www.jianshu.com/p/fc2ef81315ee?from=jiantop.com)
+
+
+### 2020/01/07
+
+#### 基于对象定义
+- 语言和宿主的基础设施由对象提供，JavaScript程序即一系列相互通讯的对象集。
+
+
+### 2020/01/10
+
+#### [expressions vs statements](https://2ality.com/2012/09/expressions-vs-statements.html)
+
+
+### 2020/01/17
+
+#### [the 80/24 rule](https://blog.ploeh.dk/2019/11/04/the-80-24-rule/)
+
+
+### 2020/01/23
+
+#### [proxy use case in js]（ vhttps://blog.bitsrc.io/a-practical-guide-to-es6-proxy-229079c3c2f0)
+
+#### [exploring es6](https://exploringjs.com/es6/index.html)
+
+
+### 2020/01/29
+
+#### [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)
+
+#### [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
+
+
+### 2020/02/18
+
+#### JWT
+- [WHAT IS JSON WEB TOKEN](https://auth0.com/learn/json-web-tokens/)
+- [JSON Web Tokens vs. Session Cookies: In Practice](https://ponyfoo.com/articles/json-web-tokens-vs-session-cookies)
+
+
+### 2020/02/19
+
+#### [res.send vs res.json vs res.end in express](https://blog.fullstacktraining.com/res-json-vs-res-send-vs-res-end-in-express/)
+- res.send and res.json set ETag header whereas res.end does not.
+- res.json can format json whereas res.send can't.
+
+#### next('route') vs next('router) in express
+- `next('route')` skip the rest of callbacks in the same stack.
+- `next('router')` jump out executing current router instance.
+
+#### [https://blog.fullstacktraining.com/concurrent-http-connections-in-node-js/](https://blog.fullstacktraining.com/concurrent-http-connections-in-node-js/)
+
 
