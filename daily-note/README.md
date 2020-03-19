@@ -3185,3 +3185,77 @@ let month = [Month.Jan, Month.Feb, Month.Mar]
 #### [https://blog.fullstacktraining.com/concurrent-http-connections-in-node-js/](https://blog.fullstacktraining.com/concurrent-http-connections-in-node-js/)
 
 
+### 2020/03/12
+
+#### [react hooks fetch data](https://www.robinwieruch.de/react-hooks-fetch-data)
+
+#### [react children deep dive](https://mxstbr.blog/2017/02/react-children-deepdive/)
+
+
+### 2020/03/17
+
+#### [bash scripting](http://linuxsig.org/files/bash_scripting.html)
+
+
+### 2020/03/18
+
+#### bash中的引用标记
+- 单引号`'`
+    - 单引号中的字符保留字面量的意思（如`$` `\` **`**等特殊字符被转义），但内容不能出现单引号（用反斜杠也不行）
+
+- 双引号`"`
+    - 双引号中的字符保留字面量的意思（但特殊字符不转义，如`$` `\` **`**）
+
+- 反引号**`**
+    - 执行命令并且把结果作为stdout
+
+- 反斜杠`\`
+    - 转义其后的特殊字符
+
+#### [&> /dev/null](https://unix.stackexchange.com/questions/70963/difference-between-2-2-dev-null-dev-null-and-dev-null-21)
+
+#### wildcard（通配符）
+
+```
+? 一个字符
+* 任意数量的任意字符
+[:digit:] 数字
+[] 中括号中的一个字符
+[^] 匹配非^后字符
+```
+
+### 2020/03/19
+
+#### [bash set 命令](http://www.ruanyifeng.com/blog/2017/11/bash-set.html)
+
+```
+// 变量不存在报错
+set -u
+set -o nounset
+
+// 显示打印是出自那句命令
+set -x
+set -o xtrace
+
+// 报错则停止执行代码
+set -e
+set -o errexit
+
+// 作为整个脚本的设置
+// 方法一 写在脚本前面
+set -uexo pipefail
+
+// 方法二
+set -uex
+set -o pipefail
+
+// 方法三 执行脚本时作为参数传入
+bash -uexo pipefail script.sh
+
+```
+
+#### export in bash
+- 执行脚本是顶层shell上开一个子shell执行，子shell可以拿到顶层的环境变量，而子shell要导出变量到顶层则需要使用export（并且要执行该脚本）
+- 上面的理解有错：所有shell不管层级，都能拿到系统内置的全局环境变量，而层级间要共享变量则需要用到export导出！
+
+
