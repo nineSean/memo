@@ -3259,3 +3259,66 @@ bash -uexo pipefail script.sh
 - 上面的理解有错：所有shell不管层级，都能拿到系统内置的全局环境变量，而层级间要共享变量则需要用到export导出！
 
 
+### 2020/03/29
+
+#### 首屏优化
+- 异步加载
+- SSR 同构 预渲染
+- CDN
+- MPA
+- 时间片
+- quickLink
+    - prefetch
+        - prefetch
+        - dns-prefetch
+        - prerender
+    - preload
+    - preconnect
+        - DNS
+        - TLS协商
+        - TCP握手
+
+
+### 2020/03/30
+
+#### 性能优化
+- navigation timing
+- basket.js
+- localForage
+- performance metrics
+    - TTFB
+    - FP
+    - FCP
+    - fMP
+    - TTi
+    - long task
+
+
+### 2020/04/06
+
+#### [Web标准制定组织](https://ppt.baomitu.com/d/59237afa#/)
+- IETF - Internet Engineering Task Force
+    - HTTP
+    - TLS
+- ECMA - European Computer Manufactures Association
+    - ECMA-262(TC39)
+- W3C - World Wide Web Consortium
+    - HTML
+    - CSS
+    - DOM
+    - BOM
+    - etc
+- WHATWG - Web Hypertext Application Technology Working Group
+
+#### [Web vs Internet](https://www.w3.org/Help/#webinternet)
+- Internet是符合TCP/IP协议的网络
+- Web是通过网络串联起来的信息
+- 可以认为Internet是硬件，而Web是建立在硬件之上的软件
+
+#### [HTML设计原则](http://www.uml.org.cn/html/201208034.asp)
+
+##### Postel's Law
+- 发送时要保守，接受时要开放
+
+#### [h1 tag seo](https://www.reliablesoft.net/h1-tag/#h1-tag-seo)
+
