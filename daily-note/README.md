@@ -3322,3 +3322,29 @@ bash -uexo pipefail script.sh
 
 #### [h1 tag seo](https://www.reliablesoft.net/h1-tag/#h1-tag-seo)
 
+
+### 2020/04/07
+
+#### [html design principles](https://www.w3.org/TR/html-design-principles/)
+
+#### [html5 for web designers](https://html5forwebdesigners.com/)
+
+
+### 2020/04/08
+
+#### section vs article
+- section
+    - 用于集合理论上相关的内容
+- article
+    - section的特例，用于自包含的相关内容
+- 两者之间的区别主要在于自包含，如果包含的内容在任何上下文中都能清晰明白地表达相同的意思，即为自包含，应该用article，反之用section
+
+  > Ask yourself if you would syndicate the content in an RSS or Atom feed. If the content still makes sense in that context, then article is probably the right element to use. In fact, the article element is specifically designed for syndication.
+  - [semantics](https://html5forwebdesigners.com/semantics/#article)
+
+#### doctype的用途
+- 告诉验证器而不是浏览器文档类型
+- 有doctype会触发使用标准盒模型，所以对这才是对浏览器的作用
+
+#### [打破iframe安全策略](http://www.ayqy.net/blog/%E6%89%93%E7%A0%B4iframe%E5%AE%89%E5%85%A8%E9%99%90%E5%88%B6%E7%9A%843%E7%A7%8D%E6%96%B9%E6%A1%88/)
+
