@@ -3348,3 +3348,42 @@ bash -uexo pipefail script.sh
 
 #### [打破iframe安全策略](http://www.ayqy.net/blog/%E6%89%93%E7%A0%B4iframe%E5%AE%89%E5%85%A8%E9%99%90%E5%88%B6%E7%9A%843%E7%A7%8D%E6%96%B9%E6%A1%88/)
 
+
+### 2020/04/11
+
+#### [Searching and viewing your notes efficiently with Alfred](https://medium.com/@Gr3g0ire/searching-and-viewing-your-notes-efficiently-with-alfred-32f716db5ae2)
+
+#### 请求发出后切换网页后会发生什么，如何取消请求
+- [和浏览器异步请求取消相关的那些事](https://www.cnblogs.com/laden666666/p/5485213.html)
+- [如何终止前端发起的请求？](https://blog.csdn.net/m0_37467586/article/details/93189490)
+
+
+### 2020/04/11
+
+#### [条件语句中的函数声明](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- 简言之，不要这样做，各个浏览器中的解析不一定一致
+
+```js
+const hoisted = foo in this
+consle.log(`foo name ${hoisted ? 'is' : 'is not'} hosited, typeof foo is ${typeof foo}`)
+
+if (true){
+    function foo(){}
+}
+
+// 不论条件真假，结果一样
+// In Chrome: 
+// 'foo' name is hoisted. typeof foo is undefined
+// 
+// In Firefox:
+// 'foo' name is hoisted. typeof foo is undefined
+//
+// In Edge:
+// 'foo' name is not hoisted. typeof foo is undefined
+// 
+// In Safari:
+// 'foo' name is hoisted. typeof foo is function
+```
+
+- 源于[confused about function declaration in { }](https://stackoverflow.com/questions/58619924/confused-about-function-declaration-in)
+
