@@ -3387,3 +3387,47 @@ if (true){
 
 - 源于[confused about function declaration in { }](https://stackoverflow.com/questions/58619924/confused-about-function-declaration-in)
 
+
+### 2020/04/14
+
+#### [vscode 调试 chrome](http://shooterblog.site/2018/05/19/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E7%94%A8Vscode%20Debugger%E8%B0%83%E8%AF%95%E4%BB%A3%E7%A0%81/#1621.733448432463)
+
+##### remote debug in chrome
+1. launch.json中`configurations`添加如下配置
+
+    ```js
+    {
+     "type": "chrome",
+     "request": "attach",
+     "name": "attach to chrome",
+     "port": 9222,
+     "webRoot": "${workspaceFolder}",
+    },
+    {
+     "type": "chrome",
+     "request": "launch",
+     "name": "launch in chrome",
+     "url": "http://127.0.0.1:8081",
+     "webRoot": "${workspaceFolder}",
+    },
+    ```
+2. 安装live-server并配置ip、port与`request: launch`中一致，即`http://127.0.0.1:8081`
+3. 启动live-server（可自动刷新）
+4. 运行`attach to chrome`配置即可
+5. 如果以上操作失败，尝试用`/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222`打开chrome
+
+
+#### [vacode 调试 node](https://www.barretlee.com/blog/2019/03/18/debugging-in-vscode-tutorial/)
+
+#### npm link
+
+##### 参考
+- [A guide to creating a NodeJS command-line package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
+- [The magic behind npm link](https://medium.com/@alexishevia/the-magic-behind-npm-link-d94dcb3a81af)
+
+#### 前端性能监控系统
+- [fundebug](https://www.fundebug.com/)
+- [badjs](https://github.com/BetterJS)
+- [session stack](https://www.sessionstack.com/)
+- [zanePerfor](https://github.com/wangweianger/zanePerfor)
+
