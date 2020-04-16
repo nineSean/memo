@@ -3431,3 +3431,37 @@ if (true){
 - [session stack](https://www.sessionstack.com/)
 - [zanePerfor](https://github.com/wangweianger/zanePerfor)
 
+
+### 2020/04/15
+
+#### [前端错误监控指南](https://juejin.im/post/5e94001bf265da47f07939b1#heading-9)
+
+#### JS事件流
+- `document->html->body->...->target->...->body->html->document`，事件自外向里（捕获阶段），再自里向外（冒泡阶段）传播
+- `onxxx`回调是在冒泡阶段执行，同一个元素的同一个`onxxx`的回调有多个的话，最后的会覆盖前面所有；而`addEventListener`不存在这个问题
+- 最里层的元素如果在冒泡和捕获阶段都监听了某个事件，则按照代码的书写顺序来确定回调的执行（写在前面的代码先执行）
+- [代码示例](https://code.h5jun.com/libow/edit?html,console,output)
+
+#### [What the Heck Is “Script Error?”](https://dzone.com/articles/what-the-heck-is-script-error)
+- 浏览器为了保护信息，在跨域的情况下，第三方资源的报错信息只显示`script error`，解决方案如下：
+    - CORS
+        - 跨域加载资源的标签上设置`crossorigin="anonymous"`
+        - `Access-Control-Allow-Origin: 页面的URL`
+    - try...catch
+    
+        ```js
+        try{
+            xxx() //引起错误的语句
+        }catch(e){
+            console.log(e)
+            throw e
+        }
+        ```
+- [script error](https://raygun.com/blog/script-error/)
+
+
+### 2020/04/16
+
+#### [The `time` Element](https://css-tricks.com/time-element/)
+
+
