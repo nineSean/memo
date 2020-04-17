@@ -3465,3 +3465,18 @@ if (true){
 #### [The `time` Element](https://css-tricks.com/time-element/)
 
 
+### 2020/04/17
+
+#### [memory management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management)
+
+#### 高程4笔记
+
+##### chapter 4
+- 原始类型与引用类型的值（primitive and reference）
+    - JS的值分为原始类型和引用类型
+    - 不像其它语言，JS不允许直接访问内存地址，所以操作对象实际是在操作引用，所以这类值叫做访问引用。
+    - 在许多语言中strings表示为对象的，因此也归为应用类型。而ECMAScript打破了传统。
+- 动态属性
+    - 只有引用类型才能够增删改查属性，而原始类型不行。
+
+
