@@ -3480,3 +3480,19 @@ if (true){
     - 只有引用类型才能够增删改查属性，而原始类型不行。
 
 
+### 2020/04/17
+
+#### [primitive value vs reference value](https://stackoverflow.com/questions/13266616/primitive-value-vs-reference-value)
+- primitive
+    - 把值的二进制表示存在内存，原始值的赋值都是值拷贝。
+- reference
+
+#### [JS memory model](https://medium.com/@ethannam/javascripts-memory-model-7c972cd2c239)
+
+
+### 2020/04/18
+
+#### [sparse array(稀疏数组)](https://remysharp.com/2018/06/26/an-adventure-in-sparse-arrays)
+- `for`、`for...of`不会忽略稀疏数组的洞
+- `forEach`、`map`、`filter`等方法都会忽略洞的回调，除了`filter`不会返稀疏数组，其它返回数组的方法都会返回稀疏数组
+
