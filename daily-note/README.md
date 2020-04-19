@@ -3496,3 +3496,17 @@ if (true){
 - `for`、`for...of`不会忽略稀疏数组的洞
 - `forEach`、`map`、`filter`等方法都会忽略洞的回调，除了`filter`不会返稀疏数组，其它返回数组的方法都会返回稀疏数组
 
+
+### 2020/04/19
+
+#### [How JavaScript works: memory management + how to handle 4 common memory leaks](https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec)
+
+#### [An interesting kind of JavaScript memory leak](https://blog.meteor.com/an-interesting-kind-of-javascript-memory-leak-8b47d2e7f156)
+
+#### smart原则
+
+#### JSONP原理小结
+- 构造script标签请求js
+- `?cb=xxx`中`cb`与后端约定，一般为`callback`；`xxx`一般为时间戳加一个随机数防止冲突
+- 执行完回调后要删除掉构造的回调`xxx`，为了兼容`ie8`以下版本（无法输出window属性），可以在全局挂一个命名空间，把`xxx`挂在该命名空间下，用完再删掉该`xxx`（非window属性可删除）。
+
