@@ -3510,3 +3510,13 @@ if (true){
 - `?cb=xxx`中`cb`与后端约定，一般为`callback`；`xxx`一般为时间戳加一个随机数防止冲突
 - 执行完回调后要删除掉构造的回调`xxx`，为了兼容`ie8`以下版本（无法输出window属性），可以在全局挂一个命名空间，把`xxx`挂在该命名空间下，用完再删掉该`xxx`（非window属性可删除）。
 
+
+### 2020/04/20
+
+#### [object toPrimitive](https://javascript.info/object-toprimitive)
+- call `Symbol.toPrimitive`, if exists
+- hint is `string`, call `toString` , then call `valueOf` if necessary
+- hint is `number` or `default`, call `valueOf` , then call `toString` if necessary
+
+#### [session jwt sso oauth2 ](https://blog.csdn.net/kikajack/article/details/80293328)
+
