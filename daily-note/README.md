@@ -3520,3 +3520,45 @@ if (true){
 
 #### [session jwt sso oauth2 ](https://blog.csdn.net/kikajack/article/details/80293328)
 
+
+### 2020/04/22
+
+#### [eventloop机制](https://juejin.im/post/5e5c7f6c518825491b11ce93)
+
+
+### 2020/04/23
+
+#### type vs interface in ts
+- [type aliases](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-aliases)
+- [TypeScript: Interfaces vs Types](https://stackoverflow.com/questions/37233735/typescript-interfaces-vs-types)
+
+
+### 2020/04/25
+
+#### webpack-deep-scope-plugin
+
+
+### 2020/04/28
+
+#### ssh免密登陆
+
+```
+// 生成秘钥对
+ssh-keygen -t rsa -b 4096 -C 'ninsean1989@gmail.com' -f 'sean_id-rsa'
+
+// 放入~/.ssh目录
+mv ./sean_id_rsa* ~/.ssh/
+
+// 拷贝公钥至远程主机/root/.ssh/authorized_keys文件中
+ssh-copy-id -i ~/.ssh/sean_id_rsa.pub username@remote-host
+
+// 添加私钥到ssh-agent
+ssh-add -K ~/.ssh/sean_id_rsa
+
+// 或者通过配置~/.ssh/config
+Host node-server
+Hostname remote-host
+User root
+IdentityFile ~/.ssh/sean_id_rsa
+```
+
