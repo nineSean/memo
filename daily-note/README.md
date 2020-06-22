@@ -3344,7 +3344,7 @@ bash -uexo pipefail script.sh
 
 #### doctype的用途
 - 告诉验证器而不是浏览器文档类型
-- 有doctype会触发使用标准盒模型，所以对这才是对浏览器的作用
+- 有doctype会触发使用标准盒模型，所以这才是对浏览器的作用
 
 #### [打破iframe安全策略](http://www.ayqy.net/blog/%E6%89%93%E7%A0%B4iframe%E5%AE%89%E5%85%A8%E9%99%90%E5%88%B6%E7%9A%843%E7%A7%8D%E6%96%B9%E6%A1%88/)
 
@@ -3561,4 +3561,110 @@ Hostname remote-host
 User root
 IdentityFile ~/.ssh/sean_id_rsa
 ```
+
+
+### 2020/05/06
+
+#### [手写vue-cli](https://juejin.im/post/5d37d982e51d45108c59a635)
+
+
+### 2020/05/07
+
+#### iOS单页返回执行JS
+- [navigationMode property (history)](http://help.dottoro.com/ljrtiivh.php)
+- [After travelling back in Firefox history, JavaScript won't run](https://stackoverflow.com/questions/2638292/after-travelling-back-in-firefox-history-javascript-wont-run)
+
+### [CI/CD](https://medium.com/yusong-blog/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%9C%A8github%E4%B8%8A%E6%8C%81%E7%BA%8C%E6%95%B4%E5%90%88%E8%88%87%E9%83%A8%E7%BD%B2-ci-cd-9735f622ae68)
+
+
+### 2020/06/05
+
+#### mysql
+- 数据库
+    
+    ```sql
+    查看数据库
+    show databases;
+    
+    创建数据库
+    create database sean_db;
+    
+    查看使用数据库
+    use sean_db;
+    
+    查看当前数据库状态
+    status
+    
+    删除数据库
+    drop database sean_db;
+    ```
+
+- 表
+
+    ```sql
+    查看表
+    show tables;
+    
+    创建表
+    create table users (name varchar(255), age int);
+    
+    显示表头
+    show columns from users;
+    
+    更改表头
+    alter table users change `name` `othername` varchar(100);
+    
+    更改表头类型
+    alter table users modify column othername varchar(255);
+    
+    删除列
+    alter table users drop columns age;
+    
+    删除表
+    drop table users;
+    ```
+
+- 记录
+
+    ```sql
+    添加记录
+    insert into users (name, age) values ('sean', 18);
+    
+    删除记录
+    delete from users where name='john';
+    
+    修改记录
+    update users set age=20 where name='sean';
+    
+    查看记录
+    select * from users;
+    ```
+
+
+### 2020/06/10
+
+#### express挂载子程序
+- https://derickbailey.com/2016/02/17/using-express-sub-apps-to-keep-your-code-clean/
+
+
+### 2020/06/12
+
+#### [nodejs中的环境变量](https://www.twilio.com/blog/working-with-environment-variables-in-node-js-html)
+
+
+### 2020/06/22
+
+#### [前后端分离之数据Mock](http://blog.poetries.top/2017/10/23/js-mock/)
+
+#### [Vue 项目架构设计与工程化实践](https://github.com/berwin/Blog/issues/14)
+
+#### [掘金 Vue.js 2.0 后端渲染及重构实践](https://mp.weixin.qq.com/s/YsBRLHXNhuDu7FGRDXip9A)
+- [ppt](https://slides.com/kalasoo/vueconf-juejin-refactor)
+
+#### [闲话 CDN](https://zhuanlan.zhihu.com/p/39028766)
+
+#### [前端工程之CDN部署](https://blog.csdn.net/sky_beyond/article/details/54092267)
+
+#### [Axios or fetch(): Which should you use?](https://blog.logrocket.com/axios-or-fetch-api/)
+
 
